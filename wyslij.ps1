@@ -1,15 +1,14 @@
 # ============================================================================
-#  TatrApart — wysylka zmian na zywo
-#  ----------------------------------------------------------------------------
+#  TatrApart - wysylka zmian na zywo
+#  ---------------------------------------------------------------------------
 #  Jedno polecenie: zapisuje zmiany, wysyla na GitHuba, a Vercel sam
 #  aktualizuje strone w ciagu okolo minuty.
 #
-#  Uzycie w terminalu, w katalogu projektu:
+#  Uzycie: kliknij dwukrotnie plik wyslij.bat
+#          albo w terminalu:  .\wyslij.bat "opis zmiany"
 #
-#      .\wyslij.ps1
-#      .\wyslij.ps1 "poprawione zdjecia apartamentow"
-#
-#  Pierwszy sposob wpisze opis automatycznie z dzisiejsza data.
+#  Uwaga: ten plik celowo nie zawiera polskich znakow. Windows PowerShell
+#  czyta skrypty jako ANSI i polskie litery rozsypalyby skladnie.
 # ============================================================================
 
 param(
@@ -17,7 +16,11 @@ param(
     [string]$Opis = ""
 )
 
-$ErrorActionPreference = "Stop"
+# Uwaga: NIE ustawiamy tu "Stop". Git normalnie pisze ostrzezenia na
+# strumien bledow (np. o koncach linii), a przy "Stop" PowerShell uznalby
+# je za blad krytyczny i przerwal skrypt bez powodu. Powodzenie kazdego
+# polecenia sprawdzamy ponizej przez $LASTEXITCODE, co jest wlasciwa metoda.
+$ErrorActionPreference = "Continue"
 Set-Location -Path $PSScriptRoot
 
 if (-not (Test-Path ".git")) {
@@ -25,10 +28,10 @@ if (-not (Test-Path ".git")) {
     exit 1
 }
 
-# Czy w ogole cokolwiek sie zmienilo?
 $zmiany = git status --porcelain
 if ([string]::IsNullOrWhiteSpace($zmiany)) {
-    Write-Host "Brak zmian do wyslania — wszystko jest juz aktualne." -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "Brak zmian do wyslania - wszystko jest juz aktualne." -ForegroundColor Yellow
     exit 0
 }
 
@@ -38,24 +41,24 @@ git status --short
 Write-Host ""
 
 if ([string]::IsNullOrWhiteSpace($Opis)) {
-    $Opis = "Aktualizacja strony — " + (Get-Date -Format "d MMMM yyyy, HH:mm")
+    $Opis = "Aktualizacja strony - " + (Get-Date -Format "yyyy-MM-dd HH:mm")
 }
 
 git add -A
+if ($LASTEXITCODE -ne 0) { Write-Host "Blad przy dodawaniu plikow." -ForegroundColor Red; exit 1 }
+
 git commit -m $Opis
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "Nie udalo sie zapisac zmian." -ForegroundColor Red
-    exit 1
-}
+if ($LASTEXITCODE -ne 0) { Write-Host "Blad przy zapisywaniu zmian." -ForegroundColor Red; exit 1 }
 
 git push
 if ($LASTEXITCODE -ne 0) {
     Write-Host ""
-    Write-Host "Nie udalo sie wyslac na GitHuba. Sprawdz polaczenie z internetem." -ForegroundColor Red
+    Write-Host "Nie udalo sie wyslac na GitHuba." -ForegroundColor Red
+    Write-Host "Sprawdz polaczenie z internetem i sprobuj ponownie." -ForegroundColor Red
     exit 1
 }
 
 Write-Host ""
 Write-Host "Gotowe. Zmiany sa na GitHubie." -ForegroundColor Green
-Write-Host "Vercel zaczal juz budowac nowa wersje — strona odswiezy sie za okolo minute." -ForegroundColor Green
+Write-Host "Vercel buduje nowa wersje - strona odswiezy sie za okolo minute." -ForegroundColor Green
 Write-Host ""

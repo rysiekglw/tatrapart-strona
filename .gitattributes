@@ -1,6 +1,11 @@
-# Ujednolicone konce linii — bez tego Windows zglaszalby zmiany
+# Ujednolicone konce linii - bez tego Windows zglaszalby zmiany
 # w plikach, ktorych nikt nie dotykal.
 * text=auto eol=lf
+
+# Pliki wsadowe Windows MUSZA miec konce linii CRLF, inaczej cmd.exe
+# bledne je odczytuje i skrypt sie nie uruchamia.
+*.bat text eol=crlf
+*.cmd text eol=crlf
 
 # Pliki binarne zostawiamy w spokoju.
 *.jpg  binary

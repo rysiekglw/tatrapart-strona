@@ -43,7 +43,80 @@ terminal). Serwer zatrzymasz skrótem Ctrl + C.
 
 ---
 
-## 2. Struktura plików
+## 2. Publikacja: GitHub i Vercel
+
+Strona jest w repozytorium **prywatnym**:
+https://github.com/rysiekglw/tatrapart-strona
+
+### Jak to działa
+
+```
+zmiana w plikach  ->  wyslij.bat  ->  GitHub  ->  Vercel buduje  ->  strona na zywo
+```
+
+Każdy push na gałąź `main` automatycznie aktualizuje stronę. Nic więcej nie
+trzeba robić, nie ma osobnego „wgrywania na serwer".
+
+### Wysyłanie zmian — jedno kliknięcie
+
+**Najprościej:** kliknij dwukrotnie plik **`wyslij.bat`** w katalogu projektu.
+Otworzy się okienko, pokaże, co się zmieniło, i wyśle to na GitHuba.
+
+**Z terminala**, jeśli chcesz dodać własny opis zmiany:
+
+```
+.\wyslij.bat "nowe zdjecia apartamentu na poddaszu"
+```
+
+Skrypt sam sprawdzi, co się zmieniło, zapisze to i wyśle. Jeżeli nic się nie
+zmieniło, powie o tym i nic nie zrobi. Strona odświeży się po około minucie.
+
+> **Dlaczego `.bat`, a nie `.ps1`?** Windows domyślnie blokuje uruchamianie
+> skryptów PowerShella. Plik `wyslij.bat` omija tę blokadę tylko dla tego
+> jednego skryptu, bez zmieniania ustawień bezpieczeństwa całego systemu.
+> Właściwa logika siedzi w `wyslij.ps1` — `.bat` tylko go uruchamia.
+
+### Vercel CLI nie jest potrzebny
+
+Vercel CLI służy do ręcznego wgrywania (`vercel --prod`), czyli dokładnie
+odwrotnie niż chcemy. Automatyczne budowanie po każdym pushu zapewnia
+integracja z GitHubem, którą ustawia się raz w panelu Vercela. Dodatkowo CLI
+wymaga Node.js, którego na tym komputerze nie ma, a instalowanie go tylko po
+to byłoby zbędne.
+
+### Jednorazowe podłączenie Vercela do GitHuba
+
+To jedyny krok, który trzeba wyklikać samodzielnie, bo wymaga zalogowania:
+
+1. Wejdź na **vercel.com** i zaloguj się przez **Continue with GitHub**.
+2. Kliknij **Add New… → Project**.
+3. Na liście repozytoriów znajdź **tatrapart-strona** i kliknij **Import**.
+   Jeśli repozytorium się nie pokazuje, kliknij **Adjust GitHub App
+   Permissions** i daj Vercelowi dostęp do niego — jest prywatne, więc trzeba
+   to potwierdzić.
+4. Vercel sam rozpozna stronę statyczną. **Nie zmieniaj żadnych ustawień** —
+   Framework Preset zostaw na „Other", pola Build Command i Output Directory
+   zostaw puste. Kliknij **Deploy**.
+
+Po minucie dostaniesz adres w rodzaju `tatrapart-strona.vercel.app`.
+Od tego momentu każdy push aktualizuje stronę automatycznie.
+
+### Własna domena
+
+W panelu projektu: **Settings → Domains → Add**. Wpisz `tatrapart.pl`.
+Vercel pokaże, jakie rekordy DNS ustawić u operatora domeny. Uwaga: obecna
+strona tatrapart.pl działa gdzie indziej, więc przepinaj domenę dopiero
+wtedy, gdy nowa wersja będzie gotowa do zastąpienia starej.
+
+### Jeśli wolisz repozytorium publiczne
+
+```
+gh repo edit rysiekglw/tatrapart-strona --visibility public --accept-visibility-change-consequences
+```
+
+---
+
+## 3. Struktura plików
 
 ```
 index.html            strona główna
@@ -77,7 +150,7 @@ znajduje się w plikach `.build/main-*.html`.
 
 ---
 
-## 3. Zdjęcia
+## 4. Zdjęcia
 
 ### Wnętrza — gotowe
 
@@ -127,7 +200,7 @@ Po zdobyciu zdjęć: wpisz nazwy plików w `nearby` i ustaw `nearbyImages: true`
 
 ---
 
-## 4. Podpięcie Hotres — następny krok
+## 5. Podpięcie Hotres — następny krok
 
 W `assets/js/site-config.js`:
 
@@ -150,7 +223,7 @@ kliknięcie nie zostało zmarnowane.
 
 ---
 
-## 5. DANE POTWIERDZONE
+## 6. DANE POTWIERDZONE
 
 Wpisane i widoczne w całym serwisie:
 
@@ -170,7 +243,7 @@ wyświetla**. Po dodaniu adresu w `social.facebook` pojawi się sam.
 
 ---
 
-## 6. Rozbieżności — dwie rozwiązane, jedna do Ciebie
+## 7. Rozbieżności — dwie rozwiązane, jedna do Ciebie
 
 ### 6.1. Terminy rezygnacji — ROZWIĄZANE
 
@@ -202,7 +275,7 @@ ELEMENT TEKSTOWY. KLIKNIJ TEN ELEMENT", a tytuł strony w przeglądarce brzmi
 stronę. Warto je poprawić również na obecnej, bo widzą je Goście i indeksuje
 Google.
 
-## 7. Regulamin — uwaga o językach
+## 8. Regulamin — uwaga o językach
 
 Treść regulaminu jest podana **wyłącznie po polsku**, we wszystkich czterech
 wersjach językowych serwisu. Powód: tłumaczenie tekstu prawnego bez akceptacji
@@ -215,7 +288,7 @@ w pozostałych językach w `i18n.js`. Mechanizm podmieni je automatycznie.
 
 ---
 
-## 8. Co jeszcze zostało
+## 9. Co jeszcze zostało
 
 - zdjęcia apartamentów (obecnie puste ramki)
 - zdjęcia miejsc w okolicy
@@ -235,7 +308,7 @@ w pozostałych językach w `i18n.js`. Mechanizm podmieni je automatycznie.
 
 ---
 
-## 9. Zmiana tekstów
+## 10. Zmiana tekstów
 
 Wszystkie teksty są w `assets/js/i18n.js`, pogrupowane po języku: `pl`, `en`,
 `uk`, `ru`. Zmieniasz tekst po prawej stronie klucza:
@@ -250,7 +323,7 @@ polską — z tego mechanizmu korzysta regulamin.
 
 ---
 
-## 10. Co strona już potrafi
+## 11. Co strona już potrafi
 
 - Sześć stron, cztery języki, zapamiętywanie wyboru i obsługa `?lang=en`
 - Menu pełnoekranowe z animacją i pułapką fokusu
