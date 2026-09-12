@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 470" role="img" aria-label="TatrApart">
+  <title>TatrApart</title>
+  <!-- Znak zastepczy, uzywany tylko wtedy, gdy nie uda sie wczytac
+       assets/images/logo-tatrapart.png. Przeswity zrobione regula evenodd,
+       dzieki czemu logo dziala takze w wersji odwroconej na ciemnym tle. -->
+  <g fill="#4A2E21" fill-rule="evenodd">
+    <path d="M112 118 L232 100 L196 120 Z"/>
+    <path d="M138 142 L268 128 L214 146 Z"/>
+    <path d="M300 92 L420 78 L352 102 Z"/>
+    <path d="M262 114 L392 300 L352 300 L330 266 L300 300 L92 300 Z
+             M256 190 L212 250 L298 216 Z"/>
+    <path d="M406 136 L512 300 L398 300 L356 240 Z
+             M438 160 L472 216 L434 198 Z"/>
+    <text x="310" y="398" text-anchor="middle"
+          font-family="Cormorant Garamond, Times New Roman, Times, serif"
+          font-size="90" font-weight="500" letter-spacing="11">TATRAPART</text>
+    <path d="M92 430 L310 448 L528 430 L310 439 Z"/>
+  </g>
+</svg>

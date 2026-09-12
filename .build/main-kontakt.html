@@ -1,0 +1,117 @@
+<main id="main">
+
+<section class="hero hero--page">
+  <div class="hero__media">
+    <img src="assets/images/gallery-11.jpg" alt="" fetchpriority="high">
+  </div>
+  <div class="hero__scrim"></div>
+  <div class="hero__content">
+    <span class="hero__eyebrow" data-i18n="foot.contact">Kontakt</span>
+    <h1 class="hero__title" data-i18n="page.contact.title">Kontakt</h1>
+    <p class="hero__tagline" data-i18n="page.contact.lead"></p>
+  </div>
+</section>
+
+<section class="section section--milk" id="rezerwacja">
+  <div class="container">
+    <div class="location__grid">
+
+      <div data-reveal>
+        <span class="eyebrow" data-i18n="page.contact.details">Dane kontaktowe</span>
+
+        <ul class="distance-list" style="margin-bottom:40px">
+          <li>
+            <span class="place" data-i18n="common.phone">Telefon</span>
+            <span class="val"><a data-cfg-href="phone" href="#"><b data-cfg="phone">+48 000 000 000</b></a></span>
+          </li>
+          <li>
+            <span class="place" data-i18n="foot.reservations">Rezerwacje</span>
+            <span class="val"><a data-cfg-href="reservations" href="#"><b data-cfg="reservations">rezerwacje@tatrapart.pl</b></a></span>
+          </li>
+          <li>
+            <span class="place" data-i18n="common.email">E-mail</span>
+            <span class="val"><a data-cfg-href="email" href="#"><b data-cfg="email">kontakt@tatrapart.pl</b></a></span>
+          </li>
+          <li>
+            <span class="place" data-i18n="page.contact.checkin">Zameldowanie od</span>
+            <span class="val"><b data-cfg="checkin">16:00</b></span>
+          </li>
+          <li>
+            <span class="place" data-i18n="page.contact.checkout">Wymeldowanie do</span>
+            <span class="val"><b data-cfg="checkout">10:00</b></span>
+          </li>
+        </ul>
+
+        <address style="font-style:normal;line-height:2;color:var(--text-soft)">
+          <strong data-cfg="name">Tatrapart</strong><br>
+          <span data-cfg="street">ul. Przykładowa 12</span><br>
+          <span data-cfg="city">34-500 Zakopane</span><br>
+          <span data-cfg="country">Polska</span>
+        </address>
+
+        <a class="link-arrow" data-cfg-href="maps" href="#" target="_blank" rel="noopener" style="margin-top:26px">
+          <span data-i18n="loc.mapCta">Otwórz w Mapach Google</span>
+          <svg class="arrow" width="22" height="8" viewBox="0 0 22 8" fill="none" aria-hidden="true"><path d="M0 4h20M17 1l3.2 3L17 7" stroke="currentColor" stroke-width="1"/></svg>
+        </a>
+      </div>
+
+      <div data-reveal data-delay="120">
+        <h2 class="h3" style="margin-bottom:30px" data-i18n="page.contact.formTitle">Formularz kontaktowy</h2>
+
+        <form data-validate data-success-key="page.contact.success">
+          <div class="field">
+            <label for="c-name" data-i18n="page.contact.name">Imię i nazwisko</label>
+            <input id="c-name" name="name" type="text" required autocomplete="name">
+            <span class="field__error"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="c-email" data-i18n="nl.email">Adres e-mail</label>
+              <input id="c-email" name="email" type="email" required autocomplete="email">
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="c-phone" data-i18n="common.phone">Telefon</label>
+              <input id="c-phone" name="phone" type="tel" autocomplete="tel">
+              <span class="field__error"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="c-msg" data-i18n="page.contact.message">Wiadomość</label>
+            <textarea id="c-msg" name="message" required></textarea>
+            <span class="field__error"></span>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" required>
+            <span data-i18n="nl.consent"></span>
+          </label>
+
+          <button class="btn" type="submit"><span data-i18n="page.contact.send">Wyślij wiadomość</span></button>
+          <p class="form-success" style="margin-top:24px" role="status"></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--milk2 section--flush-top">
+  <div class="container">
+    <div class="map-frame" data-map-embed data-reveal="mask" style="aspect-ratio:21/9"></div>
+  </div>
+</section>
+
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ścieżka nawigacji">
+    <ol>
+      <li><a href="index.html" data-i18n="nav.home">Strona główna</a></li>
+      <li class="sep">/</li>
+      <li data-i18n="nav.contact">Kontakt</li>
+    </ol>
+  </nav>
+</div>
+
+</main>

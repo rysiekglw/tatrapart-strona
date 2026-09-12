@@ -1,0 +1,11 @@
+# Ujednolicone konce linii — bez tego Windows zglaszalby zmiany
+# w plikach, ktorych nikt nie dotykal.
+* text=auto eol=lf
+
+# Pliki binarne zostawiamy w spokoju.
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.webp binary
+*.ico  binary
+*.pdf  binary

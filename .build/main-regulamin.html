@@ -1,0 +1,142 @@
+<main id="main">
+
+<section class="hero hero--page">
+  <div class="hero__media">
+    <img src="assets/images/gallery-04.jpg" alt="" fetchpriority="high">
+  </div>
+  <div class="hero__scrim"></div>
+  <div class="hero__content">
+    <span class="hero__eyebrow" data-i18n="nav.terms">Regulamin</span>
+    <h1 class="hero__title" data-i18n="page.terms.title">Regulamin</h1>
+    <p class="hero__tagline" data-i18n="page.terms.lead"></p>
+  </div>
+</section>
+
+<section class="section section--milk">
+  <div class="container">
+    <div class="legal__layout">
+
+      <!-- Spis treści -->
+      <nav class="legal__toc" aria-label="Spis treści regulaminu" data-reveal>
+        <h2 class="eyebrow" data-i18n="terms.contents">Spis treści</h2>
+        <ol>
+          <li><a href="#regulamin-rezerwacji" data-i18n="terms.booking.title">Regulamin rezerwacji</a></li>
+          <li><a href="#odstapienia" data-i18n="terms.withdrawal.title">Polityka odstąpień</a></li>
+          <li><a href="#reklamacje" data-i18n="terms.complaints.title">Reklamacje</a></li>
+          <li><a href="#regulamin-obiektu" data-i18n="terms.house.title">Regulamin obiektu</a></li>
+          <li><a href="#doba-hotelowa" data-i18n="terms.day.title">Doba hotelowa</a></li>
+          <li><a href="#naleznosc" data-i18n="terms.payment.title">Należność za pobyt</a></li>
+          <li><a href="#cisza-nocna" data-i18n="terms.quiet.title">Cisza nocna</a></li>
+          <li><a href="#parking" data-i18n="terms.parking.title">Parking</a></li>
+          <li><a href="#pokoje" data-i18n="terms.rooms.title">Pokoje i sfera prywatna</a></li>
+          <li><a href="#dane-firmy" data-i18n="terms.company.title">Dane firmy</a></li>
+        </ol>
+      </nav>
+
+      <div>
+
+        <!-- Informacja o języku — widoczna tylko w wersjach obcojęzycznych -->
+        <p class="legal__notice" data-i18n="terms.notice" data-hide-if-empty></p>
+
+        <!-- ============ REGULAMIN REZERWACJI ============ -->
+        <section class="legal-section" id="regulamin-rezerwacji" data-reveal>
+          <h2 data-i18n="terms.booking.title">Regulamin rezerwacji</h2>
+
+          <h3 id="odstapienia" data-i18n="terms.withdrawal.title">Polityka odstąpień</h3>
+          <p data-i18n="terms.withdrawal.p1"></p>
+          <p data-i18n="terms.withdrawal.p2"></p>
+
+          <blockquote class="legal-quote">
+            <p class="legal-quote__title" data-i18n="terms.withdrawal.quoteTitle"></p>
+            <p data-i18n="terms.withdrawal.quoteIntro"></p>
+            <p data-i18n="terms.withdrawal.quoteItem"></p>
+          </blockquote>
+
+          <h3 id="reklamacje" data-i18n="terms.complaints.title">Reklamacje</h3>
+          <p data-i18n="terms.complaints.p1"></p>
+        </section>
+
+        <!-- ============ REGULAMIN OBIEKTU ============ -->
+        <section class="legal-section" id="regulamin-obiektu" data-reveal>
+          <h2 data-i18n="terms.house.title">Regulamin obiektu</h2>
+          <p data-i18n="terms.house.intro"></p>
+
+          <h3 id="doba-hotelowa" data-i18n="terms.day.title">Doba hotelowa</h3>
+          <p data-i18n="terms.day.p1"></p>
+          <p data-i18n="terms.day.p2"></p>
+
+          <h3 id="naleznosc" data-i18n="terms.payment.title">Należność za pobyt</h3>
+          <ol class="legal-list">
+            <li data-i18n="terms.payment.1"></li>
+            <li data-i18n="terms.payment.2"></li>
+            <li data-i18n="terms.payment.3"></li>
+            <li data-i18n="terms.payment.4"></li>
+            <li data-i18n="terms.payment.5"></li>
+            <li data-i18n="terms.payment.6"></li>
+          </ol>
+
+          <h3 id="cisza-nocna" data-i18n="terms.quiet.title">Cisza nocna</h3>
+          <p data-i18n="terms.quiet.p1"></p>
+          <p data-i18n="terms.quiet.p2"></p>
+
+          <h3 data-i18n="terms.requests.title">Prośby i uwagi</h3>
+          <p data-i18n="terms.requests.p1"></p>
+
+          <h3 id="parking" data-i18n="terms.parking.title">Parking</h3>
+          <p data-i18n="terms.parking.p1"></p>
+
+          <h3 id="pokoje" data-i18n="terms.rooms.title">Pokoje, czystość i sfera prywatna</h3>
+          <p data-i18n="terms.rooms.p1"></p>
+          <p data-i18n="terms.rooms.p2"></p>
+          <p data-i18n="terms.rooms.p3"></p>
+
+          <h3 data-i18n="terms.fire.title">Bezpieczeństwo przeciwpożarowe</h3>
+          <p data-i18n="terms.fire.p1"></p>
+
+          <h3 data-i18n="terms.left.title">Pozostawione rzeczy</h3>
+          <p data-i18n="terms.left.p1"></p>
+        </section>
+
+        <!-- ============ DANE FIRMY ============ -->
+        <div class="legal-company" id="dane-firmy" data-reveal>
+          <h2 class="eyebrow" data-i18n="terms.company.title">Dane firmy</h2>
+          <dl>
+            <dt data-i18n="nav.contact">Firma</dt>
+            <dd data-cfg="legalName">TatrApart Tatiana Głowacka</dd>
+
+            <dt data-i18n="page.contact.details">Adres</dt>
+            <dd>
+              <span data-cfg="street">ul. Topory 1B</span>,
+              <span data-cfg="city">34-500 Zakopane</span>
+            </dd>
+
+            <dt data-i18n="terms.company.nip">NIP</dt>
+            <dd data-cfg="nip">5262638491</dd>
+
+            <dt data-i18n="terms.company.regon">REGON</dt>
+            <dd data-cfg="regon">523743437</dd>
+
+            <dt data-i18n="common.email">E-mail</dt>
+            <dd><a data-cfg-href="email" href="#"><span data-cfg="email">contact@tatrapart.pl</span></a></dd>
+
+            <dt data-i18n="common.phone">Telefon</dt>
+            <dd><a data-cfg-href="phone" href="#"><span data-cfg="phone">+48 510 005 004</span></a></dd>
+          </dl>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ścieżka nawigacji">
+    <ol>
+      <li><a href="index.html" data-i18n="nav.home">Strona główna</a></li>
+      <li class="sep">/</li>
+      <li data-i18n="nav.terms">Regulamin</li>
+    </ol>
+  </nav>
+</div>
+
+</main>

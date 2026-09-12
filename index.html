@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TatrApart — Apartamenty w Zakopanem</title>
+<meta name="description" content="Dwa domki góralskie i sześć apartamentów w Zakopanem, przy ul. Topory 1B. Kominek, sauna, jacuzzi i widok na Tatry.">
+<meta name="theme-color" content="#FBF8F3">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TatrApart">
+<meta property="og:title" content="TatrApart — Apartamenty w Zakopanem">
+<meta property="og:description" content="Dwa domki góralskie i sześć apartamentów w Zakopanem, przy ul. Topory 1B. Kominek, sauna, jacuzzi i widok na Tatry.">
+<meta property="og:image" content="assets/images/gallery-01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/images/logo-tatrapart.png">
+<link rel="alternate" hreflang="pl" href="./index.html">
+<link rel="alternate" hreflang="en" href="./index.html?lang=en">
+<link rel="alternate" hreflang="uk" href="./index.html?lang=uk">
+<link rel="alternate" hreflang="ru" href="./index.html?lang=ru">
+<link rel="alternate" hreflang="x-default" href="./index.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body data-page="home" data-title-key="meta.title">
+
+<a class="skip-link" href="#main" data-i18n="nav.home">Strona główna</a>
+
+<!-- ====================================================== NAGŁÓWEK -->
+<header class="header">
+  <div class="header__inner">
+
+    <div class="header__left">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="overlay-nav">
+        <span class="nav-toggle__bars" aria-hidden="true">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </span>
+        <span class="nav-toggle__label" data-i18n="header.menu">Menu</span>
+      </button>
+
+      <nav class="nav-inline" aria-label="Główna nawigacja">
+        <a href="apartamenty.html" data-nav="apartments" data-i18n="nav.accommodation">Apartamenty</a>
+        <a href="index.html#wnetrza" data-i18n="nav.amenities">Wnętrza</a>
+        <a href="oferty.html" data-nav="offers" data-i18n="nav.offers">Oferty</a>
+        <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery">Galeria</a>
+        <a href="regulamin.html" data-nav="terms" data-i18n="nav.terms">Regulamin</a>
+      </nav>
+    </div>
+
+    <a class="brand" href="index.html" aria-label="TatrApart">
+      <img class="brand__img" data-logo src="assets/images/logo-tatrapart.png" alt="TatrApart">
+    </a>
+
+    <div class="header__right">
+      <div class="lang">
+        <button class="lang__btn" type="button" aria-expanded="false" aria-haspopup="true">
+          <span class="sr-only" data-i18n="header.language">Język</span>
+          <span data-lang-current>PL</span>
+          <svg class="lang__chev" width="10" height="7" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1.5 5 5.5l4-4" stroke="currentColor" stroke-width="1.1"/></svg>
+        </button>
+        <div class="lang__menu" role="menu"></div>
+      </div>
+
+      <a class="btn btn--sm btn--book" data-book=""><span data-i18n="common.book">Rezerwuj</span></a>
+    </div>
+
+  </div>
+</header>
+
+<!-- ====================================================== MENU PEŁNOEKRANOWE -->
+<div class="overlay-nav" id="overlay-nav" aria-hidden="true">
+  <div></div>
+
+  <div class="overlay-nav__body">
+    <nav aria-label="Menu główne">
+      <ul class="overlay-nav__list">
+        <li><a href="apartamenty.html" data-i18n="nav.accommodation">Apartamenty</a></li>
+        <li><a href="index.html#wnetrza" data-i18n="nav.amenities">Wnętrza</a></li>
+        <li><a href="oferty.html" data-i18n="nav.offers">Oferty</a></li>
+        <li><a href="galeria.html" data-i18n="nav.gallery">Galeria</a></li>
+        <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+        <li><a href="regulamin.html" data-i18n="nav.terms">Regulamin</a></li>
+      </ul>
+    </nav>
+
+    <aside class="overlay-nav__aside">
+      <span class="eyebrow" data-i18n="foot.contact">Kontakt</span>
+      <div class="overlay-contact">
+        <a data-cfg-href="phone" href="#"><span data-cfg="phone">+48 510 005 004</span></a>
+        <a data-cfg-href="email" href="#"><span data-cfg="email">contact@tatrapart.pl</span></a>
+        <address style="font-style:normal;margin-top:8px">
+          <span data-cfg="street">ul. Topory 1B</span><br>
+          <span data-cfg="city">34-500 Zakopane</span><br>
+          <span data-cfg="country">Polska</span>
+        </address>
+      </div>
+      <div style="margin-top:34px">
+        <a class="btn btn--light" data-book=""><span data-i18n="common.bookStay">Rezerwuj pobyt</span></a>
+      </div>
+    </aside>
+  </div>
+
+  <div class="overlay-nav__foot">
+    <span>&copy; <span data-cfg="year">2026</span> <span data-cfg="name">TatrApart</span></span>
+    <span class="socials">
+      <a data-cfg-href="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+      </span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ====================================================== HERO -->
+<section class="hero">
+  <div class="hero__media">
+    <img src="assets/images/gallery-01.jpg" alt="" fetchpriority="high">
+  </div>
+  <div class="hero__scrim"></div>
+
+  <div class="hero__content">
+    <span class="hero__eyebrow" data-i18n="hero.eyebrow">Zakopane · Polskie Tatry</span>
+    <h1 class="hero__title" data-i18n="hero.title">TatrApart</h1>
+    <p class="hero__tagline" data-i18n="hero.tagline">Dwa domki góralskie, sześć apartamentów, widok na Tatry.</p>
+    <div class="hero__actions">
+      <a class="btn btn--light" data-book=""><span data-i18n="common.checkAvail">Sprawdź dostępność</span></a>
+      <a class="btn btn--outline-light" href="#" data-lightbox="0"><span data-i18n="common.viewImages">Zobacz zdjęcia</span></a>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span class="line"></span>
+    <span data-i18n="common.scroll">Przewiń</span>
+  </div>
+</section>
+
+<!-- ====================================================== WPROWADZENIE -->
+<section class="section section--milk">
+  <div class="container">
+    <div class="intro__grid">
+      <div data-reveal>
+        <h2 class="h2 measure-sm" data-i18n="intro.title">Górski dom</h2>
+      </div>
+      <div data-reveal data-delay="120">
+        <p class="lead measure" data-i18n="intro.p1"></p>
+        <p class="lead measure" style="margin-top:1.5em" data-i18n="intro.p2"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== LICZBY -->
+<section class="section section--tight section--milk section--flush-top">
+  <div class="container">
+    <div class="facts" data-mount="facts" data-reveal></div>
+  </div>
+</section>
+
+<!-- ====================================================== APARTAMENTY -->
+<section class="section section--milk2" id="apartamenty">
+  <div class="container">
+
+    <div class="feature__head">
+      <div data-reveal>
+        <span class="eyebrow" data-i18n="acc.eyebrow">Zakwaterowanie</span>
+        <h2 class="h2" data-i18n="acc.title">Apartamenty</h2>
+      </div>
+      <div data-reveal data-delay="120">
+        <p class="lead measure" data-i18n="acc.text"></p>
+        <a class="link-arrow" href="apartamenty.html" style="margin-top:26px">
+          <span data-i18n="acc.cta">Zobacz wszystkie apartamenty</span>
+          <svg class="arrow" width="22" height="8" viewBox="0 0 22 8" fill="none" aria-hidden="true"><path d="M0 4h20M17 1l3.2 3L17 7" stroke="currentColor" stroke-width="1"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <div class="carousel__viewport" role="group" aria-label="Apartamenty">
+        <div class="carousel__track" data-mount="apartments-carousel"></div>
+      </div>
+      <div class="carousel__nav">
+        <button class="c-btn" type="button" data-carousel-prev data-i18n-attr="aria-label:common.prev">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 2 4 8l6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </button>
+        <button class="c-btn" type="button" data-carousel-next data-i18n-attr="aria-label:common.next">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 2l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </button>
+        <span class="carousel__progress"><span></span></span>
+        <span class="carousel__count"></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================================================== ZDJĘCIE PEŁNOEKRANOWE -->
+<section class="full-bleed">
+  <img src="assets/images/gallery-02.jpg" alt="" loading="lazy" data-parallax="0.14">
+</section>
+
+<!-- ====================================================== WNĘTRZA -->
+<section class="section section--milk" id="wnetrza">
+  <div class="container">
+
+    <div class="feature__head">
+      <div data-reveal>
+        <span class="eyebrow" data-i18n="amen.eyebrow">Wnętrza</span>
+        <h2 class="h2" data-i18n="amen.title">Drewno, kamień i ciepłe światło</h2>
+      </div>
+      <div data-reveal data-delay="120">
+        <p class="lead measure" data-i18n="amen.text"></p>
+        <a class="link-arrow" href="galeria.html" style="margin-top:26px">
+          <span data-i18n="amen.cta">Zobacz galerię</span>
+          <svg class="arrow" width="22" height="8" viewBox="0 0 22 8" fill="none" aria-hidden="true"><path d="M0 4h20M17 1l3.2 3L17 7" stroke="currentColor" stroke-width="1"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <div class="carousel__viewport" role="group" aria-label="Wnętrza">
+        <div class="carousel__track">
+          <div class="carousel__slide carousel__slide--wide">
+            <a class="media-card" href="#" data-lightbox="3" data-reveal="mask">
+              <span class="media-card__frame media-card__frame--wide"><img src="assets/images/gallery-04.jpg" alt="" loading="lazy"></span>
+            </a>
+          </div>
+          <div class="carousel__slide carousel__slide--wide">
+            <a class="media-card" href="#" data-lightbox="4" data-reveal="mask" data-delay="120">
+              <span class="media-card__frame media-card__frame--wide"><img src="assets/images/gallery-05.jpg" alt="" loading="lazy"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel__nav">
+        <button class="c-btn" type="button" data-carousel-prev data-i18n-attr="aria-label:common.prev">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 2 4 8l6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </button>
+        <button class="c-btn" type="button" data-carousel-next data-i18n-attr="aria-label:common.next">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 2l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </button>
+        <span class="carousel__progress"><span></span></span>
+        <span class="carousel__count"></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================================================== USŁUGI (ZAKŁADKI) -->
+<section class="section section--cream">
+  <div class="container">
+    <div style="max-width:72ch;margin-bottom:clamp(34px,4vw,64px)" data-reveal>
+      <span class="eyebrow" data-i18n="serv.eyebrow">Usługi</span>
+      <p class="h3" style="margin-bottom:18px" data-i18n="serv.lead"></p>
+      <h2 class="h2" data-i18n="serv.title">Wszystko, czego potrzeba</h2>
+    </div>
+
+    <div data-tabs data-reveal data-delay="100">
+      <div class="tabs__head" role="tablist">
+        <button class="tab-btn" type="button" role="tab" aria-selected="true"  id="tab-inc" aria-controls="panel-inc" data-i18n="serv.tab1">W cenie pobytu</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false" id="tab-req" aria-controls="panel-req" data-i18n="serv.tab2">Na życzenie</button>
+      </div>
+
+      <div class="tab-panel is-active" role="tabpanel" id="panel-inc" aria-labelledby="tab-inc">
+        <ul class="check-list" data-services="included"></ul>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-req" aria-labelledby="tab-req">
+        <ul class="check-list" data-services="request"></ul>
+        <p class="body-text measure" style="margin-top:30px" data-i18n="serv.reqNote"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== OKOLICA -->
+<section class="section section--dark">
+  <div class="container">
+
+    <div class="feature__head">
+      <div data-reveal>
+        <span class="eyebrow" data-i18n="near.eyebrow">Okolica</span>
+        <h2 class="h2" data-i18n="near.title">Zakopane i okolica</h2>
+      </div>
+      <div data-reveal data-delay="120">
+        <p class="lead measure" data-i18n="near.text"></p>
+      </div>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <div class="carousel__viewport" role="group" aria-label="Zakopane i okolica">
+        <div class="carousel__track" data-mount="nearby"></div>
+      </div>
+      <div class="carousel__nav">
+        <button class="c-btn" type="button" data-carousel-prev data-i18n-attr="aria-label:common.prev">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 2 4 8l6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </button>
+        <button class="c-btn" type="button" data-carousel-next data-i18n-attr="aria-label:common.next">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 2l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </button>
+        <span class="carousel__progress"><span></span></span>
+        <span class="carousel__count"></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================================================== LOKALIZACJA -->
+<section class="section section--milk" id="lokalizacja">
+  <div class="container">
+    <div class="location__grid">
+
+      <div data-reveal>
+        <span class="eyebrow" data-i18n="loc.eyebrow">Lokalizacja</span>
+        <h2 class="h2" style="margin-bottom:22px" data-i18n="loc.title">Blisko gór</h2>
+        <p class="lead measure" style="margin-bottom:34px" data-i18n="loc.text"></p>
+
+        <h3 class="eyebrow" style="margin-bottom:10px" data-i18n="loc.distances">Odległości</h3>
+        <ul class="distance-list" data-mount="distances"></ul>
+
+        <a class="link-arrow" data-cfg-href="maps" href="#" target="_blank" rel="noopener" style="margin-top:30px">
+          <span data-i18n="loc.mapCta">Otwórz w Mapach Google</span>
+          <svg class="arrow" width="22" height="8" viewBox="0 0 22 8" fill="none" aria-hidden="true"><path d="M0 4h20M17 1l3.2 3L17 7" stroke="currentColor" stroke-width="1"/></svg>
+        </a>
+      </div>
+
+      <div class="map-frame" data-map-embed data-reveal="mask" data-delay="120"></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== O ZAKOPANEM -->
+<section class="section section--milk2">
+  <div class="container container--narrow" style="text-align:center">
+    <span class="eyebrow" data-reveal data-i18n="dest.eyebrow">Destynacja</span>
+    <h2 class="h2" style="margin-bottom:28px" data-reveal data-delay="80" data-i18n="dest.title">O Zakopanem</h2>
+    <p class="lead" data-reveal data-delay="140" data-i18n="dest.p1"></p>
+    <p class="lead" style="margin-top:1.4em" data-reveal data-delay="200" data-i18n="dest.p2"></p>
+  </div>
+</section>
+
+<!-- ====================================================== OFERTY -->
+<section class="offer">
+  <div class="offer__media">
+    <img src="assets/images/gallery-10.jpg" alt="" loading="lazy">
+  </div>
+  <div class="container">
+    <div class="offer__content" data-reveal>
+      <span class="eyebrow" data-i18n="off.eyebrow">Oferty</span>
+      <h3 class="h3" data-i18n="off.title">Oferty specjalne</h3>
+      <p data-i18n="off.text"></p>
+      <a class="btn btn--light" href="oferty.html"><span data-i18n="off.cta">Przejdź do ofert</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== OPINIE -->
+<section class="section section--milk" data-section="reviews">
+  <div class="container">
+    <div style="margin-bottom:clamp(30px,4vw,60px)" data-reveal>
+      <span class="eyebrow" data-i18n="rev.eyebrow">Opinie</span>
+      <h2 class="h2" data-i18n="rev.title">Głosy naszych Gości</h2>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <div class="carousel__viewport" role="group" aria-label="Opinie Gości">
+        <div class="carousel__track" data-mount="reviews"></div>
+      </div>
+      <div class="carousel__nav">
+        <button class="c-btn" type="button" data-carousel-prev data-i18n-attr="aria-label:common.prev">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 2 4 8l6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </button>
+        <button class="c-btn" type="button" data-carousel-next data-i18n-attr="aria-label:common.next">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 2l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
+        </button>
+        <span class="carousel__progress"><span></span></span>
+        <span class="carousel__count"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== OKRUSZKI -->
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Ścieżka nawigacji">
+    <ol>
+      <li><a href="index.html" data-i18n="nav.home">Strona główna</a></li>
+      <li class="sep">/</li>
+      <li data-cfg="name">TatrApart</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- ====================================================== NEWSLETTER -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="newsletter__grid">
+
+      <div data-reveal>
+        <h2 class="h3" style="margin-bottom:20px" data-i18n="nl.title">Pozostańmy w kontakcie</h2>
+        <p class="body-text measure" data-i18n="nl.text"></p>
+      </div>
+
+      <form data-validate data-success-key="nl.success" data-reveal data-delay="120">
+        <div class="form-row">
+          <div class="field">
+            <label for="nl-first" data-i18n="nl.first">Imię</label>
+            <input id="nl-first" name="first" type="text" required autocomplete="given-name">
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="nl-last" data-i18n="nl.last">Nazwisko</label>
+            <input id="nl-last" name="last" type="text" required autocomplete="family-name">
+            <span class="field__error"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="nl-email" data-i18n="nl.email">Adres e-mail</label>
+          <input id="nl-email" name="email" type="email" required autocomplete="email">
+          <span class="field__error"></span>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" required>
+          <span data-i18n="nl.consent"></span>
+        </label>
+
+        <button class="btn" type="submit"><span data-i18n="nl.submit">Zapisz się</span></button>
+        <p class="form-success" style="margin-top:24px" role="status"></p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ====================================================== STOPKA -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div class="footer__brand">
+        <img class="brand__img" data-logo src="assets/images/logo-tatrapart.png" alt="TatrApart">
+        <p style="font-size:.9rem" data-i18n="foot.tagline">Apartamenty w Zakopanem</p>
+      </div>
+
+      <div>
+        <h5 data-cfg="name">TatrApart</h5>
+        <address>
+          <span data-cfg="street">ul. Topory 1B</span><br>
+          <span data-cfg="city">34-500 Zakopane</span><br>
+          <span data-cfg="country">Polska</span>
+        </address>
+      </div>
+
+      <div>
+        <h5 data-i18n="foot.explore">Serwis</h5>
+        <ul>
+          <li><a href="apartamenty.html" data-i18n="nav.accommodation">Apartamenty</a></li>
+          <li><a href="galeria.html" data-i18n="nav.gallery">Galeria</a></li>
+          <li><a href="oferty.html" data-i18n="nav.offers">Oferty</a></li>
+          <li><a href="index.html#lokalizacja" data-i18n="nav.location">Lokalizacja</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 data-i18n="foot.info">Informacje</h5>
+        <ul>
+          <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+          <li><a href="regulamin.html" data-i18n="foot.terms">Regulamin</a></li>
+          <li><a data-cfg-href="privacy" href="#" data-i18n="foot.privacy">Polityka prywatności</a></li>
+          </ul>
+      </div>
+
+      <div>
+        <h5 data-i18n="foot.contact">Kontakt</h5>
+        <ul>
+          <li><a data-cfg-href="phone" href="#"><span data-cfg="phone">+48 510 005 004</span></a></li>
+          <li><a data-cfg-href="reservations" href="#"><span data-cfg="reservations">contact@tatrapart.pl</span></a></li>
+        </ul>
+        <h5 style="margin-top:28px" data-i18n="foot.follow">Obserwuj nas</h5>
+        <ul>
+          <li><a data-cfg-href="instagram" href="#" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a data-cfg-href="facebook" href="#" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="footer__legal">
+      <span>&copy; <span data-cfg="year">2026</span> <span data-cfg="name">TatrApart</span>. <span data-i18n="foot.rights">Wszelkie prawa zastrzeżone.</span></span>
+      <ul>
+        <li><a data-cfg-href="privacy" href="#" data-i18n="foot.privacy">Polityka prywatności</a></li>
+        <li><a href="regulamin.html" data-i18n="foot.terms">Regulamin</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ====================================================== PASEK MOBILNY -->
+<div class="book-bar">
+  <span class="book-bar__label">
+    <b data-cfg="name">TatrApart</b>
+    <span data-i18n="foot.tagline">Apartamenty w Zakopanem</span>
+  </span>
+  <a class="btn btn--light btn--sm" data-book=""><span data-i18n="common.book">Rezerwuj</span></a>
+</div>
+
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

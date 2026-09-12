@@ -1,0 +1,13 @@
+# Pliki podgladu tworzone tymczasowo przy sprawdzaniu wygladu strony
+__*.html
+__*.css
+
+# Smieci systemowe Windows i macOS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Narzedzia
+node_modules/
+.vercel/
+*.log
