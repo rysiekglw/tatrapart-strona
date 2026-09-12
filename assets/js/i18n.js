@@ -70,7 +70,7 @@ window.TATRAPART_I18N = {
 
     'acc.eyebrow': 'Zakwaterowanie',
     'acc.title':   'Apartamenty',
-    'acc.text':    'Trzy typy apartamentów, każdy w dwóch wariantach: Brown w Domku Forest i White w Domku Snow. Od sześćdziesięciu do dziewięćdziesięciu metrów, od czterech do ośmiu osób. Wszystkie z kominkiem, w pełni wyposażoną kuchnią i widokiem na góry.',
+    'acc.text':    'Trzy typy apartamentów, każdy w dwóch wariantach: Brown w Domku Forest i White w Domku Snow. Od sześćdziesięciu do dziewięćdziesięciu metrów, od czterech do ośmiu osób. Wszystkie z w pełni wyposażoną kuchnią i widokiem na góry, a te na parterze i I piętrze także z kominkiem.',
     'acc.cta':     'Zobacz wszystkie apartamenty',
 
     'floor.first':  'I piętro',
@@ -100,7 +100,7 @@ window.TATRAPART_I18N = {
     'apt.suitePoddasze.name':  'Apartament 6 osobowy',
     'apt.suitePoddasze.sub':   'typu Suite, poddasze',
     'apt.suitePoddasze.desc':  'Ten apartament składa się z trzech sypialni, spośród których jedna posiada duże łoże dwuosobowe, a dwie kolejne wyposażono w dwa łóżka pojedyncze. Przestronny salon będzie miejscem idealnym do spędzania razem wolnego czasu. Odnajdzie się w nim duża rodzina lub paczka znajomych. Łazienka posiada komfortową wannę, a kuchnia nowoczesne sprzęty domowe bardzo dobrej jakości.',
-    'apt.suitePoddasze.desc2': 'Suite to apartament z widokiem. Góry rozpościerają się z okien, a także z balkonu, na którym polecamy napić się kawy w towarzystwie wyłaniającego się zza wierzchołków szczytów słońca. Przyjemne chwile można spędzić na wygodnej sofie. Wystarczy rozpalić w kominku, usiąść z bliskimi pod kocem i rozkoszować się wspólnym czasem w tym pięknie urządzonym miejscu.',
+    'apt.suitePoddasze.desc2': 'Suite to apartament z widokiem. Góry rozpościerają się z okien, a także z balkonu, na którym polecamy napić się kawy w towarzystwie wyłaniającego się zza wierzchołków szczytów słońca. Przyjemne chwile można spędzić na wygodnej sofie — wystarczy usiąść z bliskimi pod kocem i rozkoszować się wspólnym czasem w tym pięknie urządzonym miejscu.',
     'apt.suitePoddasze.brown': 'Ulokowany na poddaszu Domku Forest gwarantuje ciepło nie tylko ze względu na swoje umiejscowienie, lecz także ze względu na użyte w wystroju barwy i dodatki. Jest tutaj nieco ciemniej, a zatem i przytulniej. Naturalne drewno zostało wzbogacone o dodatki w tym samym kolorze, jednak znacznie ciemniejszym odcieniu. Piękno i niezłomność lasu biją z każdego miejsca tego apartamentu.',
     'apt.suitePoddasze.white': 'Wersja dla osób lubiących jasne barwy i kontrast, jaki daje połączenie drewna bielonego z naturalnym, a także jasnymi elementami dekoracji. Ten apartament znajduje się na poddaszu Domku Snow. Poddasza zazwyczaj kojarzą się z mrokiem i małą ilością światła — apartament White dzięki nietuzinkowym rozwiązaniom wnętrzarskim zdecydowanie temu zaprzecza.',
 
@@ -349,7 +349,7 @@ window.TATRAPART_I18N = {
 
     'acc.eyebrow': 'Accommodation',
     'acc.title':   'Apartments',
-    'acc.text':    'Three types of apartment, each in two versions: Brown in the Forest House and White in the Snow House. From sixty to ninety square metres, for four to eight guests. All with a fireplace, a fully equipped kitchen and a view of the mountains.',
+    'acc.text':    'Three types of apartment, each in two versions: Brown in the Forest House and White in the Snow House. From sixty to ninety square metres, for four to eight guests. All with a fully equipped kitchen and a view of the mountains; those on the ground floor and the first floor also have a fireplace.',
     'acc.cta':     'See all apartments',
 
     'floor.first':  'First floor',
@@ -379,7 +379,7 @@ window.TATRAPART_I18N = {
     'apt.suitePoddasze.name':  'Apartment for 6 guests',
     'apt.suitePoddasze.sub':   'Suite, attic',
     'apt.suitePoddasze.desc':  'This apartment consists of three bedrooms, one of which has a large double bed while the other two are fitted with two single beds each. The spacious living room is an ideal place to spend time together. A large family or a group of friends will settle in easily. The bathroom has a comfortable bathtub, and the kitchen modern appliances of very good quality.',
-    'apt.suitePoddasze.desc2': 'The Suite is an apartment with a view. The mountains open out from the windows and from the balcony, where we recommend a coffee in the company of the sun rising from behind the summits. Pleasant hours can be spent on the comfortable sofa. Light the fireplace, sit down with your closest under a blanket, and enjoy the shared time in this beautifully arranged place.',
+    'apt.suitePoddasze.desc2': 'The Suite is an apartment with a view. The mountains open out from the windows and from the balcony, where we recommend a coffee in the company of the sun rising from behind the summits. Pleasant hours can be spent on the comfortable sofa — sit down with your closest under a blanket and enjoy the shared time in this beautifully arranged place.',
     'apt.suitePoddasze.brown': 'Set in the attic of the Forest House, it guarantees warmth not only because of where it sits but also because of the colours and additions used in the decor. It is a little darker here, and therefore cosier. The natural wood has been enriched with additions in the same colour but a considerably deeper shade. The beauty and resilience of the forest come through from every part of this apartment.',
     'apt.suitePoddasze.white': 'A version for those who like bright tones and the contrast that comes from combining whitewashed wood with natural wood and pale decorative elements. This apartment is in the attic of the Snow House. Attics are usually associated with gloom and little light; thanks to some inventive interior solutions, the White apartment firmly contradicts that.',
 
@@ -580,7 +580,7 @@ window.TATRAPART_I18N = {
 
     'acc.eyebrow': 'Розміщення',
     'acc.title':   'Апартаменти',
-    'acc.text':    'Три типи апартаментів, кожен у двох варіантах: Brown у будинку Forest і White у будинку Snow. Від шістдесяти до дев’яноста метрів, від чотирьох до восьми осіб. Усі з каміном, повністю обладнаною кухнею та видом на гори.',
+    'acc.text':    'Три типи апартаментів, кожен у двох варіантах: Brown у будинку Forest і White у будинку Snow. Від шістдесяти до дев’яноста метрів, від чотирьох до восьми осіб. Усі з повністю обладнаною кухнею та видом на гори, а ті, що на партері та першому поверсі, — також із каміном.',
     'acc.cta':     'Переглянути всі апартаменти',
 
     'floor.first':  'Перший поверх',
@@ -610,7 +610,7 @@ window.TATRAPART_I18N = {
     'apt.suitePoddasze.name':  'Апартамент на 6 осіб',
     'apt.suitePoddasze.sub':   'типу Suite, мансарда',
     'apt.suitePoddasze.desc':  'Цей апартамент складається з трьох спалень, одна з яких має велике двоспальне ліжко, а дві інші обладнані двома односпальними ліжками кожна. Простора вітальня буде ідеальним місцем для спільного проведення вільного часу. Тут добре почуватиметься велика родина або компанія друзів. Ванна кімната має зручну ванну, а кухня — сучасну побутову техніку дуже доброї якості.',
-    'apt.suitePoddasze.desc2': 'Suite — це апартамент із видом. Гори відкриваються з вікон, а також із балкона, на якому радимо випити кави в товаристві сонця, що виринає з-за вершин. Приємні хвилини можна провести на зручному дивані. Достатньо розпалити камін, сісти з близькими під ковдрою та насолоджуватися спільним часом у цьому гарно облаштованому місці.',
+    'apt.suitePoddasze.desc2': 'Suite — це апартамент із видом. Гори відкриваються з вікон, а також із балкона, на якому радимо випити кави в товаристві сонця, що виринає з-за вершин. Приємні хвилини можна провести на зручному дивані — достатньо сісти з близькими під ковдрою та насолоджуватися спільним часом у цьому гарно облаштованому місці.',
     'apt.suitePoddasze.brown': 'Розташований на мансарді будинку Forest, він гарантує тепло не лише через своє розміщення, а й завдяки використаним у декорі барвам і доповненням. Тут трохи темніше, а отже й затишніше. Природне дерево збагачене доповненнями того ж кольору, але значно темнішого відтінку. Краса й незламність лісу відчуваються в кожному куточку цього апартаменту.',
     'apt.suitePoddasze.white': 'Версія для тих, хто любить світлі барви та контраст, який дає поєднання біленого дерева з природним, а також світлі елементи декору. Цей апартамент розташований на мансарді будинку Snow. Мансарди зазвичай асоціюються з напівтемрявою та малою кількістю світла — апартамент White завдяки неординарним інтер’єрним рішенням рішуче це спростовує.',
 
@@ -811,7 +811,7 @@ window.TATRAPART_I18N = {
 
     'acc.eyebrow': 'Размещение',
     'acc.title':   'Апартаменты',
-    'acc.text':    'Три типа апартаментов, каждый в двух вариантах: Brown в доме Forest и White в доме Snow. От шестидесяти до девяноста метров, от четырёх до восьми человек. Все с камином, полностью оснащённой кухней и видом на горы.',
+    'acc.text':    'Три типа апартаментов, каждый в двух вариантах: Brown в доме Forest и White в доме Snow. От шестидесяти до девяноста метров, от четырёх до восьми человек. Все с полностью оснащённой кухней и видом на горы, а те, что на первом уровне и первом этаже, — также с камином.',
     'acc.cta':     'Смотреть все апартаменты',
 
     'floor.first':  'Первый этаж',
@@ -841,7 +841,7 @@ window.TATRAPART_I18N = {
     'apt.suitePoddasze.name':  'Апартамент на 6 человек',
     'apt.suitePoddasze.sub':   'типа Suite, мансарда',
     'apt.suitePoddasze.desc':  'Этот апартамент состоит из трёх спален, одна из которых имеет большую двуспальную кровать, а две другие оборудованы двумя односпальными кроватями каждая. Просторная гостиная будет идеальным местом для совместного проведения свободного времени. Здесь хорошо разместится большая семья или компания друзей. Ванная комната имеет удобную ванну, а кухня — современную бытовую технику очень хорошего качества.',
-    'apt.suitePoddasze.desc2': 'Suite — это апартамент с видом. Горы открываются из окон, а также с балкона, на котором мы рекомендуем выпить кофе в компании солнца, выходящего из-за вершин. Приятные минуты можно провести на удобном диване. Достаточно растопить камин, сесть с близкими под пледом и наслаждаться общим временем в этом прекрасно обставленном месте.',
+    'apt.suitePoddasze.desc2': 'Suite — это апартамент с видом. Горы открываются из окон, а также с балкона, на котором мы рекомендуем выпить кофе в компании солнца, выходящего из-за вершин. Приятные минуты можно провести на удобном диване — достаточно сесть с близкими под пледом и наслаждаться общим временем в этом прекрасно обставленном месте.',
     'apt.suitePoddasze.brown': 'Расположенный на мансарде дома Forest, он гарантирует тепло не только из-за своего размещения, но и благодаря использованным в декоре цветам и дополнениям. Здесь немного темнее, а значит и уютнее. Натуральное дерево обогащено дополнениями того же цвета, но значительно более тёмного оттенка. Красота и стойкость леса чувствуются в каждом уголке этого апартамента.',
     'apt.suitePoddasze.white': 'Версия для тех, кто любит светлые тона и контраст, который даёт сочетание белёного дерева с натуральным, а также светлые элементы декора. Этот апартамент находится на мансарде дома Snow. Мансарды обычно ассоциируются с полумраком и малым количеством света — апартамент White благодаря незаурядным интерьерным решениям решительно это опровергает.',
 

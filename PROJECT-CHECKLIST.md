@@ -181,7 +181,7 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
 ## ETAP 15 — Do rozstrzygnięcia po etapie 14
 - [!] Zdjęcia mają 616 × 411 pikseli — tylko taki rozmiar udostępnia obecna
       strona. Oryginały z aparatu byłyby wyraźniejsze na dużych ekranach
-- [!] Opis w sekcji „Apartamenty" na stronie głównej wciąż mówi „Wszystkie
-      z kominkiem" — sprzeczne z poprawką z etapu 12 (kominek tylko na
-      parterze i I piętrze). To samo dotyczy listy wyposażenia apartamentu
-      na poddaszu
+- [x] Kominek na poddaszu: potwierdzone, że go nie ma. Usunięty z wyposażenia
+      apartamentu Suite i z jego opisu, a zdanie „Wszystkie z kominkiem"
+      w sekcji „Apartamenty" zamienione na „te na parterze i I piętrze także
+      z kominkiem" — w czterech językach

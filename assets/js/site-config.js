@@ -151,7 +151,8 @@ window.TATRAPART_CONFIG = {
       floorKey: 'floor.attic',
       typeKey: 'type.suite',
       variants: ['brown', 'white'],
-      features: ['terrace', 'mountainView', 'sauna', 'jacuzzi', 'balcony', 'fireplace',
+      // Na poddaszu nie ma kominka — jest tylko na parterze i I pietrze.
+      features: ['terrace', 'mountainView', 'sauna', 'jacuzzi', 'balcony',
                  'bath', 'shower', 'bidet', 'kitchen', 'fridge', 'dishwasher',
                  'kettle', 'microwave', 'tv', 'wifi', 'heating', 'parking',
                  'towels', 'hairdryer', 'gardenView', 'tableware']
