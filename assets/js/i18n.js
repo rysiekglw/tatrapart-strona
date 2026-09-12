@@ -109,6 +109,7 @@ window.TATRAPART_I18N = {
     'spec.bathrooms': 'Łazienki',
     'spec.area':      'Powierzchnia',
 
+    'feat.title':        'Wyposażenie',
     'feat.terrace':      'Taras',
     'feat.mountainView': 'Widok na góry',
     'feat.gardenView':   'Widok na ogród',
@@ -387,6 +388,7 @@ window.TATRAPART_I18N = {
     'spec.bathrooms': 'Bathrooms',
     'spec.area':      'Area',
 
+    'feat.title':        'Amenities',
     'feat.terrace':      'Terrace',
     'feat.mountainView': 'Mountain view',
     'feat.gardenView':   'Garden view',
@@ -617,6 +619,7 @@ window.TATRAPART_I18N = {
     'spec.bathrooms': 'Ванні кімнати',
     'spec.area':      'Площа',
 
+    'feat.title':        'Оснащення',
     'feat.terrace':      'Тераса',
     'feat.mountainView': 'Вид на гори',
     'feat.gardenView':   'Вид на сад',
@@ -847,6 +850,7 @@ window.TATRAPART_I18N = {
     'spec.bathrooms': 'Ванные комнаты',
     'spec.area':      'Площадь',
 
+    'feat.title':        'Оснащение',
     'feat.terrace':      'Терраса',
     'feat.mountainView': 'Вид на горы',
     'feat.gardenView':   'Вид на сад',

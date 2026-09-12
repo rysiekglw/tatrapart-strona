@@ -1181,11 +1181,80 @@ img.is-missing { opacity: 0; }
 /* Jednostka metrazu ma pozostac mala litera — „90 m²", nie „90 M²". */
 .apt-specs .nocaps { text-transform: none; letter-spacing: .06em; }
 
-.tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
-.tag {
-  font-size: .64rem; letter-spacing: .16em; text-transform: uppercase;
-  padding: 8px 14px; border: 1px solid var(--line); color: var(--text-soft);
+/* Wyposazenie z ikonami.
+   Ikony to rysunki kreskowe na przezroczystym tle. Uzywamy ich jako maski,
+   a nie jako obrazka — dzieki temu przyjmuja kolor debowy z palety i pasuja
+   do reszty strony. Przegladarki bez obslugi maski pokaza sam napis. */
+.amenities__head { margin: 34px 0 18px; }
+
+.amenities {
+  display: grid; grid-template-columns: 1fr; gap: 2px;
+  margin-bottom: 34px;
 }
+@media (min-width: 560px) { .amenities { grid-template-columns: 1fr 1fr; column-gap: clamp(20px, 3vw, 44px); } }
+
+.amenity {
+  display: flex; align-items: center; gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: .88rem; color: var(--text-soft); line-height: 1.5;
+}
+
+/* Sam rysunek podaje main.js w atrybucie style — adres liczy sie wtedy
+   wzgledem strony, a nie wzgledem tego arkusza. */
+.amenity__ico {
+  flex: 0 0 auto; width: 22px; height: 22px;
+  background-color: var(--oak-dark);
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+  -webkit-mask-size: contain; mask-size: contain;
+}
+.amenity__ico--plain {
+  background: none;
+  display: grid; place-items: center;
+  color: var(--oak-dark);
+}
+/* Przegladarka bez obslugi maski pokazalaby pelny kwadrat — lepiej nic. */
+@supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+  .amenity__ico { display: none; }
+}
+
+/* Pasek zdjec przy wariancie Brown / White */
+.variant__gallery {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
+  margin: 18px 0 20px;
+}
+.variant__shot {
+  position: relative; display: block; overflow: hidden;
+  aspect-ratio: 1 / 1; background: var(--cream);
+}
+.variant__shot img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1s var(--ease-soft);
+}
+.variant__shot:hover img { transform: scale(1.07); }
+.variant__more {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  background: rgba(28, 24, 21, .62);
+  color: var(--milk);
+  font-size: .78rem; letter-spacing: .10em;
+  transition: background-color .4s var(--ease);
+}
+.variant__shot:hover .variant__more { background: rgba(28, 24, 21, .48); }
+
+/* Duze zdjecie apartamentu otwiera powiekszenie z calym zestawem */
+.apt-row__link { display: block; position: relative; }
+.apt-row__zoom {
+  position: absolute; right: 16px; bottom: 16px;
+  display: grid; place-items: center;
+  width: 46px; height: 46px;
+  background: rgba(28, 24, 21, .58); color: var(--milk);
+  opacity: 0; transform: scale(.9);
+  transition: opacity .4s var(--ease), transform .4s var(--ease);
+}
+.apt-row__link:hover .apt-row__zoom,
+.apt-row__link:focus-visible .apt-row__zoom { opacity: 1; transform: scale(1); }
 
 /* --------------------------------------------------------- 22b. REGULAMIN */
 .legal__layout {

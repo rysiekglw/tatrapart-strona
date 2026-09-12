@@ -98,7 +98,7 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
 
 ## ETAP 9 — Kolejne kroki
 - [ ] Podpięcie Hotres — jedna sekcja w `site-config.js`
-- [ ] Zdjęcia apartamentów (obecnie puste ramki)
+- [x] Zdjęcia apartamentów — przeniesione z tatrapart.pl, etap 14
 - [ ] Zdjęcia miejsc w okolicy
 - [ ] Potwierdzenie listy usług w cenie i na życzenie
 - [ ] Prawdziwe opinie Gości i włączenie sekcji
@@ -159,3 +159,29 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
       i I piętrze, trzeba poprawić opis i listę `features` w `site-config.js`
 - [!] Rosyjskie nazwy kondygnacji („Первый уровень" dla parteru, „Первый этаж"
       dla I piętra) są mylące — do przejrzenia razem z całym tłumaczeniem RU
+
+## ETAP 14 — Zakładka Apartamenty
+- [x] Kolejność apartamentów: 4–6 osobowy, potem 6–8 osobowy, na końcu
+      6 osobowy typu Suite
+- [x] 109 zdjęć przeniesionych z tatrapart.pl do `assets/images/apartamenty/`,
+      każde w tym samym apartamencie i wariancie co na starej stronie
+      (Brown i White rozdzielone, sprawdzone porównaniem zdjęć)
+- [x] Przy każdym wariancie pasek czterech kafelków; ostatni pokazuje, ile
+      zdjęć czeka dalej. Kliknięcie otwiera powiększenie z całym zestawem
+      tego wariantu
+- [x] Duże zdjęcie apartamentu otwiera powiększenie ze wszystkimi zdjęciami
+      obu wariantów
+- [x] Nagłówek „Wyposażenie" nad listą, w czterech językach
+- [x] Ikony przy wyposażeniu — 20 przeniesionych z tatrapart.pl, dwie
+      dorysowane (bidet, mikrofalówka). Malowane kolorem dębowym maską CSS,
+      więc pasują do palety
+- [x] Sprawdzone w przeglądarce: kolejność, zdjęcia, ikony, powiększenie
+      i wszystkie cztery języki
+
+## ETAP 15 — Do rozstrzygnięcia po etapie 14
+- [!] Zdjęcia mają 616 × 411 pikseli — tylko taki rozmiar udostępnia obecna
+      strona. Oryginały z aparatu byłyby wyraźniejsze na dużych ekranach
+- [!] Opis w sekcji „Apartamenty" na stronie głównej wciąż mówi „Wszystkie
+      z kominkiem" — sprzeczne z poprawką z etapu 12 (kominek tylko na
+      parterze i I piętrze). To samo dotyczy listy wyposażenia apartamentu
+      na poddaszu

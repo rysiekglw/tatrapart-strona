@@ -173,6 +173,34 @@ Wgrane i podpięte: **logo + 11 zdjęć wnętrz** (`gallery-01.jpg` … `gallery
 Dodajesz kolejne? Nazwij `gallery-12.jpg` i zmień `galleryCount: 11` na `12`
 w `site-config.js`.
 
+### Apartamenty — gotowe
+
+**109 zdjęć przeniesionych z tatrapart.pl**, w `assets/images/apartamenty/`.
+Każdy wariant ma własny zestaw, a nazwy plików mówią, gdzie zdjęcie trafia:
+
+| Apartament | Brown | White |
+|---|---|---|
+| `deluxe-parter` — 4–6 osobowy | 14 zdjęć | 26 zdjęć |
+| `deluxe-pietro` — 6–8 osobowy | 8 zdjęć | 28 zdjęć |
+| `suite-poddasze` — 6 osobowy | 10 zdjęć | 23 zdjęcia |
+
+Schemat nazwy: `<apartament>-<wariant>-NN.jpg`, na przykład
+`deluxe-parter-white-01.jpg`. Dokładasz zdjęcie? Dograj plik z kolejnym
+numerem i podnieś liczbę w `photos` w `site-config.js` — reszta dzieje się
+sama. Pierwsze zdjęcie wariantu Brown jest zarazem zdjęciem głównym
+apartamentu, tym z karuzeli na stronie głównej.
+
+> Zdjęcia mają 616 × 411 pikseli, bo tylko w takim rozmiarze udostępnia je
+> obecna strona. Jeśli macie oryginały z aparatu, warto je podmienić —
+> na dużych ekranach będą wyraźniejsze.
+
+### Ikony wyposażenia
+
+W `assets/images/ikony/` leży 20 ikon przeniesionych z tatrapart.pl oraz dwie
+dorysowane (`bidet.svg`, `microwave.svg`), bo takich nie było. Strona maluje je
+kolorem dębowym z palety, więc pliki mogą pozostać czarno-białe. Przypisanie
+ikony do wyposażenia siedzi w `main.js`, w tablicy `FEATURE_ICON`.
+
 `gallery-10.jpg` waży 745 KB — warto skompresować. W katalogu został też
 nieużywany duplikat `gallery (7).webp`, można go skasować.
 
@@ -290,7 +318,6 @@ w pozostałych językach w `i18n.js`. Mechanizm podmieni je automatycznie.
 
 ## 9. Co jeszcze zostało
 
-- zdjęcia apartamentów (obecnie puste ramki)
 - zdjęcia miejsc w okolicy
 - potwierdzenie listy usług „W cenie pobytu"
 - prawdziwe opinie Gości — sekcja jest ukryta, `showReviews: false`

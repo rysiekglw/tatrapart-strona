@@ -705,17 +705,52 @@
 
   /* ====================================================== 12. TRESCI Z KONFIGURACJI */
 
-  // Ramka zdjecia apartamentu. Gdy nie ma jeszcze pliku, zwracamy pusta
-  // ramke w kolorach Milk & Oak zamiast zlamanego obrazka.
+  // Ikony wyposazenia. Pliki leza w assets/images/ikony/ i sa rysunkami
+  // kreskowymi na przezroczystym tle, wiec uzywamy ich jako maski CSS —
+  // dzieki temu przyjmuja kolor z palety zamiast czerni.
+  var ICON_PATH = 'assets/images/ikony/';
+  var FEATURE_ICON = {
+    terrace: 'terrace.png',      mountainView: 'mountains.png',  gardenView: 'garden.png',
+    sauna: 'sauna.png',          jacuzzi: 'jacuzzi.png',         balcony: 'balcony-1.png',
+    balcony4: 'balcony-1.png',   fireplace: 'fireplace.png',     bath: 'bath-tub.png',
+    shower: 'shower.png',        bidet: 'bidet.svg',             kitchen: 'kitchen.png',
+    fridge: 'fridge.png',        dishwasher: 'dishwasher.png',   kettle: 'kettle.png',
+    microwave: 'microwave.svg',  tv: 'flatscreen-tv.png',        wifi: 'wifi.png',
+    heating: 'heater.png',       parking: 'parking.png',         towels: 'towel.png',
+    hairdryer: 'hairdryer.png',  tableware: 'dish.png'
+  };
+
+  // Zdjecia apartamentu w jednym wariancie. Nazwy plikow powstaja
+  // z identyfikatora apartamentu, nazwy wariantu i numeru:
+  // apartamenty/deluxe-parter-white-01.jpg
+  function aptPhotos(apt, variant) {
+    var p = apt.photos || {};
+    var n = p[variant] || 0;
+    var out = [];
+    for (var i = 1; i <= n; i++) {
+      out.push((p.path || 'apartamenty/') + apt.id + '-' + variant + '-' + (i < 10 ? '0' + i : i) + '.jpg');
+    }
+    return out;
+  }
+
+  function aptAllPhotos(apt) {
+    var out = [];
+    (apt.variants || []).forEach(function (v) { out = out.concat(aptPhotos(apt, v)); });
+    return out;
+  }
+
+  // Ramka zdjecia apartamentu. Gdy nie ma jeszcze zadnego pliku, zwracamy
+  // pusta ramke w kolorach Milk & Oak zamiast zlamanego obrazka.
   function aptFrame(apt, modifier) {
     var cls = 'media-card__frame ' + (modifier || '');
-    if (!apt.img) {
+    var first = aptAllPhotos(apt)[0];
+    if (!first) {
       return '<span class="' + cls + ' frame-empty">' +
                '<span class="frame-empty__mark">' + ICON.mountain + '</span>' +
                '<span class="frame-empty__label" data-i18n="common.photoSoon"></span>' +
              '</span>';
     }
-    return '<span class="' + cls + '"><img src="' + esc(imgPath(apt.img)) + '" alt="" loading="lazy"></span>';
+    return '<span class="' + cls + '"><img src="' + esc(imgPath(first)) + '" alt="" loading="lazy"></span>';
   }
 
   function priceTag(apt) {
@@ -739,13 +774,13 @@
           '</a>' +
           '<div class="media-card__body">' +
             '<p class="media-card__meta">' +
-              '<span data-i18n="' + esc(apt.typeKey) + '"></span> · ' +
+              '<span data-i18n="' + esc(apt.typeKey) + '"></span> &middot; ' +
               '<span data-i18n="' + esc(apt.floorKey) + '"></span>' +
             '</p>' +
             '<h3 class="media-card__title" data-i18n="' + esc(apt.i18nKey) + '.name"></h3>' +
             '<p class="media-card__facts">' +
               esc(apt.guests) + '&nbsp;<span data-i18n="spec.guests"></span>' +
-              ' · ' + esc(apt.area) + '&nbsp;m&sup2;' +
+              ' &middot; ' + esc(apt.area) + '&nbsp;m&sup2;' +
             '</p>' +
             priceTag(apt) +
             '<a class="link-arrow media-card__cta" href="apartamenty.html#' + esc(apt.id) + '">' +
@@ -755,6 +790,24 @@
         '</article>';
       mount.appendChild(slide);
     });
+  }
+
+  // Pasek zdjec jednego wariantu: cztery kafelki, a na ostatnim liczba
+  // pozostalych. Kazdy otwiera powiekszenie z pelnym zestawem tego wariantu.
+  function variantGallery(apt, variant) {
+    var photos = aptPhotos(apt, variant);
+    if (!photos.length) return '';
+    var set = photos.join(',');
+    var shots = photos.slice(0, 4).map(function (src, i) {
+      var rest = (i === 3 && photos.length > 4)
+        ? '<span class="variant__more">+' + (photos.length - 3) + '</span>'
+        : '';
+      return '<a class="variant__shot" href="#" data-lightbox="' + i + '" ' +
+                'data-lightbox-set="' + esc(set) + '">' +
+               '<img src="' + esc(imgPath(src)) + '" alt="" loading="lazy">' + rest +
+             '</a>';
+    }).join('');
+    return '<div class="variant__gallery">' + shots + '</div>';
   }
 
   function renderApartmentRows(mount) {
@@ -771,14 +824,28 @@
         '<li>' + ICON.bath   + '<span>' + esc(apt.bathrooms) + '&nbsp;</span><span data-i18n="spec.bathrooms"></span></li>' +
         '<li>' + ICON.area   + '<span class="nocaps">' + esc(apt.area) + '&nbsp;m&sup2;</span></li>';
 
-      var tags = (apt.features || []).map(function (f) {
-        return '<li class="tag" data-i18n="feat.' + esc(f) + '"></li>';
+      var amenities = (apt.features || []).map(function (f) {
+        var file = FEATURE_ICON[f];
+        var src = ICON_PATH + esc(file || '');
+        var mark = file
+          ? '<span class="amenity__ico" style="-webkit-mask-image:url(&quot;' + src + '&quot;);' +
+                   'mask-image:url(&quot;' + src + '&quot;)"></span>'
+          : '<span class="amenity__ico amenity__ico--plain">' + ICON.check + '</span>';
+        return '<li class="amenity">' + mark +
+                 '<span data-i18n="feat.' + esc(f) + '"></span>' +
+               '</li>';
       }).join('');
 
-      // Warianty Brown / White
+      var amenityBlock = amenities
+        ? '<h3 class="eyebrow amenities__head" data-i18n="feat.title"></h3>' +
+          '<ul class="amenities">' + amenities + '</ul>'
+        : '';
+
+      // Warianty Brown / White — kazdy z wlasnym zestawem zdjec
       var variants = (apt.variants || []).map(function (v) {
         return '<div class="variant">' +
                  '<h4 class="variant__name" data-i18n="variant.' + esc(v) + '"></h4>' +
+                 variantGallery(apt, v) +
                  '<p class="variant__text" data-i18n="' + esc(apt.i18nKey) + '.' + esc(v) + '"></p>' +
                '</div>';
       }).join('');
@@ -790,12 +857,20 @@
           '</div>'
         : '';
 
+      var all = aptAllPhotos(apt);
+      var media = all.length
+        ? '<a class="apt-row__link" href="#" data-lightbox="0" data-lightbox-set="' + esc(all.join(',')) + '">' +
+            aptFrame(apt, 'apt-row__frame') +
+            '<span class="apt-row__zoom">' + ICON.zoom + '</span>' +
+          '</a>'
+        : aptFrame(apt, 'apt-row__frame');
+
       row.innerHTML =
         '<div class="apt-row__grid">' +
-          '<div class="apt-row__media" data-reveal="mask">' + aptFrame(apt, 'apt-row__frame') + '</div>' +
+          '<div class="apt-row__media" data-reveal="mask">' + media + '</div>' +
           '<div data-reveal>' +
             '<p class="media-card__meta">' +
-              '<span data-i18n="' + esc(apt.typeKey) + '"></span> · ' +
+              '<span data-i18n="' + esc(apt.typeKey) + '"></span> &middot; ' +
               '<span data-i18n="' + esc(apt.floorKey) + '"></span>' +
             '</p>' +
             '<h2 class="h3" data-i18n="' + esc(apt.i18nKey) + '.name"></h2>' +
@@ -803,7 +878,7 @@
             priceTag(apt) +
             '<p class="body-text measure" data-i18n="' + esc(apt.i18nKey) + '.desc"></p>' +
             '<p class="body-text measure" data-i18n="' + esc(apt.i18nKey) + '.desc2"></p>' +
-            '<ul class="tag-list" style="margin-top:28px">' + tags + '</ul>' +
+            amenityBlock +
             '<div style="display:flex;gap:12px;flex-wrap:wrap">' +
               '<a class="btn" data-book="' + esc(apt.id) + '"><span data-i18n="common.checkAvail"></span></a>' +
             '</div>' +

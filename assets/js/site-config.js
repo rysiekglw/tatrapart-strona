@@ -96,33 +96,19 @@ window.TATRAPART_CONFIG = {
      Ponizej 3 TYPY apartamentow; kazdy wystepuje w wersji Brown (Forest)
      i White (Snow).
 
-     img: '' oznacza pusta ramke — zgodnie z ustaleniem zdjecia apartamentow
-     zostana dostarczone pozniej. Wystarczy wpisac nazwe pliku.
+     photos podaje liczbe zdjec kazdego wariantu. Pliki leza w
+     assets/images/apartamenty/ i nazywaja sie wedlug schematu
+     <id>-brown-01.jpg, <id>-brown-02.jpg, <id>-white-01.jpg itd.
+     Dokladasz zdjecia? Dograj plik z kolejnym numerem i podnies liczbe.
+     Kolejnosc apartamentow na stronie jest taka jak ponizej.
      -------------------------------------------------------------------- */
   apartments: [
     {
-      id: 'deluxe-pietro',
-      i18nKey: 'apt.deluxePietro',
-      img: '',                                       // pusta ramka — zdjecia w kolejnym kroku
-      gallery: [],
-      priceFrom: 495,
-      guests: 8,
-      bedrooms: 3,
-      bathrooms: 2,
-      area: 90,
-      floorKey: 'floor.first',
-      typeKey: 'type.deluxe',
-      variants: ['brown', 'white'],
-      features: ['terrace', 'mountainView', 'sauna', 'jacuzzi', 'balcony4', 'fireplace',
-                 'bath', 'shower', 'kitchen', 'fridge', 'dishwasher', 'kettle',
-                 'tv', 'wifi', 'heating', 'parking', 'towels', 'hairdryer',
-                 'gardenView', 'tableware']
-    },
-    {
       id: 'deluxe-parter',
       i18nKey: 'apt.deluxeParter',
-      img: '',
-      gallery: [],
+      // Zdjecia przeniesione z tatrapart.pl, osobny zestaw dla kazdego wariantu.
+      // Pliki: assets/images/apartamenty/<id>-<wariant>-01.jpg ... -NN.jpg
+      photos: { path: 'apartamenty/', brown: 14, white: 26 },
       priceFrom: 445,
       guests: 6,
       bedrooms: 2,
@@ -137,10 +123,26 @@ window.TATRAPART_CONFIG = {
                  'gardenView', 'tableware']
     },
     {
+      id: 'deluxe-pietro',
+      i18nKey: 'apt.deluxePietro',
+      photos: { path: 'apartamenty/', brown: 8, white: 28 },
+      priceFrom: 495,
+      guests: 8,
+      bedrooms: 3,
+      bathrooms: 2,
+      area: 90,
+      floorKey: 'floor.first',
+      typeKey: 'type.deluxe',
+      variants: ['brown', 'white'],
+      features: ['terrace', 'mountainView', 'sauna', 'jacuzzi', 'balcony4', 'fireplace',
+                 'bath', 'shower', 'kitchen', 'fridge', 'dishwasher', 'kettle',
+                 'tv', 'wifi', 'heating', 'parking', 'towels', 'hairdryer',
+                 'gardenView', 'tableware']
+    },
+    {
       id: 'suite-poddasze',
       i18nKey: 'apt.suitePoddasze',
-      img: '',
-      gallery: [],
+      photos: { path: 'apartamenty/', brown: 10, white: 23 },
       priceFrom: 297,
       guests: 6,
       bedrooms: 3,
