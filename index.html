@@ -11,7 +11,7 @@
 <meta property="og:site_name" content="TatrApart">
 <meta property="og:title" content="TatrApart — Apartamenty w Zakopanem">
 <meta property="og:description" content="Dwa domki góralskie i sześć apartamentów w Zakopanem, przy ul. Topory 1B. Kominek, sauna, jacuzzi i widok na Tatry.">
-<meta property="og:image" content="assets/images/gallery-01.jpg">
+<meta property="og:image" content="assets/images/gallery-05.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/images/logo-tatrapart.png">
@@ -48,7 +48,6 @@
 
       <nav class="nav-inline" aria-label="Główna nawigacja">
         <a href="apartamenty.html" data-nav="apartments" data-i18n="nav.accommodation">Apartamenty</a>
-        <a href="index.html#wnetrza" data-i18n="nav.amenities">Wnętrza</a>
         <a href="oferty.html" data-nav="offers" data-i18n="nav.offers">Oferty</a>
         <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery">Galeria</a>
         <a href="regulamin.html" data-nav="terms" data-i18n="nav.terms">Regulamin</a>
@@ -83,7 +82,6 @@
     <nav aria-label="Menu główne">
       <ul class="overlay-nav__list">
         <li><a href="apartamenty.html" data-i18n="nav.accommodation">Apartamenty</a></li>
-        <li><a href="index.html#wnetrza" data-i18n="nav.amenities">Wnętrza</a></li>
         <li><a href="oferty.html" data-i18n="nav.offers">Oferty</a></li>
         <li><a href="galeria.html" data-i18n="nav.gallery">Galeria</a></li>
         <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
@@ -121,7 +119,7 @@
 <!-- ====================================================== HERO -->
 <section class="hero">
   <div class="hero__media">
-    <img src="assets/images/gallery-01.jpg" alt="" fetchpriority="high">
+    <img src="assets/images/gallery-05.jpg" alt="" fetchpriority="high">
   </div>
   <div class="hero__scrim"></div>
 
@@ -131,7 +129,7 @@
     <p class="hero__tagline" data-i18n="hero.tagline">Dwa domki góralskie, sześć apartamentów, widok na Tatry.</p>
     <div class="hero__actions">
       <a class="btn btn--light" data-book=""><span data-i18n="common.checkAvail">Sprawdź dostępność</span></a>
-      <a class="btn btn--outline-light" href="#" data-lightbox="0"><span data-i18n="common.viewImages">Zobacz zdjęcia</span></a>
+      <a class="btn btn--oak" href="#" data-lightbox="0"><span data-i18n="common.viewImages">Zobacz zdjęcia</span></a>
     </div>
   </div>
 
@@ -174,9 +172,8 @@
       </div>
       <div data-reveal data-delay="120">
         <p class="lead measure" data-i18n="acc.text"></p>
-        <a class="link-arrow" href="apartamenty.html" style="margin-top:26px">
+        <a class="btn" href="apartamenty.html" style="margin-top:26px">
           <span data-i18n="acc.cta">Zobacz wszystkie apartamenty</span>
-          <svg class="arrow" width="22" height="8" viewBox="0 0 22 8" fill="none" aria-hidden="true"><path d="M0 4h20M17 1l3.2 3L17 7" stroke="currentColor" stroke-width="1"/></svg>
         </a>
       </div>
     </div>
@@ -205,55 +202,7 @@
   <img src="assets/images/gallery-02.jpg" alt="" loading="lazy" data-parallax="0.14">
 </section>
 
-<!-- ====================================================== WNĘTRZA -->
-<section class="section section--milk" id="wnetrza">
-  <div class="container">
-
-    <div class="feature__head">
-      <div data-reveal>
-        <span class="eyebrow" data-i18n="amen.eyebrow">Wnętrza</span>
-        <h2 class="h2" data-i18n="amen.title">Drewno, kamień i ciepłe światło</h2>
-      </div>
-      <div data-reveal data-delay="120">
-        <p class="lead measure" data-i18n="amen.text"></p>
-        <a class="link-arrow" href="galeria.html" style="margin-top:26px">
-          <span data-i18n="amen.cta">Zobacz galerię</span>
-          <svg class="arrow" width="22" height="8" viewBox="0 0 22 8" fill="none" aria-hidden="true"><path d="M0 4h20M17 1l3.2 3L17 7" stroke="currentColor" stroke-width="1"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="carousel" data-carousel>
-      <div class="carousel__viewport" role="group" aria-label="Wnętrza">
-        <div class="carousel__track">
-          <div class="carousel__slide carousel__slide--wide">
-            <a class="media-card" href="#" data-lightbox="3" data-reveal="mask">
-              <span class="media-card__frame media-card__frame--wide"><img src="assets/images/gallery-04.jpg" alt="" loading="lazy"></span>
-            </a>
-          </div>
-          <div class="carousel__slide carousel__slide--wide">
-            <a class="media-card" href="#" data-lightbox="4" data-reveal="mask" data-delay="120">
-              <span class="media-card__frame media-card__frame--wide"><img src="assets/images/gallery-05.jpg" alt="" loading="lazy"></span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel__nav">
-        <button class="c-btn" type="button" data-carousel-prev data-i18n-attr="aria-label:common.prev">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 2 4 8l6 6" stroke="currentColor" stroke-width="1.1"/></svg>
-        </button>
-        <button class="c-btn" type="button" data-carousel-next data-i18n-attr="aria-label:common.next">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 2l6 6-6 6" stroke="currentColor" stroke-width="1.1"/></svg>
-        </button>
-        <span class="carousel__progress"><span></span></span>
-        <span class="carousel__count"></span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ====================================================== USŁUGI (ZAKŁADKI) -->
+<!-- ====================================================== USŁUGI -->
 <section class="section section--cream">
   <div class="container">
     <div style="max-width:72ch;margin-bottom:clamp(34px,4vw,64px)" data-reveal>
@@ -262,20 +211,9 @@
       <h2 class="h2" data-i18n="serv.title">Wszystko, czego potrzeba</h2>
     </div>
 
-    <div data-tabs data-reveal data-delay="100">
-      <div class="tabs__head" role="tablist">
-        <button class="tab-btn" type="button" role="tab" aria-selected="true"  id="tab-inc" aria-controls="panel-inc" data-i18n="serv.tab1">W cenie pobytu</button>
-        <button class="tab-btn" type="button" role="tab" aria-selected="false" id="tab-req" aria-controls="panel-req" data-i18n="serv.tab2">Na życzenie</button>
-      </div>
-
-      <div class="tab-panel is-active" role="tabpanel" id="panel-inc" aria-labelledby="tab-inc">
-        <ul class="check-list" data-services="included"></ul>
-      </div>
-
-      <div class="tab-panel" role="tabpanel" id="panel-req" aria-labelledby="tab-req">
-        <ul class="check-list" data-services="request"></ul>
-        <p class="body-text measure" style="margin-top:30px" data-i18n="serv.reqNote"></p>
-      </div>
+    <div class="services" data-reveal data-delay="100">
+      <h3 class="services__head" data-i18n="serv.tab1">W cenie pobytu</h3>
+      <ul class="check-list" data-services="included"></ul>
     </div>
   </div>
 </section>
@@ -326,25 +264,14 @@
         <h3 class="eyebrow" style="margin-bottom:10px" data-i18n="loc.distances">Odległości</h3>
         <ul class="distance-list" data-mount="distances"></ul>
 
-        <a class="link-arrow" data-cfg-href="maps" href="#" target="_blank" rel="noopener" style="margin-top:30px">
+        <a class="btn" data-cfg-href="maps" href="#" target="_blank" rel="noopener" style="margin-top:30px">
           <span data-i18n="loc.mapCta">Otwórz w Mapach Google</span>
-          <svg class="arrow" width="22" height="8" viewBox="0 0 22 8" fill="none" aria-hidden="true"><path d="M0 4h20M17 1l3.2 3L17 7" stroke="currentColor" stroke-width="1"/></svg>
         </a>
       </div>
 
       <div class="map-frame" data-map-embed data-reveal="mask" data-delay="120"></div>
 
     </div>
-  </div>
-</section>
-
-<!-- ====================================================== O ZAKOPANEM -->
-<section class="section section--milk2">
-  <div class="container container--narrow" style="text-align:center">
-    <span class="eyebrow" data-reveal data-i18n="dest.eyebrow">Destynacja</span>
-    <h2 class="h2" style="margin-bottom:28px" data-reveal data-delay="80" data-i18n="dest.title">O Zakopanem</h2>
-    <p class="lead" data-reveal data-delay="140" data-i18n="dest.p1"></p>
-    <p class="lead" style="margin-top:1.4em" data-reveal data-delay="200" data-i18n="dest.p2"></p>
   </div>
 </section>
 

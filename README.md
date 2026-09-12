@@ -158,11 +158,11 @@ Wgrane i podpięte: **logo + 11 zdjęć wnętrz** (`gallery-01.jpg` … `gallery
 
 | Plik | Ujęcie | Gdzie |
 |---|---|---|
-| `gallery-01.jpg` | jadalnia, widok na Giewont, lato | hero strony głównej |
+| `gallery-01.jpg` | jadalnia, widok na Giewont, lato | galeria |
 | `gallery-02.jpg` | balkon latem, panorama Tatr | duże zdjęcie z paralaksą |
 | `gallery-03.jpg` | sypialnia, drzwi z niedźwiedziem | hero podstrony Apartamenty |
-| `gallery-04.jpg` | kamienny kominek i stół | sekcja Wnętrza, hero Regulaminu |
-| `gallery-05.jpg` | salon ze skórzaną kanapą | sekcja Wnętrza |
+| `gallery-04.jpg` | kamienny kominek i stół | hero Regulaminu |
+| `gallery-05.jpg` | salon ze skórzaną kanapą | **hero strony głównej**, `og:image` |
 | `gallery-06.jpg` | sypialnia z pikowanym zagłówkiem | hero podstrony Galeria |
 | `gallery-07.jpg` | poddasze z aneksem kuchennym | galeria |
 | `gallery-08.jpg` | salon z choinką | galeria |
@@ -292,7 +292,7 @@ w pozostałych językach w `i18n.js`. Mechanizm podmieni je automatycznie.
 
 - zdjęcia apartamentów (obecnie puste ramki)
 - zdjęcia miejsc w okolicy
-- potwierdzenie listy usług „W cenie pobytu" i „Na życzenie"
+- potwierdzenie listy usług „W cenie pobytu"
 - prawdziwe opinie Gości — sekcja jest ukryta, `showReviews: false`
 - treść strony „Oferty"
 - podpięcie formularzy do usługi wysyłkowej (Formspree, Getform lub własny
@@ -302,9 +302,10 @@ w pozostałych językach w `i18n.js`. Mechanizm podmieni je automatycznie.
   nie wpiszesz adresu dokumentu w `legal.privacyUrl` w `site-config.js`
 - minimalna długość pobytu i zasady dotyczące zwierząt — nie ma ich
   w regulaminie, pola w `site-config.js` są ustawione na `null`
-- dokładny pin na mapie: obecnie środek Zakopanego, warto wpisać prawdziwe
-  współrzędne ulicy Topory w `company.latitude` i `company.longitude`
-- odległości w sekcji „Lokalizacja" są orientacyjne
+- odległości w sekcji „Lokalizacja" są orientacyjne i liczone od dawnego,
+  błędnego punktu na mapie — po korekcie pinezki (ul. Topory 1B leży
+  w Olczy, nie w centrum) warto je przeliczyć w `site-config.js`, tablica
+  `distances`
 
 ---
 
@@ -331,7 +332,7 @@ polską — z tego mechanizmu korzysta regulamin.
 - Karuzele obsługiwane myszą, palcem, klawiaturą i przyciskami
 - Galeria z powiększaniem, miniaturami i gestem swipe
 - Regulamin z przyklejonym spisem treści i odnośnikami do sekcji
-- Zakładki usług, animacje wejścia, delikatna paralaksa
+- Lista usług „W cenie pobytu", animacje wejścia, delikatna paralaksa
 - Przyklejony pasek rezerwacji na telefonie
 - Pełna responsywność od 320 px wzwyż
 - Obsługa ustawienia „ogranicz animacje" w systemie

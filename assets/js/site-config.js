@@ -45,9 +45,12 @@ window.TATRAPART_CONFIG = {
     phoneHref: '+48510005004',
     email: 'contact@tatrapart.pl',
     reservationsEmail: 'contact@tatrapart.pl',
-    latitude: 49.2992,                               // >>> DO POTWIERDZENIA <<< dokladny pin
-    longitude: 19.9496,                              // >>> DO POTWIERDZENIA <<<
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=TatrApart+Topory+1B+34-500+Zakopane'
+    // Wspolrzedne budynku przy ul. Topory 1B odczytane z bazy OpenStreetMap
+    // (wyszukiwarka Nominatim, wrzesien 2026). Pinezka na mapie i odnosnik do
+    // Map Google korzystaja z tych samych liczb.
+    latitude: 49.311585,
+    longitude: 19.996076,
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=49.311585,19.996076'
   },
 
   social: {

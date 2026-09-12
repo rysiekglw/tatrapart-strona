@@ -627,32 +627,7 @@
     });
   }
 
-  /* ====================================================== 10. ZAKLADKI */
-  function initTabs() {
-    $$('[data-tabs]').forEach(function (root) {
-      var btns   = $$('.tab-btn', root);
-      var panels = $$('.tab-panel', root);
-
-      function select(i) {
-        btns.forEach(function (b, bi) {
-          b.setAttribute('aria-selected', bi === i ? 'true' : 'false');
-          b.setAttribute('tabindex', bi === i ? '0' : '-1');
-        });
-        panels.forEach(function (p, pi) { p.classList.toggle('is-active', pi === i); });
-      }
-
-      btns.forEach(function (b, i) {
-        b.addEventListener('click', function () { select(i); });
-        b.addEventListener('keydown', function (e) {
-          if (e.key === 'ArrowRight') { e.preventDefault(); btns[(i + 1) % btns.length].focus(); select((i + 1) % btns.length); }
-          if (e.key === 'ArrowLeft')  { e.preventDefault(); var p = (i - 1 + btns.length) % btns.length; btns[p].focus(); select(p); }
-        });
-      });
-      select(0);
-    });
-  }
-
-  /* ====================================================== 11. PASEK MOBILNY */
+  /* ====================================================== 10. PASEK MOBILNY */
   function initBookBar() {
     var bar = $('.book-bar');
     if (!bar) return;
@@ -666,7 +641,7 @@
     update();
   }
 
-  /* ====================================================== 12. FORMULARZE */
+  /* ====================================================== 11. FORMULARZE */
   function initForms() {
     $$('form[data-validate]').forEach(function (form) {
       form.setAttribute('novalidate', 'novalidate');
@@ -728,7 +703,7 @@
     });
   }
 
-  /* ====================================================== 13. TRESCI Z KONFIGURACJI */
+  /* ====================================================== 12. TRESCI Z KONFIGURACJI */
 
   // Ramka zdjecia apartamentu. Gdy nie ma jeszcze pliku, zwracamy pusta
   // ramke w kolorach Milk & Oak zamiast zlamanego obrazka.
@@ -896,20 +871,14 @@
     });
   }
 
+  // Jedna lista uslug — „W cenie pobytu". Zakladka „Na zyczenie" zostala
+  // usunieta razem z jej trescia.
   function renderServiceLists() {
     var inc = $('[data-services="included"]');
-    if (inc) {
-      inc.innerHTML = '';
-      for (var i = 1; i <= 9; i++) {
-        inc.appendChild(el('li', '', ICON.check + '<span data-i18n="serv.inc.' + i + '"></span>'));
-      }
-    }
-    var req = $('[data-services="request"]');
-    if (req) {
-      req.innerHTML = '';
-      for (var j = 1; j <= 4; j++) {
-        req.appendChild(el('li', '', ICON.check + '<span data-i18n="serv.req.' + j + '"></span>'));
-      }
+    if (!inc) return;
+    inc.innerHTML = '';
+    for (var i = 1; i <= 9; i++) {
+      inc.appendChild(el('li', '', ICON.check + '<span data-i18n="serv.inc.' + i + '"></span>'));
     }
   }
 
@@ -1042,7 +1011,7 @@
     if (!tag.parentNode) document.head.appendChild(tag);
   }
 
-  /* ====================================================== 14. START */
+  /* ====================================================== 13. START */
   function boot() {
     I18N.init();
 
@@ -1066,7 +1035,6 @@
     initHeader();
     initNav();
     initLang();
-    initTabs();
     initCarousels();
     initLightboxTriggers();
     initBookBar();

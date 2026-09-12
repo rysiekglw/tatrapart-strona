@@ -1,6 +1,6 @@
 # TatrApart — Lista kontrolna projektu
 
-Aktualizacja: 12 września 2026
+Aktualizacja: 12 września 2026 (etap 12)
 Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebie
 
 ---
@@ -126,3 +126,36 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
 - [x] Nierówne odstępy w regulaminie: zamiast osobnych wartości przy każdym
       elemencie wprowadzona jedna skala (akapit / blok / podtytuł)
 - [x] Podtytuł stojący pod akapitem wstępnym odzyskał pełny odstęp
+
+## ETAP 12 — Poprawki po obejrzeniu opublikowanej wersji
+- [x] Zdjęcie główne: `gallery-05.jpg` w hero strony głównej i w `og:image`
+- [x] Panel „Usługi": zakładka „Na życzenie" usunięta w całości (treść, style,
+      obsługa klawiatury i klucze tłumaczeń w czterech językach). Została jedna
+      lista „W cenie pobytu"
+- [x] „W cenie pobytu": „sala rozrywkowa ze stołem bilardowym" → „stół
+      bilardowy"; „kominek w każdym apartamencie" → „kominek w apartamentach
+      na parterze i I piętrze"
+- [x] Panel „Wnętrza" usunięty ze strony głównej, razem z pozycją w menu
+      (prowadziłaby do nieistniejącej sekcji) na wszystkich sześciu stronach
+- [x] Panel „Destynacja" („O Zakopanem") usunięty
+- [x] Mapa: pełny kolor zamiast szarości, przesuwanie i przybliżanie działa,
+      pinezka przesunięta na ul. Topory 1B — współrzędne 49.311585, 19.996076
+      z bazy OpenStreetMap; ten sam punkt otwiera się w Mapach Google
+- [x] Przyciski prowadzące w inne miejsce mają pełne, kontrastowe tło:
+      na jasnym tle ciemny atrament, na zdjęciu i na ciemnym tle mleczny lub
+      dębowy. „Otwórz w Mapach Google" i „Zobacz wszystkie apartamenty" nie są
+      już samymi podkreślonymi napisami
+- [x] Zdjęcia z tekstem przyciemnione: hero, nagłówki podstron, blok „Oferty",
+      najazd na kafelek galerii
+- [x] Sprawdzone w przeglądarce: strona główna, apartamenty, galeria oraz
+      wszystkie cztery języki listy usług
+
+## ETAP 13 — Do rozstrzygnięcia po etapie 12
+- [!] Odległości w sekcji „Lokalizacja" liczono od dawnego, błędnego punktu
+      w centrum. Prawdziwy adres leży w Olczy, więc np. „Krupówki 2,5 km"
+      jest zaniżone — potrzebne prawdziwe wartości
+- [!] Opis apartamentów mówi „Wszystkie z kominkiem", a apartament na poddaszu
+      ma kominek na liście wyposażenia. Jeśli kominek jest tylko na parterze
+      i I piętrze, trzeba poprawić opis i listę `features` w `site-config.js`
+- [!] Rosyjskie nazwy kondygnacji („Первый уровень" dla parteru, „Первый этаж"
+      dla I piętra) są mylące — do przejrzenia razem z całym tłumaczeniem RU
