@@ -115,8 +115,8 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
 - [x] `vercel.json` — nagłówki bezpieczeństwa i pamięć podręczna obrazków
 - [x] `wyslij.bat` + `wyslij.ps1` — wysyłka zmian jednym kliknięciem
 - [x] Sprawdzone realnym uruchomieniem: skrypt wysłał zmiany na GitHuba
-- [ ] **Do zrobienia przez Ciebie:** podłączenie repozytorium w panelu Vercela
-      (README, punkt 2) — wymaga zalogowania, więc nie da się tego zrobić za Ciebie
+- [x] Repozytorium podłączone w panelu Vercela — push na `main` buduje stronę
+      sam; potwierdzone wdrożeniem etapu 12 na `tatrapart-strona.vercel.app`
 - [ ] Przepięcie domeny tatrapart.pl — dopiero gdy nowa strona ma zastąpić starą
 
 ## ETAP 11 — Poprawki po obejrzeniu strony
