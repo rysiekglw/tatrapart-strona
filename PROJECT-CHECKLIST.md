@@ -107,3 +107,22 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
 - [ ] Weryfikacja tłumaczeń EN / UA / RU przez native speakera
 - [ ] Tłumaczenie regulaminu po akceptacji prawnika
 - [ ] Polityka prywatności
+
+## ETAP 10 — Publikacja
+- [x] Repozytorium Git zainicjowane, gałąź `main`
+- [x] Repozytorium prywatne na GitHubie: rysiekglw/tatrapart-strona
+- [x] `.gitignore` i `.gitattributes` (pliki `.bat` wymuszone na CRLF)
+- [x] `vercel.json` — nagłówki bezpieczeństwa i pamięć podręczna obrazków
+- [x] `wyslij.bat` + `wyslij.ps1` — wysyłka zmian jednym kliknięciem
+- [x] Sprawdzone realnym uruchomieniem: skrypt wysłał zmiany na GitHuba
+- [ ] **Do zrobienia przez Ciebie:** podłączenie repozytorium w panelu Vercela
+      (README, punkt 2) — wymaga zalogowania, więc nie da się tego zrobić za Ciebie
+- [ ] Przepięcie domeny tatrapart.pl — dopiero gdy nowa strona ma zastąpić starą
+
+## ETAP 11 — Poprawki po obejrzeniu strony
+- [x] Dziura w siatce galerii: szeroki kafelek co 6. pozycję nie mieścił się
+      w końcówce rzędu i przeskakiwał niżej, zostawiając puste pole.
+      Zmieniony na co 5. pozycję + `grid-auto-flow: dense`
+- [x] Nierówne odstępy w regulaminie: zamiast osobnych wartości przy każdym
+      elemencie wprowadzona jedna skala (akapit / blok / podtytuł)
+- [x] Podtytuł stojący pod akapitem wstępnym odzyskał pełny odstęp
