@@ -11,3 +11,10 @@ desktop.ini
 node_modules/
 .vercel/
 *.log
+
+# Folder na zdjecia i pliki, ktore pokazujesz Claude'owi dla kontekstu.
+# Zostaja na komputerze, nie trafiaja na GitHuba ani na strone.
+dla-claude/
+
+# To samo dla folderu ze zrzutami ekranu, ktore pokazujesz przy poprawkach.
+assets/images/zdjecia/

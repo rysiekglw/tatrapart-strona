@@ -185,3 +185,9 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
       apartamentu Suite i z jego opisu, a zdanie „Wszystkie z kominkiem"
       w sekcji „Apartamenty" zamienione na „te na parterze i I piętrze także
       z kominkiem" — w czterech językach
+
+## ETAP 16 — Poprawki ze zrzutow ekranu (folder `assets/images/zdjecia/`)
+- [x] `przyciski.png` — przelacznik jezyka i przycisk „Rezerwuj" w naglowku:
+      ta sama wysokosc (44 px, na telefonie 40 px) i ten sam debowy kolor
+      co pozostale przyciski drugoplanowe. Po najechaniu i po rozwinieciu
+      listy jezykow oba ciemnieja tak samo
