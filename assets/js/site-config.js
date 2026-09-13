@@ -11,19 +11,30 @@ window.TATRAPART_CONFIG = {
   /* --------------------------------------------------------------------
      1. SILNIK REZERWACJI (HOTRES)
      --------------------------------------------------------------------
-     Podpiecie Hotres to kolejny krok prac. Do tego czasu kazdy przycisk
-     "Rezerwuj" kieruje na strone kontaktowa, zeby zadne klikniecie
-     nie zostalo zmarnowane.
-     Po otrzymaniu adresu: wpisz bookingUrl, objectId i ustaw enabled: true.
+     Kazdy przycisk "Rezerwuj" i "Sprawdz dostepnosc" otwiera panel Hotres
+     TatrApartu w nowej karcie. Numer obiektu (oid 2746) i adres pochodza
+     z formularza rezerwacji na tatrapart.pl.
+
+     Adres wyglada tak:
+       https://panel.hotres.pl/v4_step1?oid=2746&lang=pl
+     Hotres przyjmuje tez arrival, departure i adults — gdyby na stronie
+     mial kiedys stanac wybor dat, wystarczy dopisac te parametry.
+
+     unitParam zostaje pusty, bo pod tym adresem Hotres nie przyjmuje
+     numeru apartamentu. Zeby przycisk przy konkretnym apartamencie
+     otwieral od razu ten apartament, potrzebne sa jego numery z panelu.
      -------------------------------------------------------------------- */
   booking: {
-    enabled: false,
-    bookingUrl: '#rezerwacja',
-    objectId: '',
+    enabled: true,
+    bookingUrl: 'https://panel.hotres.pl/v4_step1',
+    objectId: '2746',
+    objectParam: 'oid',
     openInNewTab: true,
     langParam: 'lang',
-    langMap: { pl: 'pl', en: 'en', uk: 'en', ru: 'en' },
-    unitParam: 'unit'
+    // Hotres mowi po polsku, angielsku i rosyjsku; dla ukrainskiego
+    // pokazuje wersje angielska, wiec od razu o nia prosimy.
+    langMap: { pl: 'pl', en: 'en', uk: 'en', ru: 'ru' },
+    unitParam: ''
   },
 
   /* --------------------------------------------------------------------

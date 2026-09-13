@@ -38,8 +38,8 @@ terminal). Serwer zatrzymasz skrótem Ctrl + C.
 5. Wejdź w **Regulamin** — spis treści po lewej przewija do sekcji.
 6. Zwęź okno przeglądarki do szerokości telefonu — układ przestawi się
    na jedną kolumnę, a na dole pojawi się pasek z przyciskiem rezerwacji.
-7. Kliknij **Rezerwuj** — na razie prowadzi na stronę Kontakt, bo Hotres
-   nie jest jeszcze podpięty.
+7. Kliknij **Rezerwuj** — w nowej karcie otworzy się panel rezerwacji
+   Hotres TatrApartu.
 
 ---
 
@@ -228,26 +228,32 @@ Po zdobyciu zdjęć: wpisz nazwy plików w `nearby` i ustaw `nearbyImages: true`
 
 ---
 
-## 5. Podpięcie Hotres — następny krok
+## 5. Hotres — podpięty
 
-W `assets/js/site-config.js`:
+Każdy przycisk „Rezerwuj" i „Sprawdź dostępność" otwiera w nowej karcie panel
+rezerwacji TatrApartu:
 
-```js
-booking: {
-  enabled: true,                                   // <- zmień na true
-  bookingUrl: 'https://panel.hotres.pl/...',       // <- adres z Hotres
-  objectId: '12345',                               // <- ID obiektu
-  ...
-}
+```
+https://panel.hotres.pl/v4_step1?oid=2746&lang=pl
 ```
 
-Każdy przycisk „Rezerwuj" i „Sprawdź dostępność" zacznie kierować do Hotres.
-Do adresu doklei się język strony oraz identyfikator apartamentu, jeśli Gość
-kliknął przycisk przy konkretnym apartamencie (`deluxe-pietro`,
-`deluxe-parter`, `suite-poddasze`).
+Numer obiektu (`oid: 2746`) i adres pochodzą z formularza rezerwacji, który
+działa na tatrapart.pl. Ustawienia siedzą w `booking` w `site-config.js`;
+język dokleja się sam — Hotres mówi po polsku, angielsku i rosyjsku, a dla
+ukraińskiego pokazuje wersję angielską.
 
-Dopóki `enabled` jest `false`, przyciski kierują na `kontakt.html`, żeby żadne
-kliknięcie nie zostało zmarnowane.
+Czego jeszcze nie ma:
+
+- **Wybór dat na naszej stronie.** Hotres przyjmuje `arrival`, `departure`
+  i `adults`. Gdyby na stronie miał stanąć kalendarzyk, dopisujemy te
+  parametry do adresu — reszta jest gotowa.
+- **Przycisk otwierający od razu konkretny apartament.** Pod adresem
+  `v4_step1` Hotres nie przyjmuje numeru apartamentu. Potrzebne są jego
+  numery z panelu Hotres; wtedy wystarczy wpisać `unitParam` i numery
+  przy apartamentach w `site-config.js`.
+
+Gdyby kiedyś trzeba było odpiąć silnik, wystarczy `enabled: false` — przyciski
+wrócą na stronę Kontakt.
 
 ---
 

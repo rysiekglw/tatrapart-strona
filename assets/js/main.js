@@ -187,7 +187,7 @@
     try { url = new URL(b.bookingUrl, window.location.href); }
     catch (e) { return b.bookingUrl; }
 
-    if (b.objectId) url.searchParams.set('id', b.objectId);
+    if (b.objectId) url.searchParams.set(b.objectParam || 'oid', b.objectId);
     if (b.langParam) url.searchParams.set(b.langParam, (b.langMap && b.langMap[I18N.lang]) || I18N.lang);
     if (unitId && b.unitParam) url.searchParams.set(b.unitParam, unitId);
     return url.toString();

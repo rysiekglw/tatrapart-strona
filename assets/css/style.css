@@ -392,11 +392,26 @@ input, textarea, select { font: inherit; color: inherit; }
    wielkosc liter dawala dwa rozne prostokaty. */
 .header__right .lang__btn,
 .header__right .btn { height: 44px; padding: 0 24px; }
+.header__right .icon-btn { height: 44px; width: 44px; }
 /* Na telefonie ta sama para, tylko cieniej — zeby zmiescila sie obok logo. */
 @media (max-width: 560px) {
   .header__right { gap: 10px; }
   .header__right .lang__btn,
   .header__right .btn { height: 40px; padding: 0 15px; letter-spacing: .12em; }
+  .header__right .icon-btn { height: 40px; width: 40px; }
+}
+
+/* Kwadratowy przycisk z samym znakiem — na razie Instagram.
+   Ten sam debowy kolor i ta sama wysokosc co sasiedzi. */
+.icon-btn {
+  display: inline-grid; place-items: center;
+  background: var(--oak);
+  border: 1px solid var(--oak);
+  color: var(--ink);
+  transition: background-color .4s var(--ease), border-color .4s var(--ease), color .4s var(--ease);
+}
+.icon-btn:hover, .icon-btn:focus-visible {
+  background: var(--ink); border-color: var(--ink); color: var(--milk);
 }
 
 .lang__btn {
@@ -1432,13 +1447,20 @@ img.is-missing { opacity: 0; }
 .quote__author { font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
 .section--dark .quote__text { color: var(--on-dark); }
 
-/* -------------------------------------------------------- 24. PELNE ZDJECIE */
-.full-bleed {
-  position: relative; overflow: hidden;
-  height: clamp(340px, 62vw, 720px);
-  background: var(--ink);
+/* ------------------------------------------------ 24. TEKST NA ZDJECIU */
+/* Sekcja z tekstem polozonym na zdjeciu. Zdjecie idzie pod spod, na nim
+   lezy przyciemnienie, a napisy stoja nad wszystkim. Kolory tekstu daje
+   klasa .section--dark, wiec obie klasy chodza w parze. */
+.section--shot { overflow: hidden; }
+.section--shot .section__media { position: absolute; inset: 0; }
+.section--shot .section__media img {
+  width: 100%; height: 120%; object-fit: cover;
 }
-.full-bleed img { width: 100%; height: 120%; object-fit: cover; }
+.section--shot .section__scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(28, 24, 21, .76), rgba(28, 24, 21, .68));
+}
+.section--shot > .container { position: relative; z-index: 1; }
 
 /* ------------------------------------------------------ 25. DOSTEPNOSC */
 @media (prefers-reduced-motion: reduce) {

@@ -97,7 +97,7 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
       literą
 
 ## ETAP 9 — Kolejne kroki
-- [ ] Podpięcie Hotres — jedna sekcja w `site-config.js`
+- [x] Podpięcie Hotres — panel obiektu 2746, etap 17
 - [x] Zdjęcia apartamentów — przeniesione z tatrapart.pl, etap 14
 - [ ] Zdjęcia miejsc w okolicy
 - [ ] Potwierdzenie listy usług w cenie i na życzenie
@@ -203,3 +203,17 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
       (hero ma odstep od gory rowny wysokosci naglowka)
 - [x] Przyciski prowadzace do galerii nazywaja sie „Zobacz galerie"
       (w czterech jezykach)
+
+## ETAP 17 — Zdjecia „panel", ikona Instagrama, Hotres
+- [x] Uslugi przeniesione na zdjecie widoku z tarasu; zdjecie przyciemnione,
+      pusty panel po tekscie usuniety
+- [x] Ikona Instagrama w naglowku, po lewej od przelacznika jezyka —
+      ta sama wysokosc i kolor co sasiednie przyciski, prowadzi na
+      https://www.instagram.com/tatrapart/ w nowej karcie
+- [x] Silnik rezerwacji Hotres podpiety: kazdy przycisk „Rezerwuj"
+      i „Sprawdz dostepnosc" otwiera panel.hotres.pl/v4_step1?oid=2746
+      w nowej karcie, z jezykiem strony
+- [!] Do ustalenia: czy na stronie ma stanac wybor dat (Hotres przyjmuje
+      arrival, departure, adults) i czy przyciski przy apartamentach maja
+      otwierac od razu wybrany apartament — do tego potrzebne sa numery
+      apartamentow z panelu Hotres
