@@ -1013,7 +1013,7 @@ input, textarea, select { font: inherit; color: inherit; }
   padding-block: clamp(44px, 5vw, 72px);
 }
 @media (min-width: 640px)  { .footer__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1060px) { .footer__grid { grid-template-columns: 1.15fr 1.35fr repeat(3, 1fr); } }
+@media (min-width: 1060px) { .footer__grid { grid-template-columns: 1.35fr 1.15fr repeat(3, 1fr); } }
 
 /* Kolumna „Kontakt" stoi pierwsza od lewej i ma odrobine jasniejsze tlo,
    zeby goscie od razu widzieli, gdzie szukac telefonu i adresu. */
