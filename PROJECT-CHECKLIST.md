@@ -191,3 +191,15 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
       ta sama wysokosc (44 px, na telefonie 40 px) i ten sam debowy kolor
       co pozostale przyciski drugoplanowe. Po najechaniu i po rozwinieciu
       listy jezykow oba ciemnieja tak samo
+- [x] `odstep*.png` — odstepy miedzy panelami: gora sekcji clamp(28-52 px),
+      dol clamp(48-92 px) zamiast jednolitych 72-168 px z gory i z dolu.
+      Krocej tez w wierszach apartamentow i w stopce
+- [x] `ikonki.png` — wyposazenie apartamentu idzie pod obiema kolumnami,
+      na cala szerokosc strony (tyle kolumn, ile zmiesci sie po 220 px)
+- [x] `informacje.png` — w stopce kolumna „Kontakt" stoi pierwsza od lewej
+      i ma delikatnie jasniejsze tlo
+- [x] `ramka.png` — ramka i kreski w pasku z liczbami w kolorze debowym
+- [x] `zakladka.png` — naglowki podstron nie wchodza juz na menu
+      (hero ma odstep od gory rowny wysokosci naglowka)
+- [x] Przyciski prowadzace do galerii nazywaja sie „Zobacz galerie"
+      (w czterech jezykach)

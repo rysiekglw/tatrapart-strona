@@ -836,9 +836,12 @@
                '</li>';
       }).join('');
 
+      // Wyposazenie idzie pod obie kolumny, na cala szerokosc strony
       var amenityBlock = amenities
-        ? '<h3 class="eyebrow amenities__head" data-i18n="feat.title"></h3>' +
-          '<ul class="amenities">' + amenities + '</ul>'
+        ? '<div class="apt-row__amenities" data-reveal>' +
+            '<h3 class="eyebrow amenities__head" data-i18n="feat.title"></h3>' +
+            '<ul class="amenities">' + amenities + '</ul>' +
+          '</div>'
         : '';
 
       // Warianty Brown / White — kazdy z wlasnym zestawem zdjec
@@ -878,11 +881,11 @@
             priceTag(apt) +
             '<p class="body-text measure" data-i18n="' + esc(apt.i18nKey) + '.desc"></p>' +
             '<p class="body-text measure" data-i18n="' + esc(apt.i18nKey) + '.desc2"></p>' +
-            amenityBlock +
-            '<div style="display:flex;gap:12px;flex-wrap:wrap">' +
-              '<a class="btn" data-book="' + esc(apt.id) + '"><span data-i18n="common.checkAvail"></span></a>' +
-            '</div>' +
           '</div>' +
+        '</div>' +
+        amenityBlock +
+        '<div class="apt-row__actions" data-reveal>' +
+          '<a class="btn" data-book="' + esc(apt.id) + '"><span data-i18n="common.checkAvail"></span></a>' +
         '</div>' +
         variantBlock;
 
