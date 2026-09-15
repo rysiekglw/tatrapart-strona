@@ -302,13 +302,15 @@ które publikują te same liczby w formacie JSON-LD:
 | Kafelek | Skąd czytamy | Uwaga |
 |---|---|---|
 | Booking.com | `domki-gawra-tatrzanska.hotels-zakopane.com` | Kopia danych z Booking.com |
-| Airbnb | strona ogłoszenia `airbnb.com/rooms/786674248961986518` | Dane wprost ze źródła |
+| Airbnb | profil gospodarza `airbnb.com/users/show/489507548` | Dane wprost ze źródła |
 | Google | `wanderlog.com/place/details/4444482/tatrapart` | Kopia oceny z Map Google |
 
+Airbnb czytamy z profilu gospodarza, a nie z pojedynczego ogłoszenia —
+dzięki temu kafelek pokazuje opinie ze wszystkich apartamentów TatrApartu
+naraz (4,89 z 114 opinii), a nie z jednego ogłoszenia.
+
 Adresy źródeł siedzą w `SOURCES` na górze skryptu — gdyby któraś strona
-przestała działać, wymienia się tam jeden wiersz. Gdyby Airbnb miał więcej
-niż jedno ogłoszenie TatrApartu, trzeba dopisać ich adresy, bo teraz liczy
-się tylko to jedno.
+przestała działać, wymienia się tam jeden wiersz.
 
 ---
 

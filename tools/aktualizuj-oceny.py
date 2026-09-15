@@ -55,14 +55,15 @@ SOURCES = [
         'count_re': r'"(?:reviewCount|ratingCount)"\s*:\s*"?([0-9]+)',
     },
     {
+        # Profil gospodarza, nie pojedyncze ogloszenie — zbiera opinie
+        # ze wszystkich apartamentow TatrApartu naraz.
         'id': 'airbnb',
         'label': 'Airbnb',
         'max': 5,
-        'url': 'https://www.airbnb.com/rooms/786674248961986518',
-        'fetch': 'https://www.airbnb.com/rooms/786674248961986518',
-        'scope_re': r'aggregateRating',
-        'score_re': r'"ratingValue"\s*:\s*"?([0-9]+(?:\.[0-9]+)?)',
-        'count_re': r'"(?:reviewCount|ratingCount)"\s*:\s*"?([0-9]+)',
+        'url': 'https://www.airbnb.com/users/show/489507548',
+        'fetch': 'https://www.airbnb.com/users/show/489507548',
+        'score_re': r'"hostRatingStats"\s*:\s*\{[^}]*"ratingAverage"\s*:\s*([0-9]+(?:\.[0-9]+)?)',
+        'count_re': r'"reviewsReceivedFromGuests"\s*:\s*\{[^}]*"count"\s*:\s*([0-9]+)',
     },
     {
         'id': 'google',

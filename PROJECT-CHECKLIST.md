@@ -225,10 +225,10 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
       + debowy przycisk obok; wybrane wartosci jada do Hotresa jako
       arrival / departure / adults
 - [x] Ramka z liczbami zamieniona na ramke z ocenami: Booking.com 9,6/10,
-      Airbnb 4,67/5, Google 4,8/5 — kazdy kafelek prowadzi do zrodla
+      Airbnb 4,89/5, Google 4,8/5 — kazdy kafelek prowadzi do zrodla
+- [x] Airbnb czytany z profilu gospodarza (114 opinii ze wszystkich
+      apartamentow), a nie z jednego ogloszenia (3 opinie)
 - [x] tools/aktualizuj-oceny.py + cotygodniowy GitHub Actions
       (.github/workflows/oceny.yml) odswiezaja liczby same
 - [!] Do potwierdzenia: czy 133 opinie na Booking zgadzaja sie z panelem
       wlasciciela (Booking blokuje czytanie wprost, liczba pochodzi z kopii)
-- [!] Airbnb ma tylko 3 opinie przy jednym ogloszeniu — jesli jest ich
-      wiecej, trzeba dopisac adresy w SOURCES

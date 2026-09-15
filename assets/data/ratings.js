@@ -24,10 +24,10 @@ window.TATRAPART_RATINGS = {
     {
       id: 'airbnb',
       label: 'Airbnb',
-      score: 4.67,
+      score: 4.89,
       max: 5,
-      count: 3,
-      url: 'https://www.airbnb.com/rooms/786674248961986518'
+      count: 114,
+      url: 'https://www.airbnb.com/users/show/489507548'
     },
     {
       id: 'google',
