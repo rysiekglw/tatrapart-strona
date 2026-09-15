@@ -34,7 +34,12 @@ window.TATRAPART_CONFIG = {
     // Hotres mowi po polsku, angielsku i rosyjsku; dla ukrainskiego
     // pokazuje wersje angielska, wiec od razu o nia prosimy.
     langMap: { pl: 'pl', en: 'en', uk: 'en', ru: 'ru' },
-    unitParam: ''
+    unitParam: '',
+    // Panel wyboru dat na stronie glownej doklei te trzy parametry.
+    // Daty w formacie RRRR-MM-DD — tak samo, jak robi to kalendarzyk Hotresa.
+    arrivalParam: 'arrival',
+    departureParam: 'departure',
+    adultsParam: 'adults'
   },
 
   /* --------------------------------------------------------------------

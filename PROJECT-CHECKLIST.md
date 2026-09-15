@@ -217,3 +217,18 @@ Legenda: `[x]` gotowe · `[ ]` do zrobienia · `[!]` czekam na decyzję od Ciebi
       arrival, departure, adults) i czy przyciski przy apartamentach maja
       otwierac od razu wybrany apartament — do tego potrzebne sa numery
       apartamentow z panelu Hotres
+
+## ETAP 18 — Panel rezerwacji i oceny obiektu
+- [x] Przycisk „Sprawdz dostepnosc" przy apartamentach przeniesiony
+      z dolu panelu do kolumny z cena i opisem
+- [x] W hero, zamiast dwoch przyciskow, panel wyboru dat i liczby osob
+      + debowy przycisk obok; wybrane wartosci jada do Hotresa jako
+      arrival / departure / adults
+- [x] Ramka z liczbami zamieniona na ramke z ocenami: Booking.com 9,6/10,
+      Airbnb 4,67/5, Google 4,8/5 — kazdy kafelek prowadzi do zrodla
+- [x] tools/aktualizuj-oceny.py + cotygodniowy GitHub Actions
+      (.github/workflows/oceny.yml) odswiezaja liczby same
+- [!] Do potwierdzenia: czy 133 opinie na Booking zgadzaja sie z panelem
+      wlasciciela (Booking blokuje czytanie wprost, liczba pochodzi z kopii)
+- [!] Airbnb ma tylko 3 opinie przy jednym ogloszeniu — jesli jest ich
+      wiecej, trzeba dopisac adresy w SOURCES

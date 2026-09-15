@@ -178,7 +178,14 @@
   function imgPath(file) { return (CFG.galleryPath || 'assets/images/') + file; }
 
   /* ====================================================== 3. REZERWACJA */
-  function buildBookingUrl(unitId) {
+  // Data w formacie RRRR-MM-DD, liczona z lokalnego kalendarza przegladarki
+  // (toISOString potrafi cofnac sie o dobe przez strefe czasowa).
+  function isoDate(d) {
+    var m = d.getMonth() + 1, day = d.getDate();
+    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day;
+  }
+
+  function buildBookingUrl(unitId, extra) {
     var b = CFG.booking || {};
     if (!b.enabled || !b.bookingUrl || b.bookingUrl.charAt(0) === '#') {
       return 'kontakt.html#rezerwacja';
@@ -190,6 +197,14 @@
     if (b.objectId) url.searchParams.set(b.objectParam || 'oid', b.objectId);
     if (b.langParam) url.searchParams.set(b.langParam, (b.langMap && b.langMap[I18N.lang]) || I18N.lang);
     if (unitId && b.unitParam) url.searchParams.set(b.unitParam, unitId);
+
+    // Daty i liczba osob z panelu w hero — jesli Gosc ich nie wybral,
+    // adres zostaje bez nich i Hotres pyta o nie u siebie.
+    if (extra) {
+      if (extra.arrival   && b.arrivalParam)   url.searchParams.set(b.arrivalParam, extra.arrival);
+      if (extra.departure && b.departureParam) url.searchParams.set(b.departureParam, extra.departure);
+      if (extra.adults    && b.adultsParam)    url.searchParams.set(b.adultsParam, extra.adults);
+    }
     return url.toString();
   }
 
@@ -628,6 +643,67 @@
   }
 
   /* ====================================================== 10. PASEK MOBILNY */
+  /* Panel wyboru dat w hero. Sam nic nie sprawdza — zbiera trzy wartosci
+     i przekazuje je do Hotresa, ktory zna prawdziwa dostepnosc. */
+  function initBookBox() {
+    var box = $('[data-bookbox]');
+    if (!box) return;
+
+    var arrival   = $('input[name="arrival"]', box);
+    var departure = $('input[name="departure"]', box);
+    var adults    = $('select[name="adults"]', box);
+    var errBox    = $('[data-bookbox-error]', box);
+    if (!arrival || !departure || !adults) return;
+
+    // Lista osob siega najwiekszego apartamentu
+    var max = 2;
+    (CFG.apartments || []).forEach(function (a) { if (a.guests > max) max = a.guests; });
+    var opts = '';
+    for (var i = 1; i <= max; i++) {
+      opts += '<option value="' + i + '"' + (i === 2 ? ' selected' : '') + '>' + i + '</option>';
+    }
+    adults.innerHTML = opts;
+
+    var today = isoDate(new Date());
+    arrival.min = today;
+    departure.min = today;
+
+    function hideError() { if (errBox) errBox.hidden = true; }
+    function showError() {
+      if (!errBox) return;
+      errBox.textContent = I18N.t('book.dateError');
+      errBox.hidden = false;
+    }
+
+    // Wyjazd nie moze wypasc przed przyjazdem — po wyborze daty przyjazdu
+    // przesuwamy go na kolejna dobe.
+    arrival.addEventListener('change', function () {
+      hideError();
+      if (!arrival.value) return;
+      var p = arrival.value.split('-');
+      var next = isoDate(new Date(+p[0], +p[1] - 1, +p[2] + 1));
+      departure.min = next;
+      if (!departure.value || departure.value <= arrival.value) departure.value = next;
+    });
+    departure.addEventListener('change', hideError);
+
+    box.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (arrival.value && departure.value && departure.value <= arrival.value) {
+        showError();
+        return;
+      }
+      var url = buildBookingUrl('', {
+        arrival: arrival.value,
+        departure: departure.value,
+        adults: adults.value
+      });
+      var live = !!(CFG.booking && CFG.booking.enabled);
+      if (live && CFG.booking.openInNewTab) window.open(url, '_blank', 'noopener');
+      else window.location.href = url;
+    });
+  }
+
   function initBookBar() {
     var bar = $('.book-bar');
     if (!bar) return;
@@ -881,12 +957,13 @@
             priceTag(apt) +
             '<p class="body-text measure" data-i18n="' + esc(apt.i18nKey) + '.desc"></p>' +
             '<p class="body-text measure" data-i18n="' + esc(apt.i18nKey) + '.desc2"></p>' +
+            // Przycisk stoi przy cenie i opisie, a nie na samym dole panelu
+            '<div class="apt-row__actions">' +
+              '<a class="btn" data-book="' + esc(apt.id) + '"><span data-i18n="common.checkAvail"></span></a>' +
+            '</div>' +
           '</div>' +
         '</div>' +
         amenityBlock +
-        '<div class="apt-row__actions" data-reveal>' +
-          '<a class="btn" data-book="' + esc(apt.id) + '"><span data-i18n="common.checkAvail"></span></a>' +
-        '</div>' +
         variantBlock;
 
       mount.appendChild(row);
@@ -999,6 +1076,36 @@
       '<div><p class="k">' + esc(stay.checkInFrom || '16:00') + '</p><p class="v" data-i18n="facts.checkIn"></p></div>';
   }
 
+  /* Ramka z ocenami obiektu. Liczby siedza w assets/data/ratings.js —
+     osobnym pliku, zeby cotygodniowy skrypt mogl go nadpisywac bez
+     dotykania reszty ustawien. Kafelek jest odnosnikiem do zrodla oceny. */
+  function renderRatings(mount) {
+    if (!mount) return;
+    var data = window.TATRAPART_RATINGS || {};
+    var items = data.items || [];
+    if (!items.length) { mount.style.display = 'none'; return; }
+
+    // Po polsku, ukrainsku i rosyjsku czesci dziesietne oddziela przecinek
+    var comma = I18N.lang !== 'en';
+    function num(v) {
+      var t = String(v);
+      return comma ? t.replace('.', ',') : t;
+    }
+
+    mount.innerHTML = items.map(function (r) {
+      var inner =
+        '<p class="k">' + esc(num(r.score)) +
+          '<span class="rating__max">/' + esc(r.max) + '</span></p>' +
+        '<p class="v">' + esc(r.label) + '</p>' +
+        '<p class="rating__count">' +
+          esc(I18N.t('rate.basedOn')) + ' ' + esc(r.count) + ' ' + esc(I18N.t('rate.reviews')) +
+        '</p>';
+      return r.url
+        ? '<a class="rating" href="' + esc(r.url) + '" target="_blank" rel="noopener">' + inner + '</a>'
+        : '<div class="rating">' + inner + '</div>';
+    }).join('');
+  }
+
   function renderContactBits() {
     var c = CFG.company || {}, s = CFG.social || {}, stay = CFG.stay || {}, lg = CFG.legal || {};
 
@@ -1101,6 +1208,7 @@
     renderGalleryGrid($('[data-mount="gallery-grid"]'));
     renderReviews($('[data-mount="reviews"]'));
     renderFacts($('[data-mount="facts"]'));
+    renderRatings($('[data-mount="ratings"]'));
     renderServiceLists();
     renderContactBits();
 
@@ -1108,6 +1216,9 @@
     I18N.apply();
     renderStructuredData();
     document.addEventListener('tatrapart:langchange', renderStructuredData);
+    document.addEventListener('tatrapart:langchange', function () {
+      renderRatings($('[data-mount="ratings"]'));
+    });
 
     // Interakcje
     initHeader();
@@ -1115,6 +1226,7 @@
     initLang();
     initCarousels();
     initLightboxTriggers();
+    initBookBox();
     initBookBar();
     initForms();
     initReveal();

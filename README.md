@@ -242,18 +242,73 @@ działa na tatrapart.pl. Ustawienia siedzą w `booking` w `site-config.js`;
 język dokleja się sam — Hotres mówi po polsku, angielsku i rosyjsku, a dla
 ukraińskiego pokazuje wersję angielską.
 
+### Panel wyboru dat
+
+Na stronie głównej, w miejscu dawnych dwóch przycisków, stoi jasna płyta
+z trzema polami — przyjazd, wyjazd, liczba osób — a obok niej dębowy przycisk
+**Sprawdź dostępność**. Wybrane wartości jadą do Hotresa jako `arrival`,
+`departure` i `adults` (daty w formacie `RRRR-MM-DD`), czyli dokładnie tak,
+jak robił to kalendarzyk na starej stronie:
+
+```
+https://panel.hotres.pl/v4_step1?oid=2746&lang=pl&arrival=2026-12-27&departure=2026-12-28&adults=6
+```
+
+Gość nie musi niczego wybierać — bez dat adres po prostu ich nie zawiera
+i Hotres pyta o nie u siebie. Wybór przyjazdu sam przesuwa wyjazd na kolejną
+dobę, a odwrotna kolejność dat jest odrzucana z komunikatem.
+
 Czego jeszcze nie ma:
 
-- **Wybór dat na naszej stronie.** Hotres przyjmuje `arrival`, `departure`
-  i `adults`. Gdyby na stronie miał stanąć kalendarzyk, dopisujemy te
-  parametry do adresu — reszta jest gotowa.
 - **Przycisk otwierający od razu konkretny apartament.** Pod adresem
   `v4_step1` Hotres nie przyjmuje numeru apartamentu. Potrzebne są jego
   numery z panelu Hotres; wtedy wystarczy wpisać `unitParam` i numery
   przy apartamentach w `site-config.js`.
 
 Gdyby kiedyś trzeba było odpiąć silnik, wystarczy `enabled: false` — przyciski
-wrócą na stronę Kontakt.
+wrócą na stronę Kontakt, a panel wyboru dat razem z nimi.
+
+---
+
+## 5a. Oceny obiektu — ramka na stronie głównej
+
+Pod wstępem, w miejscu dawnej ramki z liczbami (6 apartamentów, 40 miejsc…),
+stoją trzy kafelki z ocenami: **Booking.com**, **Airbnb** i **Google**. Każdy
+pokazuje średnią, skalę i liczbę opinii, i prowadzi do źródła oceny.
+
+Liczby siedzą w `assets/data/ratings.js`. Można je poprawić ręcznie — to zwykły
+plik tekstowy z trzema wpisami.
+
+### Odświeżanie
+
+```
+python tools/aktualizuj-oceny.py
+```
+
+Skrypt czyta trzy strony i nadpisuje `ratings.js`. Jeśli któreś źródło nie
+odpowie albo zwróci bzdurę (zero opinii, ocena poza skalą), zostaje ostatnia
+znana liczba — ramka nigdy nie pokaże pustki.
+
+To samo robi co poniedziałek GitHub Actions
+(`.github/workflows/oceny.yml`). Gdy któraś liczba się zmieni, workflow
+wrzuca commit na `main`, a Vercel publikuje nową wersję. Można go też odpalić
+ręcznie: **Actions → Oceny obiektu → Run workflow**.
+
+### Skąd biorą się liczby
+
+Booking i Google blokują czytanie wprost, więc skrypt sięga po serwisy,
+które publikują te same liczby w formacie JSON-LD:
+
+| Kafelek | Skąd czytamy | Uwaga |
+|---|---|---|
+| Booking.com | `domki-gawra-tatrzanska.hotels-zakopane.com` | Kopia danych z Booking.com |
+| Airbnb | strona ogłoszenia `airbnb.com/rooms/786674248961986518` | Dane wprost ze źródła |
+| Google | `wanderlog.com/place/details/4444482/tatrapart` | Kopia oceny z Map Google |
+
+Adresy źródeł siedzą w `SOURCES` na górze skryptu — gdyby któraś strona
+przestała działać, wymienia się tam jeden wiersz. Gdyby Airbnb miał więcej
+niż jedno ogłoszenie TatrApartu, trzeba dopisać ich adresy, bo teraz liczy
+się tylko to jedno.
 
 ---
 

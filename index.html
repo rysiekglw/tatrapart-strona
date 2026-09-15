@@ -135,10 +135,28 @@
     <span class="hero__eyebrow" data-i18n="hero.eyebrow">Zakopane · Polskie Tatry</span>
     <h1 class="hero__title" data-i18n="hero.title">TatrApart</h1>
     <p class="hero__tagline" data-i18n="hero.tagline">Dwa domki góralskie, sześć apartamentów, widok na Tatry.</p>
-    <div class="hero__actions">
-      <a class="btn btn--light" data-book=""><span data-i18n="common.checkAvail">Sprawdź dostępność</span></a>
-      <a class="btn btn--oak" href="#" data-lightbox="0"><span data-i18n="common.viewImages">Zobacz galerię</span></a>
-    </div>
+    <!-- Panel wyboru dat. Po kliknieciu przycisku daty i liczba osob
+         jada razem z Gosciem do silnika rezerwacji Hotres. -->
+    <form class="bookbox" data-bookbox>
+      <div class="bookbox__panel">
+        <label class="bookbox__field">
+          <span class="bookbox__label" data-i18n="book.arrival">Przyjazd</span>
+          <input class="bookbox__input" type="date" name="arrival" autocomplete="off">
+        </label>
+        <label class="bookbox__field">
+          <span class="bookbox__label" data-i18n="book.departure">Wyjazd</span>
+          <input class="bookbox__input" type="date" name="departure" autocomplete="off">
+        </label>
+        <label class="bookbox__field bookbox__field--guests">
+          <span class="bookbox__label" data-i18n="book.guests">Goście</span>
+          <select class="bookbox__input" name="adults"></select>
+        </label>
+      </div>
+      <button class="btn btn--oak bookbox__go" type="submit">
+        <span data-i18n="common.checkAvail">Sprawdź dostępność</span>
+      </button>
+      <p class="bookbox__error" data-bookbox-error hidden></p>
+    </form>
   </div>
 
   <div class="hero__scroll" aria-hidden="true">
@@ -162,10 +180,10 @@
   </div>
 </section>
 
-<!-- ====================================================== LICZBY -->
+<!-- ====================================================== OCENY -->
 <section class="section section--tight section--milk section--flush-top">
   <div class="container">
-    <div class="facts" data-mount="facts" data-reveal></div>
+    <div class="facts facts--ratings" data-mount="ratings" data-reveal></div>
   </div>
 </section>
 
@@ -454,6 +472,7 @@
 </div>
 
 <script src="assets/js/site-config.js"></script>
+<script src="assets/data/ratings.js"></script>
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 </body>

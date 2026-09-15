@@ -593,6 +593,76 @@ input, textarea, select { font: inherit; color: inherit; }
 
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 
+/* --- Panel wyboru dat w hero ---------------------------------------------
+   Jasna plyta z trzema polami, a tuz obok debowy przycisk — celowo w innym
+   kolorze niz plyta, zeby od razu rzucal sie w oczy. */
+.bookbox {
+  display: flex; flex-wrap: wrap; align-items: stretch;
+  gap: 14px;
+  max-width: 880px;
+}
+.bookbox__panel {
+  flex: 1 1 420px;
+  display: grid;
+  grid-template-columns: 1fr 1fr .8fr;
+  background: rgba(251, 248, 243, .95);
+  border: 1px solid rgba(251, 248, 243, .95);
+  box-shadow: 0 18px 46px rgba(28, 24, 21, .28);
+}
+.bookbox__field {
+  display: flex; flex-direction: column; justify-content: center;
+  gap: 5px;
+  padding: 13px clamp(14px, 1.6vw, 20px);
+  border-right: 1px solid var(--cream);
+  cursor: pointer;
+  min-width: 0;
+}
+.bookbox__field:last-child { border-right: 0; }
+.bookbox__label {
+  font-size: .6rem; letter-spacing: .20em; text-transform: uppercase;
+  color: var(--muted);
+}
+.bookbox__input {
+  width: 100%;
+  border: 0; background: transparent; padding: 0;
+  font-family: inherit; font-size: .95rem; color: var(--ink);
+  /* Jednakowa wysokosc pol daty i listy osob — bez tego podpisy
+     nad nimi staja na roznych wysokosciach. */
+  height: 1.55em; line-height: 1.55;
+  cursor: pointer;
+}
+.bookbox__input:focus { outline: 0; }
+.bookbox__field:focus-within { background: var(--milk-2); }
+/* Ikona kalendarza w debowym odcieniu zamiast domyslnej szarej */
+.bookbox__input::-webkit-calendar-picker-indicator { opacity: .55; cursor: pointer; }
+.bookbox__input::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+
+/* Kolor bierze z .btn--oak — celowo inny niz jasna plyta obok. */
+.bookbox__go {
+  flex: 0 0 auto;
+  /* Na szerokim ekranie wysokosc bierze sie z rozciagniecia obok plyty,
+     na telefonie przycisk stoi sam i musi miec wlasne odstepy. */
+  padding: 17px clamp(26px, 3.4vw, 44px);
+  box-shadow: 0 18px 46px rgba(28, 24, 21, .28);
+}
+.bookbox__error {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size: .78rem; color: var(--milk);
+  background: rgba(28, 24, 21, .62);
+  padding: 8px 14px;
+}
+
+@media (max-width: 720px) {
+  .bookbox { gap: 12px; }
+  .bookbox__panel { flex: 1 1 100%; grid-template-columns: 1fr 1fr; }
+  .bookbox__field--guests {
+    grid-column: 1 / -1;
+    border-right: 0; border-top: 1px solid var(--cream);
+  }
+  .bookbox__go { flex: 1 1 100%; }
+}
+
 .hero__scroll {
   position: absolute;
   right: var(--gutter);
@@ -1144,6 +1214,38 @@ img.is-missing { opacity: 0; }
 }
 .facts .v { font-size: .68rem; letter-spacing: .20em; text-transform: uppercase; color: var(--muted); }
 
+/* --- Ramka z ocenami -----------------------------------------------------
+   Ten sam ksztalt co ramka z liczbami, tylko trzy kafelki zamiast czterech.
+   Kazdy jest odnosnikiem do serwisu, z ktorego pochodzi ocena. */
+/* Na telefonie oceny ida jedna pod druga, potem 2 + 1, na koncu trzy obok siebie */
+.facts--ratings { grid-template-columns: 1fr; }
+@media (min-width: 560px) {
+  .facts--ratings { grid-template-columns: repeat(2, 1fr); }
+  .facts--ratings .rating:last-child { grid-column: 1 / -1; }
+}
+@media (min-width: 720px) {
+  .facts--ratings { grid-template-columns: repeat(3, 1fr); }
+  .facts--ratings .rating:last-child { grid-column: auto; }
+}
+.facts--ratings .rating {
+  background: var(--milk);
+  padding: clamp(24px, 3vw, 40px);
+  display: block;
+  color: inherit; text-decoration: none;
+  transition: background-color .4s var(--ease);
+}
+a.rating:hover, a.rating:focus-visible { background: var(--milk-2); }
+.facts--ratings .k { margin-bottom: 10px; }
+.rating__max {
+  font-size: .42em; letter-spacing: .04em; color: var(--muted);
+  margin-left: 2px;
+}
+.rating__count {
+  margin-top: 7px;
+  font-size: .72rem; color: var(--muted); letter-spacing: .02em;
+}
+
+
 /* ----------------------------------------------- 22. LISTA APARTAMENTOW */
 .apt-row {
   padding-block: clamp(34px, 4vw, 64px);
@@ -1258,7 +1360,7 @@ img.is-missing { opacity: 0; }
 
 /* Blok wyposazenia stoi pod dwiema kolumnami, wiec ma wlasny odstep */
 .apt-row__amenities { margin-top: clamp(26px, 3vw, 44px); }
-.apt-row__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.apt-row__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: clamp(22px, 2.4vw, 32px); }
 
 .amenity {
   display: flex; align-items: center; gap: 14px;

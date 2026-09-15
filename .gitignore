@@ -18,3 +18,6 @@ dla-claude/
 
 # To samo dla folderu ze zrzutami ekranu, ktore pokazujesz przy poprawkach.
 assets/images/zdjecia/
+
+# Smieci Pythona po uruchomieniu skryptu z folderu tools/
+__pycache__/
