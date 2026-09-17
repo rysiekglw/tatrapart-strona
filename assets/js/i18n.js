@@ -19,7 +19,7 @@ window.TATRAPART_I18N = {
      ====================================================================== */
   pl: {
     'meta.title':        'TatrApart — Apartamenty w Zakopanem',
-    'meta.description':  'Dwa domki góralskie i sześć apartamentów w Zakopanem, przy ul. Topory 1B. Od 60 do 90 m², kominek, sauna, jacuzzi i widok na Tatry.',
+    'meta.description':  'Dwa domki góralskie i pięć apartamentów w Zakopanem, przy ul. Topory 1B. Od 60 do 90 m², kominek, sauna, jacuzzi i widok na Tatry.',
     'meta.title.apartments': 'Apartamenty — TatrApart Zakopane',
     'meta.title.gallery':    'Galeria — TatrApart Zakopane',
     'meta.title.offers':     'Oferty — TatrApart Zakopane',
@@ -61,7 +61,7 @@ window.TATRAPART_I18N = {
 
     'hero.eyebrow': 'Zakopane · Polskie Tatry',
     'hero.title':   'TatrApart',
-    'hero.tagline': 'Dwa domki góralskie, sześć apartamentów, widok na Tatry.',
+    'hero.tagline': 'Dwa domki góralskie, pięć apartamentów, widok na Tatry.',
 
     'intro.title': 'Domek Forest i Domek Snow',
     'intro.p1':    'TatrApart to dwa piękne, trzypiętrowe domki góralskie. Każdy z nich oferuje trzy przestronne i klimatycznie urządzone apartamenty. Rozłożenie pomieszczeń gwarantuje wszystkim Gościom komfortowy i kameralny wypoczynek z zachowaniem najwyższych standardów wyposażenia wnętrz.',
@@ -304,7 +304,7 @@ window.TATRAPART_I18N = {
      ====================================================================== */
   en: {
     'meta.title':        'TatrApart — Apartments in Zakopane',
-    'meta.description':  'Two highland houses and six apartments in Zakopane, at Topory 1B. From 60 to 90 sqm, fireplace, sauna, jacuzzi and Tatra views.',
+    'meta.description':  'Two highland houses and five apartments in Zakopane, at Topory 1B. From 60 to 90 sqm, fireplace, sauna, jacuzzi and Tatra views.',
     'meta.title.apartments': 'Apartments — TatrApart Zakopane',
     'meta.title.gallery':    'Gallery — TatrApart Zakopane',
     'meta.title.offers':     'Offers — TatrApart Zakopane',
@@ -346,7 +346,7 @@ window.TATRAPART_I18N = {
 
     'hero.eyebrow': 'Zakopane · Polish Tatras',
     'hero.title':   'TatrApart',
-    'hero.tagline': 'Two highland houses, six apartments, a view of the Tatras.',
+    'hero.tagline': 'Two highland houses, five apartments, a view of the Tatras.',
 
     'intro.title': 'Forest House and Snow House',
     'intro.p1':    'TatrApart is two beautiful three-storey highland houses. Each offers three spacious apartments furnished with real character. The way the rooms are arranged gives every guest a comfortable and private stay, held to the highest standards of interior fittings.',
@@ -541,7 +541,7 @@ window.TATRAPART_I18N = {
      ====================================================================== */
   uk: {
     'meta.title':        'TatrApart — Апартаменти в Закопаному',
-    'meta.description':  'Два гуральські будинки і шість апартаментів у Закопаному, вул. Topory 1B. Від 60 до 90 м², камін, сауна, джакузі та вид на Татри.',
+    'meta.description':  'Два гуральські будинки і п’ять апартаментів у Закопаному, вул. Topory 1B. Від 60 до 90 м², камін, сауна, джакузі та вид на Татри.',
     'meta.title.apartments': 'Апартаменти — TatrApart Закопане',
     'meta.title.gallery':    'Галерея — TatrApart Закопане',
     'meta.title.offers':     'Пропозиції — TatrApart Закопане',
@@ -583,7 +583,7 @@ window.TATRAPART_I18N = {
 
     'hero.eyebrow': 'Закопане · Польські Татри',
     'hero.title':   'TatrApart',
-    'hero.tagline': 'Два гуральські будинки, шість апартаментів, вид на Татри.',
+    'hero.tagline': 'Два гуральські будинки, п’ять апартаментів, вид на Татри.',
 
     'intro.title': 'Будинок Forest і будинок Snow',
     'intro.p1':    'TatrApart — це два гарні триповерхові гуральські будинки. Кожен із них пропонує три просторі та зі смаком облаштовані апартаменти. Розташування приміщень гарантує всім гостям комфортний і камерний відпочинок із дотриманням найвищих стандартів облаштування інтер’єрів.',
@@ -778,7 +778,7 @@ window.TATRAPART_I18N = {
      ====================================================================== */
   ru: {
     'meta.title':        'TatrApart — Апартаменты в Закопане',
-    'meta.description':  'Два гуральских дома и шесть апартаментов в Закопане, ул. Topory 1B. От 60 до 90 м², камин, сауна, джакузи и вид на Татры.',
+    'meta.description':  'Два гуральских дома и пять апартаментов в Закопане, ул. Topory 1B. От 60 до 90 м², камин, сауна, джакузи и вид на Татры.',
     'meta.title.apartments': 'Апартаменты — TatrApart Закопане',
     'meta.title.gallery':    'Галерея — TatrApart Закопане',
     'meta.title.offers':     'Предложения — TatrApart Закопане',
@@ -820,7 +820,7 @@ window.TATRAPART_I18N = {
 
     'hero.eyebrow': 'Закопане · Польские Татры',
     'hero.title':   'TatrApart',
-    'hero.tagline': 'Два гуральских дома, шесть апартаментов, вид на Татры.',
+    'hero.tagline': 'Два гуральских дома, пять апартаментов, вид на Татры.',
 
     'intro.title': 'Дом Forest и дом Snow',
     'intro.p1':    'TatrApart — это два красивых трёхэтажных гуральских дома. Каждый из них предлагает три просторных и со вкусом обставленных апартамента. Расположение помещений гарантирует всем гостям комфортный и камерный отдых с соблюдением высочайших стандартов оснащения интерьеров.',

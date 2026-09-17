@@ -124,7 +124,7 @@ window.TATRAPART_CONFIG = {
       i18nKey: 'apt.deluxeParter',
       // Zdjecia przeniesione z tatrapart.pl, osobny zestaw dla kazdego wariantu.
       // Pliki: assets/images/apartamenty/<id>-<wariant>-01.jpg ... -NN.jpg
-      photos: { path: 'apartamenty/', brown: 14, white: 26 },
+      photos: { path: 'apartamenty/', brown: 14, white: 17 },
       priceFrom: 445,
       guests: 6,
       bedrooms: 2,
@@ -141,7 +141,9 @@ window.TATRAPART_CONFIG = {
     {
       id: 'deluxe-pietro',
       i18nKey: 'apt.deluxePietro',
-      photos: { path: 'apartamenty/', brown: 8, white: 28 },
+      // Wariant White na I pietrze jeszcze nie istnieje (brak apartamentu) —
+      // wpisany tylko wariant Brown, dopoki nie powstanie i nie bedzie zdjec.
+      photos: { path: 'apartamenty/', brown: 18 },
       priceFrom: 495,
       guests: 8,
       bedrooms: 3,
@@ -149,7 +151,7 @@ window.TATRAPART_CONFIG = {
       area: 90,
       floorKey: 'floor.first',
       typeKey: 'type.deluxe',
-      variants: ['brown', 'white'],
+      variants: ['brown'],
       features: ['terrace', 'mountainView', 'sauna', 'jacuzzi', 'balcony4', 'fireplace',
                  'bath', 'shower', 'kitchen', 'fridge', 'dishwasher', 'kettle',
                  'tv', 'wifi', 'heating', 'parking', 'towels', 'hairdryer',
@@ -158,7 +160,7 @@ window.TATRAPART_CONFIG = {
     {
       id: 'suite-poddasze',
       i18nKey: 'apt.suitePoddasze',
-      photos: { path: 'apartamenty/', brown: 10, white: 23 },
+      photos: { path: 'apartamenty/', brown: 14, white: 15 },
       priceFrom: 297,
       guests: 6,
       bedrooms: 3,
@@ -191,10 +193,10 @@ window.TATRAPART_CONFIG = {
 
   /* --------------------------------------------------------------------
      6. GALERIA
-     Pliki: assets/images/gallery-01.jpg ... gallery-11.jpg
-     Dodajesz kolejne? Nazwij gallery-12.jpg i podnies liczbe o jeden.
+     Pliki: assets/images/gallery-01.jpg ... gallery-17.jpg
+     Dodajesz kolejne? Nazwij gallery-18.jpg i podnies liczbe o jeden.
      -------------------------------------------------------------------- */
-  galleryCount: 11,
+  galleryCount: 17,
   galleryPath: 'assets/images/',
   galleryPrefix: 'gallery-',
   galleryExt: '.jpg',

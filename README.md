@@ -154,12 +154,15 @@ znajduje się w plikach `.build/main-*.html`.
 
 ### Wnętrza — gotowe
 
-Wgrane i podpięte: **logo + 11 zdjęć wnętrz** (`gallery-01.jpg` … `gallery-11.jpg`).
+Wgrane i podpięte: **logo + 17 zdjęć wnętrz** (`gallery-01.jpg` … `gallery-17.jpg`).
+Zdjęcia 01–11 mają przypisane stałe role (hero, tło, paralaksa) — 12–17 to
+dodatkowe ujęcia (zima z drona, bilard, sauna, jacuzzi), które trafiają tylko
+do siatki na stronie Galeria.
 
 | Plik | Ujęcie | Gdzie |
 |---|---|---|
 | `gallery-01.jpg` | jadalnia, widok na Giewont, lato | galeria |
-| `gallery-02.jpg` | balkon latem, panorama Tatr | duże zdjęcie z paralaksą |
+| `gallery-02.jpg` | taras, panorama Tatr | duże zdjęcie z paralaksą |
 | `gallery-03.jpg` | sypialnia, drzwi z niedźwiedziem | hero podstrony Apartamenty |
 | `gallery-04.jpg` | kamienny kominek i stół | hero Regulaminu |
 | `gallery-05.jpg` | salon ze skórzaną kanapą | **hero strony głównej**, `og:image` |
@@ -169,30 +172,34 @@ Wgrane i podpięte: **logo + 11 zdjęć wnętrz** (`gallery-01.jpg` … `gallery
 | `gallery-09.jpg` | antresola z szezlongiem | galeria |
 | `gallery-10.jpg` | taras zimą | tło bloku Oferty, hero Oferty |
 | `gallery-11.jpg` | widok z balkonu, Giewont | hero podstrony Kontakt |
+| `gallery-12.jpg` … `gallery-17.jpg` | domki zimą z drona, bilard, sauna, jacuzzi | galeria |
 
-Dodajesz kolejne? Nazwij `gallery-12.jpg` i zmień `galleryCount: 11` na `12`
+Dodajesz kolejne? Nazwij `gallery-18.jpg` i zmień `galleryCount: 17` na `18`
 w `site-config.js`.
 
 ### Apartamenty — gotowe
 
-**109 zdjęć przeniesionych z tatrapart.pl**, w `assets/images/apartamenty/`.
-Każdy wariant ma własny zestaw, a nazwy plików mówią, gdzie zdjęcie trafia:
+Zdjęcia w `assets/images/apartamenty/`, skompresowane do 1920 px / jakość 85
+(oryginały z aparatu ważyły łącznie 400 MB — po kompresji 39 MB). Każdy
+wariant ma własny zestaw, a nazwy plików mówią, gdzie zdjęcie trafia:
 
 | Apartament | Brown | White |
 |---|---|---|
-| `deluxe-parter` — 4–6 osobowy | 14 zdjęć | 26 zdjęć |
-| `deluxe-pietro` — 6–8 osobowy | 8 zdjęć | 28 zdjęć |
-| `suite-poddasze` — 6 osobowy | 10 zdjęć | 23 zdjęcia |
+| `deluxe-parter` — 4–6 osobowy | 14 zdjęć | 17 zdjęć |
+| `deluxe-pietro` — 6–8 osobowy | 18 zdjęć | **nie istnieje** |
+| `suite-poddasze` — 6 osobowy | 14 zdjęć | 15 zdjęć |
+
+> **Wariant White apartamentu 6–8 osobowego (deluxe-pietro) jeszcze nie
+> istnieje** — to jedyny wyjątek, ustalony świadomie z właścicielką. W
+> `site-config.js` ten apartament ma `variants: ['brown']` i w ogóle nie ma
+> klucza `white` w `photos`. Gdy apartament powstanie i pojawią się zdjęcia:
+> dopisz `white: NN` do `photos` i `'white'` do `variants`.
 
 Schemat nazwy: `<apartament>-<wariant>-NN.jpg`, na przykład
 `deluxe-parter-white-01.jpg`. Dokładasz zdjęcie? Dograj plik z kolejnym
 numerem i podnieś liczbę w `photos` w `site-config.js` — reszta dzieje się
-sama. Pierwsze zdjęcie wariantu Brown jest zarazem zdjęciem głównym
+sama. Zdjęcie `-01` każdego wariantu Brown jest zarazem zdjęciem głównym
 apartamentu, tym z karuzeli na stronie głównej.
-
-> Zdjęcia mają 616 × 411 pikseli, bo tylko w takim rozmiarze udostępnia je
-> obecna strona. Jeśli macie oryginały z aparatu, warto je podmienić —
-> na dużych ekranach będą wyraźniejsze.
 
 ### Ikony wyposażenia
 
@@ -200,17 +207,6 @@ W `assets/images/ikony/` leży 20 ikon przeniesionych z tatrapart.pl oraz dwie
 dorysowane (`bidet.svg`, `microwave.svg`), bo takich nie było. Strona maluje je
 kolorem dębowym z palety, więc pliki mogą pozostać czarno-białe. Przypisanie
 ikony do wyposażenia siedzi w `main.js`, w tablicy `FEATURE_ICON`.
-
-`gallery-10.jpg` waży 745 KB — warto skompresować. W katalogu został też
-nieużywany duplikat `gallery (7).webp`, można go skasować.
-
-### Apartamenty — puste ramki, zgodnie z ustaleniem
-
-Przy każdym z trzech apartamentów jest w tej chwili **pusta ramka** w kolorach
-Milk & Oak z napisem „Zdjęcie wkrótce". Aby wstawić zdjęcie:
-
-1. wgraj plik do `assets/images/`, np. `apt-deluxe-pietro.jpg`,
-2. w `site-config.js` w danym apartamencie wpisz `img: 'apt-deluxe-pietro.jpg'`.
 
 ### Logo
 
@@ -405,7 +401,7 @@ Wszystkie teksty są w `assets/js/i18n.js`, pogrupowane po języku: `pl`, `en`,
 `uk`, `ru`. Zmieniasz tekst po prawej stronie klucza:
 
 ```js
-'hero.tagline': 'Dwa domki góralskie, sześć apartamentów, widok na Tatry.',
+'hero.tagline': 'Dwa domki góralskie, pięć apartamentów, widok na Tatry.',
 ```
 
 Jeżeli zmieniasz tekst po polsku, zmień go też w pozostałych trzech językach.

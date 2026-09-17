@@ -1321,6 +1321,7 @@ a.rating:hover, a.rating:focus-visible { background: var(--milk-2); }
   border-block: 1px solid var(--line-soft);
 }
 @media (min-width: 820px) { .variants__grid { grid-template-columns: 1fr 1fr; } }
+.variants__grid--single { grid-template-columns: 1fr !important; }
 .variant { background: var(--milk); padding: clamp(24px, 2.6vw, 36px); }
 .section--milk2 .variant { background: var(--milk-2); }
 .variant__name {

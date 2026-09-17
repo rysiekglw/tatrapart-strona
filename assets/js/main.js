@@ -929,10 +929,11 @@
                '</div>';
       }).join('');
 
+      var singleVariant = (apt.variants || []).length === 1;
       var variantBlock = variants
         ? '<div class="variants" data-reveal>' +
             '<h3 class="eyebrow" data-i18n="variant.title"></h3>' +
-            '<div class="variants__grid">' + variants + '</div>' +
+            '<div class="variants__grid' + (singleVariant ? ' variants__grid--single' : '') + '">' + variants + '</div>' +
           '</div>'
         : '';
 
