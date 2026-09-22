@@ -653,6 +653,22 @@ input, textarea, select { font: inherit; color: inherit; }
   padding: 8px 14px;
 }
 
+/* Brak dat, a Gosc klika „Sprawdz dostepnosc" — zamiast wysylac go do
+   Hotresa z pustym terminem, cala plyta obrysowuje sie na moment na
+   czerwono i zostaje na stronie. Klasa znika po chwili, a obrys
+   scieraja plynnie przejscia ponizej. */
+.bookbox__panel,
+.bookbox__field { transition: border-color .45s ease, box-shadow .45s ease; }
+.bookbox.is-invalid .bookbox__panel {
+  border-color: #A3402F;
+  box-shadow: 0 0 0 2px rgba(163, 64, 47, .55), 0 18px 46px rgba(28, 24, 21, .28);
+  transition-duration: .12s;
+}
+.bookbox.is-invalid .bookbox__field { border-right-color: rgba(163, 64, 47, .32); }
+@media (max-width: 720px) {
+  .bookbox.is-invalid .bookbox__field--guests { border-top-color: rgba(163, 64, 47, .32); }
+}
+
 @media (max-width: 720px) {
   .bookbox { gap: 12px; }
   .bookbox__panel { flex: 1 1 100%; grid-template-columns: 1fr 1fr; }
@@ -1031,12 +1047,7 @@ input, textarea, select { font: inherit; color: inherit; }
 .lightbox__thumb.is-active { opacity: 1; border-color: var(--oak-light); }
 .lightbox__thumb:hover { opacity: .8; }
 
-/* -------------------------------------------------------- 15. NEWSLETTER */
-.newsletter__grid {
-  display: grid; grid-template-columns: 1fr; gap: clamp(28px, 4vw, 70px);
-}
-@media (min-width: 960px) { .newsletter__grid { grid-template-columns: 1fr 1.1fr; align-items: start; } }
-
+/* ---------------------------------------------------------- 15. FORMULARZE */
 .field { position: relative; margin-bottom: 26px; }
 .field input, .field textarea, .field select {
   width: 100%;
@@ -1121,6 +1132,16 @@ input, textarea, select { font: inherit; color: inherit; }
 .footer a { transition: color .35s var(--ease); font-size: .90rem; }
 .footer a:hover { color: var(--milk); }
 .footer address { font-style: normal; font-size: .90rem; line-height: 1.9; }
+
+/* Jezyki, w ktorych odbieramy telefon — drobny dopisek tuz za numerem,
+   celowo mniejszy i bez podkreslenia, zeby nie udawal odnosnika. */
+.phone-langs {
+  margin-left: 10px;
+  font-size: .66rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.footer .phone-langs { color: rgba(198, 185, 168, .72); }
 
 .footer__legal {
   border-top: 1px solid var(--line-dark);

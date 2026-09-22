@@ -34,7 +34,7 @@ terminal). Serwer zatrzymasz skrótem Ctrl + C.
    Русский. Cała strona zmieni język, a wybór zostanie zapamiętany.
 3. Kliknij **Zobacz zdjęcia** w sekcji powitalnej — otworzy się galeria
    z miniaturami. Zamkniesz ją klawiszem Esc.
-4. Wejdź w **Apartamenty** — trzy typy, każdy z wariantem Brown i White.
+4. Wejdź w **Apartamenty** — trzy typy, każdy w Domku Brązowym i Białym.
 5. Wejdź w **Regulamin** — spis treści po lewej przewija do sekcji.
 6. Zwęź okno przeglądarki do szerokości telefonu — układ przestawi się
    na jedną kolumnę, a na dole pojawi się pasek z przyciskiem rezerwacji.
@@ -381,17 +381,14 @@ w pozostałych językach w `i18n.js`. Mechanizm podmieni je automatycznie.
 - potwierdzenie listy usług „W cenie pobytu"
 - prawdziwe opinie Gości — sekcja jest ukryta, `showReviews: false`
 - treść strony „Oferty"
-- podpięcie formularzy do usługi wysyłkowej (Formspree, Getform lub własny
-  skrypt) — miejsce przygotowane w `main.js`, funkcja `initForms`
+- podpięcie formularza kontaktowego do usługi wysyłkowej (Formspree,
+  Getform lub własny skrypt) — miejsce przygotowane w `main.js`,
+  funkcja `initForms`
 - weryfikacja tłumaczeń EN / UA / RU przez native speakera
 - polityka prywatności — odnośnik w stopce **nie wyświetla się**, dopóki
   nie wpiszesz adresu dokumentu w `legal.privacyUrl` w `site-config.js`
 - minimalna długość pobytu i zasady dotyczące zwierząt — nie ma ich
   w regulaminie, pola w `site-config.js` są ustawione na `null`
-- odległości w sekcji „Lokalizacja" są orientacyjne i liczone od dawnego,
-  błędnego punktu na mapie — po korekcie pinezki (ul. Topory 1B leży
-  w Olczy, nie w centrum) warto je przeliczyć w `site-config.js`, tablica
-  `distances`
 
 ---
 

@@ -62,11 +62,14 @@ window.TATRAPART_CONFIG = {
     email: 'contact@tatrapart.pl',
     reservationsEmail: 'contact@tatrapart.pl',
     // Wspolrzedne budynku przy ul. Topory 1B odczytane z bazy OpenStreetMap
-    // (wyszukiwarka Nominatim, wrzesien 2026). Pinezka na mapie i odnosnik do
-    // Map Google korzystaja z tych samych liczb.
+    // (wyszukiwarka Nominatim, wrzesien 2026). Z nich powstaje pinezka na
+    // mapce osadzonej na stronie.
+    // mapsUrl to firmowa wizytowka TatrApartu w Mapach Google — przycisk
+    // „Otworz w Mapach Google" prowadzi prosto do niej, a nie do samego
+    // punktu na mapie.
     latitude: 49.311585,
     longitude: 19.996076,
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=49.311585,19.996076'
+    mapsUrl: 'https://maps.app.goo.gl/ytCL8chvA2aztcmMA'
   },
 
   social: {
@@ -107,16 +110,20 @@ window.TATRAPART_CONFIG = {
   /* --------------------------------------------------------------------
      4. APARTAMENTY — dane przepisane z tatrapart.pl
      --------------------------------------------------------------------
-     Obiekt to dwa trzypietrowe domki goralskie: Domek Forest i Domek Snow.
+     Obiekt to dwa trzypietrowe domki goralskie: Domek Brazowy i Domek Bialy.
      Kazdy z nich ma 3 apartamenty, czyli razem 6 apartamentow.
-     Ponizej 3 TYPY apartamentow; kazdy wystepuje w wersji Brown (Forest)
-     i White (Snow).
+     Ponizej 3 TYPY apartamentow; kazdy wystepuje w wersji brown
+     (Domek Brazowy) i white (Domek Bialy) — tak nazywaja sie pliki zdjec.
 
      photos podaje liczbe zdjec kazdego wariantu. Pliki leza w
      assets/images/apartamenty/ i nazywaja sie wedlug schematu
      <id>-brown-01.jpg, <id>-brown-02.jpg, <id>-white-01.jpg itd.
      Dokladasz zdjecia? Dograj plik z kolejnym numerem i podnies liczbe.
      Kolejnosc apartamentow na stronie jest taka jak ponizej.
+
+     photos.cover wskazuje numer zdjecia tytulowego danego wariantu — tego,
+     ktore stoi na kafelku apartamentu i na poczatku paska zdjec wariantu.
+     Bez wpisu zdjeciem tytulowym zostaje pierwsze z brzegu (numer 1).
      -------------------------------------------------------------------- */
   apartments: [
     {
@@ -124,7 +131,8 @@ window.TATRAPART_CONFIG = {
       i18nKey: 'apt.deluxeParter',
       // Zdjecia przeniesione z tatrapart.pl, osobny zestaw dla kazdego wariantu.
       // Pliki: assets/images/apartamenty/<id>-<wariant>-01.jpg ... -NN.jpg
-      photos: { path: 'apartamenty/', brown: 14, white: 17 },
+      // Zdjecia tytulowe dobrane tak, zeby od razu bylo widac kominek.
+      photos: { path: 'apartamenty/', brown: 14, white: 17, cover: { brown: 10, white: 17 } },
       priceFrom: 445,
       guests: 6,
       bedrooms: 2,
@@ -143,7 +151,8 @@ window.TATRAPART_CONFIG = {
       i18nKey: 'apt.deluxePietro',
       // Wariant White na I pietrze jeszcze nie istnieje (brak apartamentu) —
       // wpisany tylko wariant Brown, dopoki nie powstanie i nie bedzie zdjec.
-      photos: { path: 'apartamenty/', brown: 18 },
+      // Zdjecie tytulowe z widocznym kominkiem.
+      photos: { path: 'apartamenty/', brown: 18, cover: { brown: 13 } },
       priceFrom: 495,
       guests: 8,
       bedrooms: 3,
@@ -180,15 +189,26 @@ window.TATRAPART_CONFIG = {
   showPrices: true,
 
   /* --------------------------------------------------------------------
-     5. ODLEGLOSCI — orientacyjne, liczone od ul. Topory 1B
+     5. ODLEGLOSCI
+     --------------------------------------------------------------------
+     Trasy samochodowe sprawdzone w Mapach Google 21 wrzesnia 2026,
+     liczone od wizytowki TatrApartu (ul. Topory 1B) do:
+       Krupowki    — srodek deptaka,
+       Gubalowka   — Gubalowka PKL, Stacja Dolna (ul. Na Gubalowke 4),
+       Kasprowy    — Kuznice, dolna stacja kolei (dalej juz tylko pieszo
+                     lub busem, bo droga jest zamknieta dla samochodow),
+       Nosal       — Centrum Szkolen Narciarskich Nosal (Droga Balzera 30),
+       Termy       — Chocholowskie Termy (Chocholow 400),
+       Krakow      — lotnisko Jana Pawla II w Balicach.
+     Czasy przy zwyklym ruchu; w sezonie i w szczycie dnia beda dluzsze.
      -------------------------------------------------------------------- */
   distances: [
-    { i18nKey: 'dist.krupowki',  value: '2,5 km', time: '8 min' },   // >>> DO POTWIERDZENIA <<<
-    { i18nKey: 'dist.gubalowka', value: '3,0 km', time: '10 min' },  // >>> DO POTWIERDZENIA <<<
-    { i18nKey: 'dist.kasprowy',  value: '5,0 km', time: '14 min' },  // >>> DO POTWIERDZENIA <<<
-    { i18nKey: 'dist.nosal',     value: '4,0 km', time: '12 min' },  // >>> DO POTWIERDZENIA <<<
-    { i18nKey: 'dist.termy',     value: '22 km',  time: '30 min' },  // >>> DO POTWIERDZENIA <<<
-    { i18nKey: 'dist.krakow',    value: '105 km', time: '2 h' }      // >>> DO POTWIERDZENIA <<<
+    { i18nKey: 'dist.krupowki',  value: '6,3 km',  time: '14 min' },
+    { i18nKey: 'dist.gubalowka', value: '5,9 km',  time: '14 min' },
+    { i18nKey: 'dist.kasprowy',  value: '4,5 km',  time: '10 min' },
+    { i18nKey: 'dist.nosal',     value: '4,3 km',  time: '8 min' },
+    { i18nKey: 'dist.termy',     value: '22,5 km', time: '32 min' },
+    { i18nKey: 'dist.krakow',    value: '109 km',  time: '1 h 30 min' }
   ],
 
   /* --------------------------------------------------------------------
@@ -242,11 +262,13 @@ window.TATRAPART_CONFIG = {
   /* --------------------------------------------------------------------
      10. JEZYKI
      -------------------------------------------------------------------- */
+  // Kazdy jezyk podpisany jest w swoim wlasnym jezyku i wlasnym alfabecie,
+  // zeby Gosc rozpoznal swoj jezyk, nie znajac pozostalych.
   languages: [
-    { code: 'pl', label: 'Polski',     short: 'PL' },
-    { code: 'en', label: 'English',    short: 'EN' },
-    { code: 'uk', label: 'Ukrainska',  short: 'UA' },
-    { code: 'ru', label: 'Russkiy',    short: 'RU' }
+    { code: 'pl', label: 'Polski',      short: 'PL' },
+    { code: 'en', label: 'English',     short: 'EN' },
+    { code: 'uk', label: 'Українська', short: 'UA' },
+    { code: 'ru', label: 'Русский',    short: 'RU' }
   ],
   defaultLanguage: 'pl'
 };

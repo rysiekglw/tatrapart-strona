@@ -232,7 +232,6 @@
   <div class="container">
     <div style="max-width:72ch;margin-bottom:clamp(34px,4vw,64px)" data-reveal>
       <span class="eyebrow" data-i18n="serv.eyebrow">Usługi</span>
-      <p class="h3" style="margin-bottom:18px" data-i18n="serv.lead"></p>
       <h2 class="h2" data-i18n="serv.title">Wszystko, czego potrzeba</h2>
     </div>
 
@@ -352,49 +351,6 @@
   </nav>
 </div>
 
-<!-- ====================================================== NEWSLETTER -->
-<section class="section section--cream">
-  <div class="container">
-    <div class="newsletter__grid">
-
-      <div data-reveal>
-        <h2 class="h3" style="margin-bottom:20px" data-i18n="nl.title">Pozostańmy w kontakcie</h2>
-        <p class="body-text measure" data-i18n="nl.text"></p>
-      </div>
-
-      <form data-validate data-success-key="nl.success" data-reveal data-delay="120">
-        <div class="form-row">
-          <div class="field">
-            <label for="nl-first" data-i18n="nl.first">Imię</label>
-            <input id="nl-first" name="first" type="text" required autocomplete="given-name">
-            <span class="field__error"></span>
-          </div>
-          <div class="field">
-            <label for="nl-last" data-i18n="nl.last">Nazwisko</label>
-            <input id="nl-last" name="last" type="text" required autocomplete="family-name">
-            <span class="field__error"></span>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="nl-email" data-i18n="nl.email">Adres e-mail</label>
-          <input id="nl-email" name="email" type="email" required autocomplete="email">
-          <span class="field__error"></span>
-        </div>
-
-        <label class="consent">
-          <input type="checkbox" required>
-          <span data-i18n="nl.consent"></span>
-        </label>
-
-        <button class="btn" type="submit"><span data-i18n="nl.submit">Zapisz się</span></button>
-        <p class="form-success" style="margin-top:24px" role="status"></p>
-      </form>
-
-    </div>
-  </div>
-</section>
-
 </main>
 
 <!-- ====================================================== STOPKA -->
@@ -410,7 +366,7 @@
       <div class="footer__contact">
         <h5 data-i18n="foot.contact">Kontakt</h5>
         <ul>
-          <li><a data-cfg-href="phone" href="#"><span data-cfg="phone">+48 510 005 004</span></a></li>
+          <li><a data-cfg-href="phone" href="#"><span data-cfg="phone">+48 510 005 004</span></a><span class="phone-langs">PL; RU</span></li>
           <li><a data-cfg-href="reservations" href="#"><span data-cfg="reservations">contact@tatrapart.pl</span></a></li>
         </ul>
         <h5 style="margin-top:28px" data-i18n="foot.follow">Obserwuj nas</h5>

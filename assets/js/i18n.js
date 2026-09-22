@@ -45,6 +45,7 @@ window.TATRAPART_I18N = {
     'book.arrival':       'Przyjazd',
     'book.departure':     'Wyjazd',
     'book.guests':        'Goście',
+    'book.datesRequired': 'Proszę wybrać datę przyjazdu i wyjazdu.',
     'book.dateError':     'Wyjazd musi być po przyjeździe.',
     'common.explore':     'Zobacz więcej',
     'common.viewImages':  'Zobacz galerię',
@@ -63,7 +64,7 @@ window.TATRAPART_I18N = {
     'hero.title':   'TatrApart',
     'hero.tagline': 'Dwa domki góralskie, pięć apartamentów, widok na Tatry.',
 
-    'intro.title': 'Domek Forest i Domek Snow',
+    'intro.title': 'Domek Brązowy i Domek Biały',
     'intro.p1':    'TatrApart to dwa piękne, trzypiętrowe domki góralskie. Każdy z nich oferuje trzy przestronne i klimatycznie urządzone apartamenty. Rozłożenie pomieszczeń gwarantuje wszystkim Gościom komfortowy i kameralny wypoczynek z zachowaniem najwyższych standardów wyposażenia wnętrz.',
     'intro.p2':    'Jedyne części wspólne to klatka schodowa oraz sala rozrywkowa, w której umieściliśmy stół do bilarda. Każdy apartament to od 60 do 90 m² przepięknie urządzonych pomieszczeń, w których Goście odnajdą spokój i poczują się jak w domu.',
 
@@ -76,7 +77,7 @@ window.TATRAPART_I18N = {
 
     'acc.eyebrow': 'Zakwaterowanie',
     'acc.title':   'Apartamenty',
-    'acc.text':    'Trzy typy apartamentów, każdy w dwóch wariantach: Brown w Domku Forest i White w Domku Snow. Od sześćdziesięciu do dziewięćdziesięciu metrów, od czterech do ośmiu osób. Wszystkie z w pełni wyposażoną kuchnią i widokiem na góry, a te na parterze i I piętrze także z kominkiem.',
+    'acc.text':    'Trzy typy apartamentów, każdy w dwóch wariantach: w Domku Brązowym i w Domku Białym. Od sześćdziesięciu do dziewięćdziesięciu metrów, od czterech do ośmiu osób. Wszystkie z w pełni wyposażoną kuchnią i widokiem na góry, a te na parterze i I piętrze także z kominkiem.',
     'acc.cta':     'Zobacz wszystkie apartamenty',
 
     'floor.first':  'I piętro',
@@ -86,29 +87,29 @@ window.TATRAPART_I18N = {
     'type.suite':   'Suite',
 
     'variant.title': 'Dwa warianty',
-    'variant.brown': 'Brown · Domek Forest',
-    'variant.white': 'White · Domek Snow',
+    'variant.brown': 'Domek Brązowy',
+    'variant.white': 'Domek Biały',
 
     'apt.deluxePietro.name':  'Apartament 6–8 osobowy',
     'apt.deluxePietro.sub':   'typu Deluxe Suite, I piętro',
     'apt.deluxePietro.desc':  'Luksusowo i przestrzennie. Ten typ apartamentu pomieści osiem osób, a składa się z salonu i trzech sypialni. Dwie sypialnie wyposażyliśmy w łoże dwuosobowe, trzecia posiada łóżko piętrowe. W salonie znajduje się rozkładana sofa dla jednej osoby. Niekwestionowanym hitem tego apartamentu są dwie łazienki: jedna znajduje się bezpośrednio przy sypialni, a druga dostępna jest dla wszystkich.',
     'apt.deluxePietro.desc2': 'Komfortowa łazienka posiada wannę, która umożliwia wieczorny relaks w rozgrzewającej kąpieli. W apartamencie czeka również nowocześnie i bogato wyposażona kuchnia. Salon to miejsce spania, ale także strefa relaksu przy klimatycznym kominku. Meble i część sprzętów to ręczna praca stolarzy, którzy wykonali z prawdziwego drewna nie tylko elementy wyposażenia, ale także przepiękne zdobienia mające na celu przybliżyć naszą kulturę. Prawdziwy majestat gór można podziwiać z okien i balkonu apartamentu.',
-    'apt.deluxePietro.brown': 'Zajmuje pierwsze piętro Domku Forest. Z jego balkonu rozpościerają się niezapomniane widoki górskich szczytów, przed którymi rozprzestrzenia się zieleń rozległych łąk. Apartament urządzony jest nowocześnie i luksusowo, jednak wiodący materiał, jakim jest drewno, i zastosowane barwy ciemnego brązu wywołują wspaniałe odczucie góralskiego klimatu.',
-    'apt.deluxePietro.white': 'Pierwsze piętro Domku Snow to apartament dla ośmiu osób. Ciepły i przytulny, chociaż poprzez użycie jaśniejszych barw dekoracji, białych tapicerek i mebli przywodzi na myśl śnieżne zaspy. Dużym udogodnieniem są dwie łazienki, a miłośnicy długich kąpieli docenią wannę. Elementem wyróżniającym są zniewalające widoki panoramy Tatr, które rozpościerają się z balkonu.',
+    'apt.deluxePietro.brown': 'Zajmuje pierwsze piętro Domku Brązowego. Z jego balkonu rozpościerają się niezapomniane widoki górskich szczytów, przed którymi rozprzestrzenia się zieleń rozległych łąk. Apartament urządzony jest nowocześnie i luksusowo, jednak wiodący materiał, jakim jest drewno, i zastosowane barwy ciemnego brązu wywołują wspaniałe odczucie góralskiego klimatu.',
+    'apt.deluxePietro.white': 'Pierwsze piętro Domku Białego to apartament dla ośmiu osób. Ciepły i przytulny, chociaż poprzez użycie jaśniejszych barw dekoracji, białych tapicerek i mebli przywodzi na myśl śnieżne zaspy. Dużym udogodnieniem są dwie łazienki, a miłośnicy długich kąpieli docenią wannę. Elementem wyróżniającym są zniewalające widoki panoramy Tatr, które rozpościerają się z balkonu.',
 
     'apt.deluxeParter.name':  'Apartament 4–6 osobowy',
     'apt.deluxeParter.sub':   'typu Deluxe Suite, parter',
     'apt.deluxeParter.desc':  'Przepiękny i przestronny apartament dla sześciu osób pozwoli każdemu zaznać luksusowego wypoczynku oraz zapewni maksimum prywatności. Znajdują się tu dwie sypialnie wyposażone w duże łoża podwójne oraz salon z wygodną dwuosobową sofą z funkcją spania. Prywatna łazienka z wanną oraz dobrze wyposażona kuchnia sprawią, że pobyt w Zakopanem będzie kojarzył się z wizytą u bliskich osób.',
     'apt.deluxeParter.desc2': 'Atrakcją, która uświetni przebywanie w tym miejscu, jest wspaniały widok z okien i balkonu. Dodatkowo w apartamencie znajduje się taras, a więc niezapomniane chwile na świeżym powietrzu z widokami. Postawiliśmy na naturę, dlatego na podłogach, ścianach, a nawet sufitach króluje drewno. Delikatne rzeźbienia w tym surowcu pozwolą przybliżyć folklorystyczny charakter tego miejsca i rozkochają w barwnej kulturze podhalańskiej. Romantyczne chwile gwarantuje drewno trzaskające z rozpalonego wieczorem kominka.',
-    'apt.deluxeParter.brown': 'Znajduje się na parterze Domku Forest. Cechuje go nie tyle mroczne, co tajemnicze i jednocześnie eleganckie wyposażenie. Dominujące wszędzie drewno okalają dodatki jeszcze ciemniejszych elementów z tego samego surowca. Łóżka, elementy dekoracyjne, a nawet płytki zastosowane w łazience mają kolor brązowy. Naturalna barwa lasu przewodzi w tym miejscu i zbliża naszych Gości do przyrody.',
-    'apt.deluxeParter.white': 'Na parterze Domku Snow znajduje się przytulny apartament White dla czterech do sześciu osób. Także tutaj elementem dominującym jest drewno, jednak w dużej mierze bielone, które skutecznie rozjaśnia pomieszczenia. Białe dekoracje, łóżko w tym kolorze i całkowicie jasne meble będą idealnym otoczeniem do spędzenia urlopu, który ma naładować baterie pozytywną energią.',
+    'apt.deluxeParter.brown': 'Znajduje się na parterze Domku Brązowego. Cechuje go nie tyle mroczne, co tajemnicze i jednocześnie eleganckie wyposażenie. Dominujące wszędzie drewno okalają dodatki jeszcze ciemniejszych elementów z tego samego surowca. Łóżka, elementy dekoracyjne, a nawet płytki zastosowane w łazience mają kolor brązowy. Naturalna barwa lasu przewodzi w tym miejscu i zbliża naszych Gości do przyrody.',
+    'apt.deluxeParter.white': 'Na parterze Domku Białego znajduje się przytulny apartament White dla czterech do sześciu osób. Także tutaj elementem dominującym jest drewno, jednak w dużej mierze bielone, które skutecznie rozjaśnia pomieszczenia. Białe dekoracje, łóżko w tym kolorze i całkowicie jasne meble będą idealnym otoczeniem do spędzenia urlopu, który ma naładować baterie pozytywną energią.',
 
     'apt.suitePoddasze.name':  'Apartament 6 osobowy',
     'apt.suitePoddasze.sub':   'typu Suite, poddasze',
     'apt.suitePoddasze.desc':  'Ten apartament składa się z trzech sypialni, spośród których jedna posiada duże łoże dwuosobowe, a dwie kolejne wyposażono w dwa łóżka pojedyncze. Przestronny salon będzie miejscem idealnym do spędzania razem wolnego czasu. Odnajdzie się w nim duża rodzina lub paczka znajomych. Łazienka posiada komfortową wannę, a kuchnia nowoczesne sprzęty domowe bardzo dobrej jakości.',
     'apt.suitePoddasze.desc2': 'Suite to apartament z widokiem. Góry rozpościerają się z okien, a także z balkonu, na którym polecamy napić się kawy w towarzystwie wyłaniającego się zza wierzchołków szczytów słońca. Przyjemne chwile można spędzić na wygodnej sofie — wystarczy usiąść z bliskimi pod kocem i rozkoszować się wspólnym czasem w tym pięknie urządzonym miejscu.',
-    'apt.suitePoddasze.brown': 'Ulokowany na poddaszu Domku Forest gwarantuje ciepło nie tylko ze względu na swoje umiejscowienie, lecz także ze względu na użyte w wystroju barwy i dodatki. Jest tutaj nieco ciemniej, a zatem i przytulniej. Naturalne drewno zostało wzbogacone o dodatki w tym samym kolorze, jednak znacznie ciemniejszym odcieniu. Piękno i niezłomność lasu biją z każdego miejsca tego apartamentu.',
-    'apt.suitePoddasze.white': 'Wersja dla osób lubiących jasne barwy i kontrast, jaki daje połączenie drewna bielonego z naturalnym, a także jasnymi elementami dekoracji. Ten apartament znajduje się na poddaszu Domku Snow. Poddasza zazwyczaj kojarzą się z mrokiem i małą ilością światła — apartament White dzięki nietuzinkowym rozwiązaniom wnętrzarskim zdecydowanie temu zaprzecza.',
+    'apt.suitePoddasze.brown': 'Ulokowany na poddaszu Domku Brązowego gwarantuje ciepło nie tylko ze względu na swoje umiejscowienie, lecz także ze względu na użyte w wystroju barwy i dodatki. Jest tutaj nieco ciemniej, a zatem i przytulniej. Naturalne drewno zostało wzbogacone o dodatki w tym samym kolorze, jednak znacznie ciemniejszym odcieniu. Piękno i niezłomność lasu biją z każdego miejsca tego apartamentu.',
+    'apt.suitePoddasze.white': 'Wersja dla osób lubiących jasne barwy i kontrast, jaki daje połączenie drewna bielonego z naturalnym, a także jasnymi elementami dekoracji. Ten apartament znajduje się na poddaszu Domku Białego. Poddasza zazwyczaj kojarzą się z mrokiem i małą ilością światła — apartament White dzięki nietuzinkowym rozwiązaniom wnętrzarskim zdecydowanie temu zaprzecza.',
 
     'spec.guests':    'Gości',
     'spec.bedrooms':  'Sypialnie',
@@ -330,6 +331,7 @@ window.TATRAPART_I18N = {
     'book.arrival':       'Arrival',
     'book.departure':     'Departure',
     'book.guests':        'Guests',
+    'book.datesRequired': 'Please choose an arrival and a departure date.',
     'book.dateError':     'Departure must be after arrival.',
     'common.explore':     'Explore',
     'common.viewImages':  'View gallery',
@@ -348,7 +350,7 @@ window.TATRAPART_I18N = {
     'hero.title':   'TatrApart',
     'hero.tagline': 'Two highland houses, five apartments, a view of the Tatras.',
 
-    'intro.title': 'Forest House and Snow House',
+    'intro.title': 'The Brown House and the White House',
     'intro.p1':    'TatrApart is two beautiful three-storey highland houses. Each offers three spacious apartments furnished with real character. The way the rooms are arranged gives every guest a comfortable and private stay, held to the highest standards of interior fittings.',
     'intro.p2':    'The only shared areas are the staircase and the games room, where we placed a billiard table. Each apartment offers between 60 and 90 square metres of beautifully arranged space, where guests find quiet and feel at home.',
 
@@ -361,7 +363,7 @@ window.TATRAPART_I18N = {
 
     'acc.eyebrow': 'Accommodation',
     'acc.title':   'Apartments',
-    'acc.text':    'Three types of apartment, each in two versions: Brown in the Forest House and White in the Snow House. From sixty to ninety square metres, for four to eight guests. All with a fully equipped kitchen and a view of the mountains; those on the ground floor and the first floor also have a fireplace.',
+    'acc.text':    'Three types of apartment, each in two versions: in the Brown House and in the White House. From sixty to ninety square metres, for four to eight guests. All with a fully equipped kitchen and a view of the mountains; those on the ground floor and the first floor also have a fireplace.',
     'acc.cta':     'See all apartments',
 
     'floor.first':  'First floor',
@@ -371,29 +373,29 @@ window.TATRAPART_I18N = {
     'type.suite':   'Suite',
 
     'variant.title': 'Two versions',
-    'variant.brown': 'Brown · Forest House',
-    'variant.white': 'White · Snow House',
+    'variant.brown': 'Brown House',
+    'variant.white': 'White House',
 
     'apt.deluxePietro.name':  'Apartment for 6 to 8 guests',
     'apt.deluxePietro.sub':   'Deluxe Suite, first floor',
     'apt.deluxePietro.desc':  'Generous and luxurious. This apartment sleeps eight and consists of a living room and three bedrooms. Two bedrooms have a double bed, the third has bunk beds. The living room holds a single sofa bed. The undisputed highlight is the pair of bathrooms: one opens directly off a bedroom, the other is available to everyone.',
     'apt.deluxePietro.desc2': 'The larger bathroom has a bathtub for an unhurried evening soak. The kitchen is modern and generously equipped. The living room is both a place to sleep and a place to unwind beside the fireplace. The furniture and part of the fittings are the handwork of joiners who worked in real wood, producing not only the furnishings but also the carved ornament that carries our regional culture. The true scale of the mountains is best taken in from the windows and the balcony.',
-    'apt.deluxePietro.brown': 'It occupies the first floor of the Forest House. From its balcony there are unforgettable views of mountain peaks, with the green of wide meadows spreading out in front of them. The apartment is arranged in a modern and luxurious way, yet the leading material, wood, and the deep brown tones give it a genuinely highland feeling.',
-    'apt.deluxePietro.white': 'The first floor of the Snow House is an apartment for eight. Warm and welcoming, though the lighter decorative tones, white upholstery and pale furniture bring snowdrifts to mind. Two bathrooms are a real convenience, and anyone fond of a long bath will appreciate the tub. What sets this apartment apart are the commanding views of the Tatra panorama from the balcony.',
+    'apt.deluxePietro.brown': 'It occupies the first floor of the Brown House. From its balcony there are unforgettable views of mountain peaks, with the green of wide meadows spreading out in front of them. The apartment is arranged in a modern and luxurious way, yet the leading material, wood, and the deep brown tones give it a genuinely highland feeling.',
+    'apt.deluxePietro.white': 'The first floor of the White House is an apartment for eight. Warm and welcoming, though the lighter decorative tones, white upholstery and pale furniture bring snowdrifts to mind. Two bathrooms are a real convenience, and anyone fond of a long bath will appreciate the tub. What sets this apartment apart are the commanding views of the Tatra panorama from the balcony.',
 
     'apt.deluxeParter.name':  'Apartment for 4 to 6 guests',
     'apt.deluxeParter.sub':   'Deluxe Suite, ground floor',
     'apt.deluxeParter.desc':  'A beautiful and spacious apartment for six that allows everyone a luxurious rest and gives maximum privacy. There are two bedrooms with large double beds and a living room with a comfortable two-person sofa bed. A private bathroom with a bathtub and a well-equipped kitchen make a stay in Zakopane feel like visiting close family.',
     'apt.deluxeParter.desc2': 'The great pleasure of this place is the view from the windows and the balcony. The apartment also has a terrace, and so unforgettable moments outdoors with the landscape in front of you. We chose nature, which is why wood reigns on the floors, the walls and even the ceilings. Delicate carving in that wood carries the folk character of the place and wins guests over to the colourful culture of Podhale. Romantic evenings are guaranteed by the crackle of wood in the lit fireplace.',
-    'apt.deluxeParter.brown': 'It sits on the ground floor of the Forest House. Its fittings are not so much dark as mysterious and, at the same time, elegant. The wood that dominates everywhere is framed by additions in still darker shades of the same material. The beds, the decorative pieces, even the tiles used in the bathroom are brown. The natural colour of the forest leads here and brings our guests closer to nature.',
-    'apt.deluxeParter.white': 'On the ground floor of the Snow House there is a welcoming White apartment for four to six guests. Here too wood dominates, but largely whitewashed wood, which brightens the rooms effectively. White decorations, a bed in the same colour and entirely pale furniture make an ideal setting for a holiday meant to recharge you with positive energy.',
+    'apt.deluxeParter.brown': 'It sits on the ground floor of the Brown House. Its fittings are not so much dark as mysterious and, at the same time, elegant. The wood that dominates everywhere is framed by additions in still darker shades of the same material. The beds, the decorative pieces, even the tiles used in the bathroom are brown. The natural colour of the forest leads here and brings our guests closer to nature.',
+    'apt.deluxeParter.white': 'On the ground floor of the White House there is a welcoming White apartment for four to six guests. Here too wood dominates, but largely whitewashed wood, which brightens the rooms effectively. White decorations, a bed in the same colour and entirely pale furniture make an ideal setting for a holiday meant to recharge you with positive energy.',
 
     'apt.suitePoddasze.name':  'Apartment for 6 guests',
     'apt.suitePoddasze.sub':   'Suite, attic',
     'apt.suitePoddasze.desc':  'This apartment consists of three bedrooms, one of which has a large double bed while the other two are fitted with two single beds each. The spacious living room is an ideal place to spend time together. A large family or a group of friends will settle in easily. The bathroom has a comfortable bathtub, and the kitchen modern appliances of very good quality.',
     'apt.suitePoddasze.desc2': 'The Suite is an apartment with a view. The mountains open out from the windows and from the balcony, where we recommend a coffee in the company of the sun rising from behind the summits. Pleasant hours can be spent on the comfortable sofa — sit down with your closest under a blanket and enjoy the shared time in this beautifully arranged place.',
-    'apt.suitePoddasze.brown': 'Set in the attic of the Forest House, it guarantees warmth not only because of where it sits but also because of the colours and additions used in the decor. It is a little darker here, and therefore cosier. The natural wood has been enriched with additions in the same colour but a considerably deeper shade. The beauty and resilience of the forest come through from every part of this apartment.',
-    'apt.suitePoddasze.white': 'A version for those who like bright tones and the contrast that comes from combining whitewashed wood with natural wood and pale decorative elements. This apartment is in the attic of the Snow House. Attics are usually associated with gloom and little light; thanks to some inventive interior solutions, the White apartment firmly contradicts that.',
+    'apt.suitePoddasze.brown': 'Set in the attic of the Brown House, it guarantees warmth not only because of where it sits but also because of the colours and additions used in the decor. It is a little darker here, and therefore cosier. The natural wood has been enriched with additions in the same colour but a considerably deeper shade. The beauty and resilience of the forest come through from every part of this apartment.',
+    'apt.suitePoddasze.white': 'A version for those who like bright tones and the contrast that comes from combining whitewashed wood with natural wood and pale decorative elements. This apartment is in the attic of the White House. Attics are usually associated with gloom and little light; thanks to some inventive interior solutions, the White apartment firmly contradicts that.',
 
     'spec.guests':    'Guests',
     'spec.bedrooms':  'Bedrooms',
@@ -567,6 +569,7 @@ window.TATRAPART_I18N = {
     'book.arrival':       'Заїзд',
     'book.departure':     'Виїзд',
     'book.guests':        'Гостей',
+    'book.datesRequired': 'Будь ласка, оберіть дату заїзду та виїзду.',
     'book.dateError':     'Виїзд має бути пізніше за заїзд.',
     'common.explore':     'Дізнатися більше',
     'common.viewImages':  'Переглянути галерею',
@@ -585,7 +588,7 @@ window.TATRAPART_I18N = {
     'hero.title':   'TatrApart',
     'hero.tagline': 'Два гуральські будинки, п’ять апартаментів, вид на Татри.',
 
-    'intro.title': 'Будинок Forest і будинок Snow',
+    'intro.title': 'Коричневий будинок і Білий будинок',
     'intro.p1':    'TatrApart — це два гарні триповерхові гуральські будинки. Кожен із них пропонує три просторі та зі смаком облаштовані апартаменти. Розташування приміщень гарантує всім гостям комфортний і камерний відпочинок із дотриманням найвищих стандартів облаштування інтер’єрів.',
     'intro.p2':    'Єдині спільні зони — це сходова клітка та кімната для розваг, де ми розмістили більярдний стіл. Кожен апартамент — це від 60 до 90 м² чудово облаштованих приміщень, у яких гості знаходять спокій і почуваються як удома.',
 
@@ -598,7 +601,7 @@ window.TATRAPART_I18N = {
 
     'acc.eyebrow': 'Розміщення',
     'acc.title':   'Апартаменти',
-    'acc.text':    'Три типи апартаментів, кожен у двох варіантах: Brown у будинку Forest і White у будинку Snow. Від шістдесяти до дев’яноста метрів, від чотирьох до восьми осіб. Усі з повністю обладнаною кухнею та видом на гори, а ті, що на партері та першому поверсі, — також із каміном.',
+    'acc.text':    'Три типи апартаментів, кожен у двох варіантах: у Коричневому будинку та в Білому будинку. Від шістдесяти до дев’яноста метрів, від чотирьох до восьми осіб. Усі з повністю обладнаною кухнею та видом на гори, а ті, що на партері та першому поверсі, — також із каміном.',
     'acc.cta':     'Переглянути всі апартаменти',
 
     'floor.first':  'Перший поверх',
@@ -608,29 +611,29 @@ window.TATRAPART_I18N = {
     'type.suite':   'Suite',
 
     'variant.title': 'Два варіанти',
-    'variant.brown': 'Brown · будинок Forest',
-    'variant.white': 'White · будинок Snow',
+    'variant.brown': 'Коричневий будинок',
+    'variant.white': 'Білий будинок',
 
     'apt.deluxePietro.name':  'Апартамент на 6–8 осіб',
     'apt.deluxePietro.sub':   'типу Deluxe Suite, перший поверх',
     'apt.deluxePietro.desc':  'Розкішно і просторо. Цей тип апартаментів вміщує вісім осіб і складається з вітальні та трьох спалень. Дві спальні обладнані двоспальним ліжком, третя має двоярусне ліжко. У вітальні є розкладний диван на одну особу. Безперечна перевага цього апартаменту — дві ванні кімнати: одна прилягає безпосередньо до спальні, інша доступна для всіх.',
     'apt.deluxePietro.desc2': 'Простора ванна кімната має ванну, що дозволяє вечірній відпочинок у теплій воді. В апартаменті також чекає сучасно та багато обладнана кухня. Вітальня — це місце для сну, а водночас зона відпочинку біля затишного каміна. Меблі та частина обладнання — ручна робота столярів, які виготовили зі справжнього дерева не лише елементи оздоблення, а й чудове різьблення, що наближає нашу культуру. Справжню велич гір можна побачити з вікон і балкона апартаменту.',
-    'apt.deluxePietro.brown': 'Займає перший поверх будинку Forest. З його балкона відкриваються незабутні краєвиди гірських вершин, перед якими розстеляється зелень широких лук. Апартамент облаштований сучасно та розкішно, проте провідний матеріал — дерево — і застосовані темно-коричневі відтінки створюють чудове відчуття гуральського колориту.',
-    'apt.deluxePietro.white': 'Перший поверх будинку Snow — це апартамент для восьми осіб. Теплий і затишний, хоча завдяки світлішим відтінкам декору, білій оббивці та меблям нагадує про снігові замети. Великою зручністю є дві ванні кімнати, а поціновувачі довгих купелей оцінять ванну. Особливою рисою є приголомшливі краєвиди панорами Татр, що відкриваються з балкона.',
+    'apt.deluxePietro.brown': 'Займає перший поверх Коричневого будинку. З його балкона відкриваються незабутні краєвиди гірських вершин, перед якими розстеляється зелень широких лук. Апартамент облаштований сучасно та розкішно, проте провідний матеріал — дерево — і застосовані темно-коричневі відтінки створюють чудове відчуття гуральського колориту.',
+    'apt.deluxePietro.white': 'Перший поверх Білого будинку — це апартамент для восьми осіб. Теплий і затишний, хоча завдяки світлішим відтінкам декору, білій оббивці та меблям нагадує про снігові замети. Великою зручністю є дві ванні кімнати, а поціновувачі довгих купелей оцінять ванну. Особливою рисою є приголомшливі краєвиди панорами Татр, що відкриваються з балкона.',
 
     'apt.deluxeParter.name':  'Апартамент на 4–6 осіб',
     'apt.deluxeParter.sub':   'типу Deluxe Suite, партер',
     'apt.deluxeParter.desc':  'Чудовий і просторий апартамент для шести осіб дозволить кожному відчути розкішний відпочинок і забезпечить максимум приватності. Тут є дві спальні з великими двоспальними ліжками та вітальня з зручним двомісним диваном із функцією сну. Приватна ванна кімната з ванною та добре обладнана кухня зроблять перебування в Закопаному схожим на гостини в близьких людей.',
     'apt.deluxeParter.desc2': 'Окрасою цього місця є чудовий вид із вікон і балкона. Крім того, в апартаменті є тераса, а отже незабутні хвилини на свіжому повітрі з краєвидами. Ми зробили ставку на природу, тому на підлогах, стінах і навіть стелях панує дерево. Делікатне різьблення наближає фольклорний характер цього місця та закохує в барвисту культуру Підгалля. Романтичні хвилини гарантує дерево, що потріскує у розпаленому ввечері каміні.',
-    'apt.deluxeParter.brown': 'Розташований на партері будинку Forest. Його вирізняє не стільки темне, скільки таємниче та водночас елегантне оздоблення. Дерево, що домінує всюди, доповнене ще темнішими елементами з того самого матеріалу. Ліжка, декоративні елементи й навіть плитка у ванній кімнаті мають коричневий колір. Природна барва лісу веде в цьому місці та наближає наших гостей до природи.',
-    'apt.deluxeParter.white': 'На партері будинку Snow розташований затишний апартамент White для чотирьох-шести осіб. Тут також домінує дерево, проте значною мірою білене, яке ефективно освітлює приміщення. Білий декор, ліжко в цьому кольорі та повністю світлі меблі стануть ідеальним оточенням для відпустки, яка має наповнити позитивною енергією.',
+    'apt.deluxeParter.brown': 'Розташований на партері Коричневого будинку. Його вирізняє не стільки темне, скільки таємниче та водночас елегантне оздоблення. Дерево, що домінує всюди, доповнене ще темнішими елементами з того самого матеріалу. Ліжка, декоративні елементи й навіть плитка у ванній кімнаті мають коричневий колір. Природна барва лісу веде в цьому місці та наближає наших гостей до природи.',
+    'apt.deluxeParter.white': 'На партері Білого будинку розташований затишний апартамент White для чотирьох-шести осіб. Тут також домінує дерево, проте значною мірою білене, яке ефективно освітлює приміщення. Білий декор, ліжко в цьому кольорі та повністю світлі меблі стануть ідеальним оточенням для відпустки, яка має наповнити позитивною енергією.',
 
     'apt.suitePoddasze.name':  'Апартамент на 6 осіб',
     'apt.suitePoddasze.sub':   'типу Suite, мансарда',
     'apt.suitePoddasze.desc':  'Цей апартамент складається з трьох спалень, одна з яких має велике двоспальне ліжко, а дві інші обладнані двома односпальними ліжками кожна. Простора вітальня буде ідеальним місцем для спільного проведення вільного часу. Тут добре почуватиметься велика родина або компанія друзів. Ванна кімната має зручну ванну, а кухня — сучасну побутову техніку дуже доброї якості.',
     'apt.suitePoddasze.desc2': 'Suite — це апартамент із видом. Гори відкриваються з вікон, а також із балкона, на якому радимо випити кави в товаристві сонця, що виринає з-за вершин. Приємні хвилини можна провести на зручному дивані — достатньо сісти з близькими під ковдрою та насолоджуватися спільним часом у цьому гарно облаштованому місці.',
-    'apt.suitePoddasze.brown': 'Розташований на мансарді будинку Forest, він гарантує тепло не лише через своє розміщення, а й завдяки використаним у декорі барвам і доповненням. Тут трохи темніше, а отже й затишніше. Природне дерево збагачене доповненнями того ж кольору, але значно темнішого відтінку. Краса й незламність лісу відчуваються в кожному куточку цього апартаменту.',
-    'apt.suitePoddasze.white': 'Версія для тих, хто любить світлі барви та контраст, який дає поєднання біленого дерева з природним, а також світлі елементи декору. Цей апартамент розташований на мансарді будинку Snow. Мансарди зазвичай асоціюються з напівтемрявою та малою кількістю світла — апартамент White завдяки неординарним інтер’єрним рішенням рішуче це спростовує.',
+    'apt.suitePoddasze.brown': 'Розташований на мансарді Коричневого будинку, він гарантує тепло не лише через своє розміщення, а й завдяки використаним у декорі барвам і доповненням. Тут трохи темніше, а отже й затишніше. Природне дерево збагачене доповненнями того ж кольору, але значно темнішого відтінку. Краса й незламність лісу відчуваються в кожному куточку цього апартаменту.',
+    'apt.suitePoddasze.white': 'Версія для тих, хто любить світлі барви та контраст, який дає поєднання біленого дерева з природним, а також світлі елементи декору. Цей апартамент розташований на мансарді Білого будинку. Мансарди зазвичай асоціюються з напівтемрявою та малою кількістю світла — апартамент White завдяки неординарним інтер’єрним рішенням рішуче це спростовує.',
 
     'spec.guests':    'Гостей',
     'spec.bedrooms':  'Спальні',
@@ -804,6 +807,7 @@ window.TATRAPART_I18N = {
     'book.arrival':       'Заезд',
     'book.departure':     'Выезд',
     'book.guests':        'Гостей',
+    'book.datesRequired': 'Пожалуйста, выберите дату заезда и выезда.',
     'book.dateError':     'Выезд должен быть позже заезда.',
     'common.explore':     'Узнать больше',
     'common.viewImages':  'Смотреть галерею',
@@ -822,7 +826,7 @@ window.TATRAPART_I18N = {
     'hero.title':   'TatrApart',
     'hero.tagline': 'Два гуральских дома, пять апартаментов, вид на Татры.',
 
-    'intro.title': 'Дом Forest и дом Snow',
+    'intro.title': 'Коричневый дом и Белый дом',
     'intro.p1':    'TatrApart — это два красивых трёхэтажных гуральских дома. Каждый из них предлагает три просторных и со вкусом обставленных апартамента. Расположение помещений гарантирует всем гостям комфортный и камерный отдых с соблюдением высочайших стандартов оснащения интерьеров.',
     'intro.p2':    'Единственные общие зоны — лестничная клетка и комната для развлечений, где мы разместили бильярдный стол. Каждый апартамент — это от 60 до 90 м² прекрасно обставленных помещений, в которых гости находят покой и чувствуют себя как дома.',
 
@@ -835,7 +839,7 @@ window.TATRAPART_I18N = {
 
     'acc.eyebrow': 'Размещение',
     'acc.title':   'Апартаменты',
-    'acc.text':    'Три типа апартаментов, каждый в двух вариантах: Brown в доме Forest и White в доме Snow. От шестидесяти до девяноста метров, от четырёх до восьми человек. Все с полностью оснащённой кухней и видом на горы, а те, что на первом уровне и первом этаже, — также с камином.',
+    'acc.text':    'Три типа апартаментов, каждый в двух вариантах: в Коричневом доме и в Белом доме. От шестидесяти до девяноста метров, от четырёх до восьми человек. Все с полностью оснащённой кухней и видом на горы, а те, что на первом уровне и первом этаже, — также с камином.',
     'acc.cta':     'Смотреть все апартаменты',
 
     'floor.first':  'Первый этаж',
@@ -845,29 +849,29 @@ window.TATRAPART_I18N = {
     'type.suite':   'Suite',
 
     'variant.title': 'Два варианта',
-    'variant.brown': 'Brown · дом Forest',
-    'variant.white': 'White · дом Snow',
+    'variant.brown': 'Коричневый дом',
+    'variant.white': 'Белый дом',
 
     'apt.deluxePietro.name':  'Апартамент на 6–8 человек',
     'apt.deluxePietro.sub':   'типа Deluxe Suite, первый этаж',
     'apt.deluxePietro.desc':  'Роскошно и просторно. Этот тип апартаментов вмещает восемь человек и состоит из гостиной и трёх спален. Две спальни оборудованы двуспальной кроватью, третья имеет двухъярусную кровать. В гостиной есть раскладной диван на одного человека. Несомненное преимущество этого апартамента — две ванные комнаты: одна примыкает непосредственно к спальне, другая доступна для всех.',
     'apt.deluxePietro.desc2': 'Просторная ванная комната оснащена ванной, позволяющей вечерний отдых в тёплой воде. В апартаменте также ждёт современно и богато оснащённая кухня. Гостиная — это место для сна и одновременно зона отдыха у уютного камина. Мебель и часть оснащения — ручная работа столяров, которые изготовили из настоящего дерева не только элементы отделки, но и прекрасную резьбу, приближающую нашу культуру. Подлинное величие гор можно увидеть из окон и с балкона апартамента.',
-    'apt.deluxePietro.brown': 'Занимает первый этаж дома Forest. С его балкона открываются незабываемые виды горных вершин, перед которыми расстилается зелень широких лугов. Апартамент обставлен современно и роскошно, однако ведущий материал — дерево — и применённые тёмно-коричневые тона создают прекрасное ощущение гуральского колорита.',
-    'apt.deluxePietro.white': 'Первый этаж дома Snow — это апартамент для восьми человек. Тёплый и уютный, хотя благодаря более светлым тонам декора, белой обивке и мебели напоминает о снежных сугробах. Большим удобством являются две ванные комнаты, а любители долгих купаний оценят ванну. Отличительной чертой являются захватывающие виды панорамы Татр, открывающиеся с балкона.',
+    'apt.deluxePietro.brown': 'Занимает первый этаж Коричневого дома. С его балкона открываются незабываемые виды горных вершин, перед которыми расстилается зелень широких лугов. Апартамент обставлен современно и роскошно, однако ведущий материал — дерево — и применённые тёмно-коричневые тона создают прекрасное ощущение гуральского колорита.',
+    'apt.deluxePietro.white': 'Первый этаж Белого дома — это апартамент для восьми человек. Тёплый и уютный, хотя благодаря более светлым тонам декора, белой обивке и мебели напоминает о снежных сугробах. Большим удобством являются две ванные комнаты, а любители долгих купаний оценят ванну. Отличительной чертой являются захватывающие виды панорамы Татр, открывающиеся с балкона.',
 
     'apt.deluxeParter.name':  'Апартамент на 4–6 человек',
     'apt.deluxeParter.sub':   'типа Deluxe Suite, первый уровень',
     'apt.deluxeParter.desc':  'Прекрасный и просторный апартамент для шести человек позволит каждому ощутить роскошный отдых и обеспечит максимум приватности. Здесь находятся две спальни с большими двуспальными кроватями и гостиная с удобным двухместным диваном с функцией сна. Отдельная ванная комната с ванной и хорошо оснащённая кухня сделают пребывание в Закопане похожим на визит к близким людям.',
     'apt.deluxeParter.desc2': 'Украшением этого места является великолепный вид из окон и с балкона. Кроме того, в апартаменте есть терраса, а значит незабываемые минуты на свежем воздухе с видами. Мы сделали ставку на природу, поэтому на полах, стенах и даже потолках царит дерево. Деликатная резьба приближает фольклорный характер этого места и влюбляет в яркую культуру Подгалья. Романтические минуты гарантирует дерево, потрескивающее в разожжённом вечером камине.',
-    'apt.deluxeParter.brown': 'Находится на первом уровне дома Forest. Его отличает не столько тёмное, сколько таинственное и одновременно элегантное оснащение. Дерево, доминирующее повсюду, окружено ещё более тёмными элементами из того же материала. Кровати, декоративные элементы и даже плитка в ванной комнате имеют коричневый цвет. Природный цвет леса ведёт в этом месте и приближает наших гостей к природе.',
-    'apt.deluxeParter.white': 'На первом уровне дома Snow находится уютный апартамент White для четырёх-шести человек. Здесь также доминирует дерево, однако в значительной мере белёное, которое эффективно осветляет помещения. Белый декор, кровать в этом цвете и полностью светлая мебель станут идеальным окружением для отпуска, который должен зарядить положительной энергией.',
+    'apt.deluxeParter.brown': 'Находится на первом уровне Коричневого дома. Его отличает не столько тёмное, сколько таинственное и одновременно элегантное оснащение. Дерево, доминирующее повсюду, окружено ещё более тёмными элементами из того же материала. Кровати, декоративные элементы и даже плитка в ванной комнате имеют коричневый цвет. Природный цвет леса ведёт в этом месте и приближает наших гостей к природе.',
+    'apt.deluxeParter.white': 'На первом уровне Белого дома находится уютный апартамент White для четырёх-шести человек. Здесь также доминирует дерево, однако в значительной мере белёное, которое эффективно осветляет помещения. Белый декор, кровать в этом цвете и полностью светлая мебель станут идеальным окружением для отпуска, который должен зарядить положительной энергией.',
 
     'apt.suitePoddasze.name':  'Апартамент на 6 человек',
     'apt.suitePoddasze.sub':   'типа Suite, мансарда',
     'apt.suitePoddasze.desc':  'Этот апартамент состоит из трёх спален, одна из которых имеет большую двуспальную кровать, а две другие оборудованы двумя односпальными кроватями каждая. Просторная гостиная будет идеальным местом для совместного проведения свободного времени. Здесь хорошо разместится большая семья или компания друзей. Ванная комната имеет удобную ванну, а кухня — современную бытовую технику очень хорошего качества.',
     'apt.suitePoddasze.desc2': 'Suite — это апартамент с видом. Горы открываются из окон, а также с балкона, на котором мы рекомендуем выпить кофе в компании солнца, выходящего из-за вершин. Приятные минуты можно провести на удобном диване — достаточно сесть с близкими под пледом и наслаждаться общим временем в этом прекрасно обставленном месте.',
-    'apt.suitePoddasze.brown': 'Расположенный на мансарде дома Forest, он гарантирует тепло не только из-за своего размещения, но и благодаря использованным в декоре цветам и дополнениям. Здесь немного темнее, а значит и уютнее. Натуральное дерево обогащено дополнениями того же цвета, но значительно более тёмного оттенка. Красота и стойкость леса чувствуются в каждом уголке этого апартамента.',
-    'apt.suitePoddasze.white': 'Версия для тех, кто любит светлые тона и контраст, который даёт сочетание белёного дерева с натуральным, а также светлые элементы декора. Этот апартамент находится на мансарде дома Snow. Мансарды обычно ассоциируются с полумраком и малым количеством света — апартамент White благодаря незаурядным интерьерным решениям решительно это опровергает.',
+    'apt.suitePoddasze.brown': 'Расположенный на мансарде Коричневого дома, он гарантирует тепло не только из-за своего размещения, но и благодаря использованным в декоре цветам и дополнениям. Здесь немного темнее, а значит и уютнее. Натуральное дерево обогащено дополнениями того же цвета, но значительно более тёмного оттенка. Красота и стойкость леса чувствуются в каждом уголке этого апартамента.',
+    'apt.suitePoddasze.white': 'Версия для тех, кто любит светлые тона и контраст, который даёт сочетание белёного дерева с натуральным, а также светлые элементы декора. Этот апартамент находится на мансарде Белого дома. Мансарды обычно ассоциируются с полумраком и малым количеством света — апартамент White благодаря незаурядным интерьерным решениям решительно это опровергает.',
 
     'spec.guests':    'Гостей',
     'spec.bedrooms':  'Спальни',

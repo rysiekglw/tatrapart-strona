@@ -643,8 +643,9 @@
   }
 
   /* ====================================================== 10. PASEK MOBILNY */
-  /* Panel wyboru dat w hero. Sam nic nie sprawdza — zbiera trzy wartosci
-     i przekazuje je do Hotresa, ktory zna prawdziwa dostepnosc. */
+  /* Panel wyboru dat w hero. Dostepnosc zna Hotres, ale o komplet dat
+     panel pyta sam: bez przyjazdu i wyjazdu nikogo dalej nie puszcza,
+     tylko obrysowuje sie na moment na czerwono. */
   function initBookBox() {
     var box = $('[data-bookbox]');
     if (!box) return;
@@ -668,11 +669,31 @@
     arrival.min = today;
     departure.min = today;
 
-    function hideError() { if (errBox) errBox.hidden = true; }
-    function showError() {
-      if (!errBox) return;
-      errBox.textContent = I18N.t('book.dateError');
-      errBox.hidden = false;
+    var flashTimer = null;
+
+    function hideError() {
+      if (errBox) errBox.hidden = true;
+      box.classList.remove('is-invalid');
+      if (flashTimer) { clearTimeout(flashTimer); flashTimer = null; }
+    }
+
+    // Czerwony obrys calej plyty plus zdanie, czego brakuje. Obrys gasnie
+    // sam; zapis zostaje, dopoki Gosc nie poprawi dat.
+    function showError(key) {
+      if (errBox) {
+        errBox.textContent = I18N.t(key);
+        errBox.hidden = false;
+      }
+      box.classList.remove('is-invalid');
+      // Wymuszenie przerysowania, zeby obrys mrugnal takze przy drugim
+      // klknieciu pod rzad.
+      void box.offsetWidth;
+      box.classList.add('is-invalid');
+      if (flashTimer) clearTimeout(flashTimer);
+      flashTimer = setTimeout(function () {
+        box.classList.remove('is-invalid');
+        flashTimer = null;
+      }, 1200);
     }
 
     // Wyjazd nie moze wypasc przed przyjazdem — po wyborze daty przyjazdu
@@ -687,10 +708,20 @@
     });
     departure.addEventListener('change', hideError);
 
+    adults.addEventListener('change', hideError);
+
     box.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (arrival.value && departure.value && departure.value <= arrival.value) {
-        showError();
+      // Pusty termin nie ma po co jechac do Hotresa — pytanie o daty
+      // zostaje tutaj, na stronie.
+      if (!arrival.value || !departure.value) {
+        showError('book.datesRequired');
+        (arrival.value ? departure : arrival).focus();
+        return;
+      }
+      if (departure.value <= arrival.value) {
+        showError('book.dateError');
+        departure.focus();
         return;
       }
       var url = buildBookingUrl('', {
@@ -799,13 +830,18 @@
   // Zdjecia apartamentu w jednym wariancie. Nazwy plikow powstaja
   // z identyfikatora apartamentu, nazwy wariantu i numeru:
   // apartamenty/deluxe-parter-white-01.jpg
+  // Jesli konfiguracja wskazuje zdjecie tytulowe (photos.cover), wedruje
+  // ono na poczatek listy — stad bierze je kafelek apartamentu, pasek zdjec
+  // wariantu i powiekszenie. Reszta zostaje w dotychczasowej kolejnosci.
   function aptPhotos(apt, variant) {
     var p = apt.photos || {};
     var n = p[variant] || 0;
+    var cover = (p.cover || {})[variant] || 0;
     var out = [];
     for (var i = 1; i <= n; i++) {
       out.push((p.path || 'apartamenty/') + apt.id + '-' + variant + '-' + (i < 10 ? '0' + i : i) + '.jpg');
     }
+    if (cover > 1 && cover <= n) out.unshift(out.splice(cover - 1, 1)[0]);
     return out;
   }
 
