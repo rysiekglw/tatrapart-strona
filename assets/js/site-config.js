@@ -56,7 +56,6 @@ window.TATRAPART_CONFIG = {
     country: 'Polska',
     countryCode: 'PL',
     nip: '5262638491',
-    regon: '523743437',
     phone: '+48 510 005 004',
     phoneHref: '+48510005004',
     email: 'contact@tatrapart.pl',
@@ -124,6 +123,11 @@ window.TATRAPART_CONFIG = {
      photos.cover wskazuje numer zdjecia tytulowego danego wariantu — tego,
      ktore stoi na kafelku apartamentu i na poczatku paska zdjec wariantu.
      Bez wpisu zdjeciem tytulowym zostaje pierwsze z brzegu (numer 1).
+
+     photos.tile pozwala postawic na kafelku apartamentu zupelnie inny plik,
+     osobno dla strony glownej (home) i dla zakladki Apartamenty (apartments).
+     Sciezki sa liczone od assets/images/. Bez wpisu kafelek bierze zdjecie
+     tytulowe wyliczone z photos.cover, tak jak dotychczas.
      -------------------------------------------------------------------- */
   apartments: [
     {
@@ -169,7 +173,15 @@ window.TATRAPART_CONFIG = {
     {
       id: 'suite-poddasze',
       i18nKey: 'apt.suitePoddasze',
-      photos: { path: 'apartamenty/', brown: 14, white: 15 },
+      // Kafelek tego apartamentu ma wlasne zdjecie tytulowe: pionowe kadr
+      // na stronie glownej, poziome w zakladce Apartamenty.
+      photos: {
+        path: 'apartamenty/', brown: 14, white: 15,
+        tile: {
+          home:       'apartamenty/suite-poddasze-brown-cover-home.jpg',
+          apartments: 'apartamenty/suite-poddasze-brown-cover-apartments.jpg'
+        }
+      },
       priceFrom: 297,
       guests: 6,
       bedrooms: 3,

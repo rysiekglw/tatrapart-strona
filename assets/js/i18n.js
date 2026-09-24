@@ -188,8 +188,8 @@ window.TATRAPART_I18N = {
     'dist.krakow':    'Kraków — lotnisko Balice',
 
     'off.eyebrow': 'Oferty',
-    'off.title':   'Oferty specjalne',
-    'off.text':    'Przygotowujemy propozycje na nadchodzące sezony. Zapraszamy wkrótce lub prosimy o kontakt bezpośredni — chętnie przedstawimy indywidualną propozycję dla Państwa pobytu.',
+    'off.title':   'Oferty grupowe',
+    'off.text':    'Rezerwacje powyżej ośmiu osób prowadzimy inaczej niż pojedyncze pobyty. Zamiast jednego apartamentu proponujemy dwa sąsiadujące albo cały domek na wyłączność. Cenę i warunki ustalamy indywidualnie — prosimy o kontakt bezpośredni.',
     'off.cta':     'Przejdź do ofert',
 
     'rev.eyebrow': 'Opinie',
@@ -227,8 +227,8 @@ window.TATRAPART_I18N = {
     'page.gallery.title':    'Galeria',
     'page.gallery.lead':     'Zdjęcia wnętrz TatrApart. Prosimy kliknąć dowolne zdjęcie, aby powiększyć.',
     'page.offers.title':     'Oferty',
-    'page.offers.lead':      'Strona w przygotowaniu.',
-    'page.offers.empty':     'Ta strona jest obecnie w przygotowaniu. W sprawie aktualnych propozycji i indywidualnych warunków pobytu prosimy o kontakt bezpośredni.',
+    'page.offers.lead':      'Pobyty dla większych grup.',
+    'page.offers.empty':     'Rezerwacje powyżej ośmiu osób prowadzimy inaczej niż pojedyncze pobyty. Zamiast jednego apartamentu proponujemy dwa sąsiadujące albo cały domek na wyłączność. Cenę i warunki ustalamy indywidualnie — prosimy o kontakt bezpośredni.',
     'page.contact.title':    'Kontakt',
     'page.contact.lead':     'Chętnie odpowiemy na wszystkie pytania dotyczące pobytu, dostępnych terminów i apartamentów.',
     'page.contact.formTitle':'Formularz kontaktowy',
@@ -294,8 +294,9 @@ window.TATRAPART_I18N = {
     'terms.left.p1':    'Przedmioty osobistego użytku pozostawione przez wyjeżdżającego Gościa będą odesłane na jego koszt na wskazany adres. W przypadku nieotrzymania dyspozycji przedmioty te zostaną zniszczone.',
 
     'terms.company.title': 'Dane firmy',
+    'terms.company.legalName': 'Nazwa prawna',
+    'terms.company.address':   'Adres',
     'terms.company.nip':   'NIP',
-    'terms.company.regon': 'REGON',
 
     'booking.soon': 'Rezerwacja online zostanie uruchomiona wkrótce. Prosimy o kontakt telefoniczny lub mailowy.'
   },
@@ -474,8 +475,8 @@ window.TATRAPART_I18N = {
     'dist.krakow':    'Krakow — Balice airport',
 
     'off.eyebrow': 'Offers',
-    'off.title':   'Special offers',
-    'off.text':    'We are preparing proposals for the coming seasons. Please return shortly, or contact us directly — we will gladly prepare an individual proposal for your stay.',
+    'off.title':   'Group bookings',
+    'off.text':    'Bookings for more than eight guests work differently from a single stay. Instead of one apartment we suggest two next to each other, or an entire house to yourselves. Prices and terms are arranged individually — please contact us directly.',
     'off.cta':     'Go to offers',
 
     'rev.eyebrow': 'Reviews',
@@ -513,8 +514,8 @@ window.TATRAPART_I18N = {
     'page.gallery.title':    'Gallery',
     'page.gallery.lead':     'Views from the interiors of TatrApart. Select any image to enlarge it.',
     'page.offers.title':     'Offers',
-    'page.offers.lead':      'This page is in preparation.',
-    'page.offers.empty':     'This page is currently in preparation. For current proposals and individual terms for your stay, please contact us directly.',
+    'page.offers.lead':      'Stays for larger groups.',
+    'page.offers.empty':     'Bookings for more than eight guests work differently from a single stay. Instead of one apartment we suggest two next to each other, or an entire house to yourselves. Prices and terms are arranged individually — please contact us directly.',
     'page.contact.title':    'Contact',
     'page.contact.lead':     'We will gladly answer any question about your stay, available dates and the apartments.',
     'page.contact.formTitle':'Contact form',
@@ -532,8 +533,9 @@ window.TATRAPART_I18N = {
     'terms.contents':   'Contents',
 
     'terms.company.title': 'Company details',
+    'terms.company.legalName': 'Legal name',
+    'terms.company.address':   'Address',
     'terms.company.nip':   'Tax ID (NIP)',
-    'terms.company.regon': 'Business register (REGON)',
 
     'booking.soon': 'Online booking will open shortly. Please contact us by telephone or email.'
   },
@@ -712,8 +714,8 @@ window.TATRAPART_I18N = {
     'dist.krakow':    'Краків — аеропорт Баліце',
 
     'off.eyebrow': 'Пропозиції',
-    'off.title':   'Спеціальні пропозиції',
-    'off.text':    'Ми готуємо пропозиції на найближчі сезони. Завітайте згодом або зв’яжіться з нами напряму — охоче підготуємо індивідуальну пропозицію для вашого перебування.',
+    'off.title':   'Групові бронювання',
+    'off.text':    'Бронювання для понад восьми осіб ми ведемо інакше, ніж окреме перебування. Замість одного апартаменту пропонуємо два сусідні або цілий будиночок у виключне користування. Ціну та умови узгоджуємо індивідуально — просимо зв’язатися з нами напряму.',
     'off.cta':     'Перейти до пропозицій',
 
     'rev.eyebrow': 'Відгуки',
@@ -751,8 +753,8 @@ window.TATRAPART_I18N = {
     'page.gallery.title':    'Галерея',
     'page.gallery.lead':     'Знімки інтер’єрів TatrApart. Оберіть будь-яке фото, щоб збільшити.',
     'page.offers.title':     'Пропозиції',
-    'page.offers.lead':      'Сторінка в підготовці.',
-    'page.offers.empty':     'Ця сторінка наразі в підготовці. Щодо актуальних пропозицій та індивідуальних умов перебування просимо зв’язатися з нами напряму.',
+    'page.offers.lead':      'Перебування для більших груп.',
+    'page.offers.empty':     'Бронювання для понад восьми осіб ми ведемо інакше, ніж окреме перебування. Замість одного апартаменту пропонуємо два сусідні або цілий будиночок у виключне користування. Ціну та умови узгоджуємо індивідуально — просимо зв’язатися з нами напряму.',
     'page.contact.title':    'Контакти',
     'page.contact.lead':     'Охоче відповімо на всі запитання щодо перебування, доступних дат і апартаментів.',
     'page.contact.formTitle':'Контактна форма',
@@ -770,8 +772,9 @@ window.TATRAPART_I18N = {
     'terms.contents':   'Зміст',
 
     'terms.company.title': 'Дані компанії',
+    'terms.company.legalName': 'Юридична назва',
+    'terms.company.address':   'Адреса',
     'terms.company.nip':   'Податковий номер (NIP)',
-    'terms.company.regon': 'Реєстраційний номер (REGON)',
 
     'booking.soon': 'Онлайн-бронювання буде запущено незабаром. Просимо зв’язатися з нами телефоном або електронною поштою.'
   },
@@ -950,8 +953,8 @@ window.TATRAPART_I18N = {
     'dist.krakow':    'Краков — аэропорт Балице',
 
     'off.eyebrow': 'Предложения',
-    'off.title':   'Специальные предложения',
-    'off.text':    'Мы готовим предложения на ближайшие сезоны. Загляните позже или свяжитесь с нами напрямую — с удовольствием подготовим индивидуальное предложение для вашего пребывания.',
+    'off.title':   'Групповые бронирования',
+    'off.text':    'Бронирования более чем на восемь человек мы ведём иначе, чем отдельное проживание. Вместо одного апартамента предлагаем два соседних или целый домик в полное распоряжение. Цену и условия согласовываем индивидуально — просим связаться с нами напрямую.',
     'off.cta':     'Перейти к предложениям',
 
     'rev.eyebrow': 'Отзывы',
@@ -989,8 +992,8 @@ window.TATRAPART_I18N = {
     'page.gallery.title':    'Галерея',
     'page.gallery.lead':     'Снимки интерьеров TatrApart. Выберите любое фото, чтобы увеличить.',
     'page.offers.title':     'Предложения',
-    'page.offers.lead':      'Страница в подготовке.',
-    'page.offers.empty':     'Эта страница в настоящее время находится в подготовке. По актуальным предложениям и индивидуальным условиям пребывания просим связаться с нами напрямую.',
+    'page.offers.lead':      'Проживание для больших групп.',
+    'page.offers.empty':     'Бронирования более чем на восемь человек мы ведём иначе, чем отдельное проживание. Вместо одного апартамента предлагаем два соседних или целый домик в полное распоряжение. Цену и условия согласовываем индивидуально — просим связаться с нами напрямую.',
     'page.contact.title':    'Контакты',
     'page.contact.lead':     'С удовольствием ответим на все вопросы о пребывании, свободных датах и апартаментах.',
     'page.contact.formTitle':'Контактная форма',
@@ -1008,8 +1011,9 @@ window.TATRAPART_I18N = {
     'terms.contents':   'Содержание',
 
     'terms.company.title': 'Данные компании',
+    'terms.company.legalName': 'Юридическое название',
+    'terms.company.address':   'Адрес',
     'terms.company.nip':   'Налоговый номер (NIP)',
-    'terms.company.regon': 'Регистрационный номер (REGON)',
 
     'booking.soon': 'Онлайн-бронирование будет запущено в ближайшее время. Просим связаться с нами по телефону или электронной почте.'
   }

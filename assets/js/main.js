@@ -851,11 +851,19 @@
     return out;
   }
 
+  // Zdjecie na kafelku apartamentu. Konfiguracja moze wskazac osobny plik
+  // dla strony glownej i dla zakladki Apartamenty (photos.tile) — wtedy
+  // wygrywa on nad zdjeciem tytulowym wyliczonym z numerow.
+  function aptTilePhoto(apt, where) {
+    var tile = (apt.photos || {}).tile || {};
+    return tile[where] || aptAllPhotos(apt)[0];
+  }
+
   // Ramka zdjecia apartamentu. Gdy nie ma jeszcze zadnego pliku, zwracamy
   // pusta ramke w kolorach Milk & Oak zamiast zlamanego obrazka.
-  function aptFrame(apt, modifier) {
+  function aptFrame(apt, modifier, where) {
     var cls = 'media-card__frame ' + (modifier || '');
-    var first = aptAllPhotos(apt)[0];
+    var first = aptTilePhoto(apt, where);
     if (!first) {
       return '<span class="' + cls + ' frame-empty">' +
                '<span class="frame-empty__mark">' + ICON.mountain + '</span>' +
@@ -882,7 +890,7 @@
       slide.innerHTML =
         '<article class="media-card" data-reveal data-delay="' + (i * 90) + '">' +
           '<a href="apartamenty.html#' + esc(apt.id) + '" class="media-card__link">' +
-            aptFrame(apt, 'media-card__frame--tall') +
+            aptFrame(apt, 'media-card__frame--tall', 'home') +
           '</a>' +
           '<div class="media-card__body">' +
             '<p class="media-card__meta">' +
@@ -973,13 +981,17 @@
           '</div>'
         : '';
 
+      // Powiekszenie ma zaczynac sie od zdjecia, ktore widac na kafelku —
+      // gdy kafelek ma wlasny plik, wchodzi on na poczatek zestawu.
       var all = aptAllPhotos(apt);
+      var tile = aptTilePhoto(apt, 'apartments');
+      if (tile && all.indexOf(tile) === -1) all.unshift(tile);
       var media = all.length
         ? '<a class="apt-row__link" href="#" data-lightbox="0" data-lightbox-set="' + esc(all.join(',')) + '">' +
-            aptFrame(apt, 'apt-row__frame') +
+            aptFrame(apt, 'apt-row__frame', 'apartments') +
             '<span class="apt-row__zoom">' + ICON.zoom + '</span>' +
           '</a>'
-        : aptFrame(apt, 'apt-row__frame');
+        : aptFrame(apt, 'apt-row__frame', 'apartments');
 
       row.innerHTML =
         '<div class="apt-row__grid">' +
@@ -1158,7 +1170,6 @@
         'name':         c.name,
         'legalName':    c.legalNameDisplay || c.legalName,
         'nip':          c.nip,
-        'regon':        c.regon,
         'checkin':      stay.checkInFrom,
         'checkout':     stay.checkOutUntil,
         'year':         new Date().getFullYear()
