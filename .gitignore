@@ -21,3 +21,9 @@ assets/images/zdjecia/
 
 # Smieci Pythona po uruchomieniu skryptu z folderu tools/
 __pycache__/
+
+# Zrzuty ekranu z bledami, ktore pokazujesz przy poprawkach.
+assets/images/bugs/
+
+# Notatki techniczne (stare wpisy DNS itp.) — nie naleza do strony.
+Stare wartosci DNS strony TATRAPART.txt

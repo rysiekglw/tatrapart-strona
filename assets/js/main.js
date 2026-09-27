@@ -134,7 +134,7 @@
   // Gdy zdjecie nie zostalo jeszcze wgrane, pokazujemy elegancki placeholder
   // w kolorach Milk & Oak zamiast zlamanej ikony.
   // Zastepczy znak graficzny uzywany, dopoki nie zostanie wgrane logo w PNG.
-  var LOGO_FALLBACK = 'assets/images/logo-fallback.svg';
+  var LOGO_FALLBACK = 'assets/images/ikony/logo-fallback.svg';
 
   function imgFallback(root) {
     $$('img', root || document).forEach(function (img) {
@@ -171,11 +171,14 @@
     var n = CFG.galleryCount || 17;
     for (var i = 1; i <= n; i++) {
       var num = i < 10 ? '0' + i : '' + i;
-      out.push((CFG.galleryPath || 'assets/images/') + (CFG.galleryPrefix || 'gallery-') + num + (CFG.galleryExt || '.jpg'));
+      out.push((CFG.galleryPath || 'assets/images/apartamenty/gallery/') + (CFG.galleryPrefix || 'gallery-') + num + (CFG.galleryExt || '.jpg'));
     }
     return out;
   }
-  function imgPath(file) { return (CFG.galleryPath || 'assets/images/') + file; }
+  // Zdjecia apartamentow maja w konfiguracji sciezke wzgledna („apartamenty/…"),
+  // liczona od katalogu ze wszystkimi obrazami — to inny katalog niz ponumerowana
+  // galeria, stad dwa osobne ustawienia.
+  function imgPath(file) { return (CFG.imagesPath || 'assets/images/') + file; }
 
   /* ====================================================== 3. REZERWACJA */
   // Data w formacie RRRR-MM-DD, liczona z lokalnego kalendarza przegladarki
@@ -1211,7 +1214,7 @@
     });
 
     $$('[data-logo]').forEach(function (img) {
-      if (!img.getAttribute('src')) img.setAttribute('src', CFG.logo || 'assets/images/logo-tatrapart.png');
+      if (!img.getAttribute('src')) img.setAttribute('src', CFG.logo || 'assets/images/ikony/logo-tatrapart.png');
     });
   }
 

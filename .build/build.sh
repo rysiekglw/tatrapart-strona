@@ -20,10 +20,10 @@ make_page () {
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TatrApart">
 <meta property="og:title" content="${title}">
-<meta property="og:image" content="assets/images/${ogimg}">
+<meta property="og:image" content="assets/images/apartamenty/gallery/${ogimg}">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="assets/images/logo-tatrapart.png">
+<link rel="icon" href="assets/images/ikony/logo-tatrapart.png">
 <link rel="alternate" hreflang="pl" href="./${file}">
 <link rel="alternate" hreflang="en" href="./${file}?lang=en">
 <link rel="alternate" hreflang="uk" href="./${file}?lang=uk">

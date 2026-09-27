@@ -315,9 +315,14 @@ input, textarea, select { font: inherit; color: inherit; }
 .header__left  { display: flex; align-items: center; gap: 22px; }
 .header__right { display: flex; align-items: center; justify-content: flex-end; gap: 14px; }
 
-.brand { display: inline-flex; align-items: center; justify-self: center; }
+.brand { display: inline-flex; align-items: center; justify-self: center; min-width: 0; }
 .brand__img {
   height: 46px; width: auto;
+  /* Srodkowa kolumna naglowka jest waska na telefonie. Bez tych dwoch linii
+     logo bylo sciskane w pionowy pasek — teraz w najgorszym razie zmalejeje,
+     ale zachowa proporcje. */
+  max-width: 100%;
+  object-fit: contain;
   transition: height .5s var(--ease), filter .5s var(--ease);
 }
 
@@ -399,6 +404,33 @@ input, textarea, select { font: inherit; color: inherit; }
   .header__right .lang__btn,
   .header__right .btn { height: 40px; padding: 0 15px; letter-spacing: .12em; }
   .header__right .icon-btn { height: 40px; width: 40px; }
+
+  /* Na telefonie prawa grupa przyciskow zjadala cala szerokosc i na logo
+     zostawalo kilkanascie pikseli — stad sciesniony znak. Na tej szerokosci
+     rezygnujemy z ukladu „1fr auto 1fr" (wymusza on rowne kolumny boczne, a
+     prawa jest duzo szersza niz przycisk menu): logo staje obok ikony menu i
+     dostaje tyle miejsca, ile naprawde potrzebuje. Podpis „Menu" chowamy —
+     sama ikona wystarczy. */
+  .header__inner { grid-template-columns: auto auto minmax(0, 1fr); gap: 12px; }
+  .brand { justify-self: start; }
+  .nav-toggle { gap: 0; }
+  .nav-toggle__label { display: none; }
+  .brand__img { height: 36px; }
+  .header--solid .brand__img { height: 32px; }
+}
+
+@media (max-width: 400px) {
+  .header__right { gap: 8px; }
+  .header__right .lang__btn,
+  .header__right .btn { padding: 0 12px; }
+  .header__right .icon-btn { height: 36px; width: 36px; }
+}
+
+/* Najwezsze telefony — Instagram zostaje w stopce, w naglowku brakuje na niego
+   miejsca obok logo. */
+@media (max-width: 359px) {
+  .header__right .icon-btn { display: none; }
+  .brand__img { height: 32px; }
 }
 
 /* Kwadratowy przycisk z samym znakiem — na razie Instagram.
@@ -1022,10 +1054,16 @@ input, textarea, select { font: inherit; color: inherit; }
 }
 .lightbox__img.is-ready { opacity: 1; transform: scale(1); }
 
+/* Strzalki leza na zdjeciu, wiec musza miec wlasny z-index — samo zdjecie ma
+   transform, przez co tworzy kontekst malowania i bez tego zaslanialo strzalke
+   „wstecz" (ta stoi w kodzie przed zdjeciem). Przyciemnione tlo sprawia, ze
+   kwadraty widac takze na jasnych fotografiach. */
 .lightbox__arrow {
   position: absolute; top: 50%; transform: translateY(-50%);
-  width: 58px; height: 58px;
-  border: 1px solid rgba(243,237,228,.28);
+  z-index: 2;
+  width: 50px; height: 50px;
+  border: 1px solid rgba(243,237,228,.34);
+  background: rgba(18, 15, 13, .55);
   color: var(--on-dark);
   display: grid; place-items: center;
   transition: background-color .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease);

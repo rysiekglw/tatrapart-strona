@@ -225,14 +225,19 @@ window.TATRAPART_CONFIG = {
 
   /* --------------------------------------------------------------------
      6. GALERIA
-     Pliki: assets/images/gallery-01.jpg ... gallery-17.jpg
+     Pliki: assets/images/apartamenty/gallery/gallery-01.jpg ... gallery-17.jpg
      Dodajesz kolejne? Nazwij gallery-18.jpg i podnies liczbe o jeden.
+
+     imagesPath to katalog, od ktorego liczone sa sciezki zdjec apartamentow
+     (pole photos.path i photos.tile powyzej). galleryPath dotyczy wylacznie
+     ponumerowanej galerii i wskazuje juz inny katalog.
      -------------------------------------------------------------------- */
   galleryCount: 17,
-  galleryPath: 'assets/images/',
+  imagesPath: 'assets/images/',
+  galleryPath: 'assets/images/apartamenty/gallery/',
   galleryPrefix: 'gallery-',
   galleryExt: '.jpg',
-  logo: 'assets/images/logo-tatrapart.png',
+  logo: 'assets/images/ikony/logo-tatrapart.png',
 
   /* --------------------------------------------------------------------
      7. OKOLICA
