@@ -11,14 +11,14 @@
    url    — dokad prowadzi klikniecie w kafelek
    ========================================================================= */
 window.TATRAPART_RATINGS = {
-  updated: '2026-09-21',
+  updated: '2026-09-28',
   items: [
     {
       id: 'booking',
       label: 'Booking.com',
       score: 9.6,
       max: 10,
-      count: 134,
+      count: 132,
       url: 'https://www.booking.com/hotel/pl/gawra-tatrzanska.pl.html'
     },
     {
@@ -26,7 +26,7 @@ window.TATRAPART_RATINGS = {
       label: 'Airbnb',
       score: 4.89,
       max: 5,
-      count: 115,
+      count: 116,
       url: 'https://www.airbnb.com/users/show/489507548'
     },
     {
