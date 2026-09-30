@@ -57,7 +57,7 @@ window.TATRAPART_I18N = {
     'common.phone':       'Telefon',
     'common.email':       'E-mail',
     'common.from':        'od',
-    'common.perNight':    'za dobę',
+    'common.perPersonNight': 'za osobę, za dobę',
     'common.photoSoon':   'Zdjęcie wkrótce',
 
     'hero.eyebrow': 'Zakopane · Polskie Tatry',
@@ -344,7 +344,7 @@ window.TATRAPART_I18N = {
     'common.phone':       'Telephone',
     'common.email':       'Email',
     'common.from':        'from',
-    'common.perNight':    'per night',
+    'common.perPersonNight': 'per person, per night',
     'common.photoSoon':   'Photograph to follow',
 
     'hero.eyebrow': 'Zakopane · Polish Tatras',
@@ -583,7 +583,7 @@ window.TATRAPART_I18N = {
     'common.phone':       'Телефон',
     'common.email':       'Електронна пошта',
     'common.from':        'від',
-    'common.perNight':    'за добу',
+    'common.perPersonNight': 'за особу, за добу',
     'common.photoSoon':   'Фото незабаром',
 
     'hero.eyebrow': 'Закопане · Польські Татри',
@@ -822,7 +822,7 @@ window.TATRAPART_I18N = {
     'common.phone':       'Телефон',
     'common.email':       'Электронная почта',
     'common.from':        'от',
-    'common.perNight':    'за сутки',
+    'common.perPersonNight': 'за человека, за сутки',
     'common.photoSoon':   'Фото скоро',
 
     'hero.eyebrow': 'Закопане · Польские Татры',

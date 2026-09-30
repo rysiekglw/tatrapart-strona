@@ -316,7 +316,8 @@ Wpisane i widoczne w całym serwisie:
 
 - TatrApart Tatiana Głowacka, ul. Topory 1B, 34-500 Zakopane
 - NIP 5262638491, REGON 523743437
-- telefon +48 510 005 004, e-mail contact@tatrapart.pl
+- telefony: +48 510 005 004 (PL, RU) i +48 503 803 800 (PL, EN)
+- e-mail contact@tatrapart.pl
 - Instagram: instagram.com/tatrapart
 - doba hotelowa: od 16:00 do 11:00
 - cisza nocna 23:00–6:00, goście niezameldowani 7:00–22:00
@@ -324,6 +325,8 @@ Wpisane i widoczne w całym serwisie:
 - całkowity zakaz palenia, darmowy parking
 - trzy typy apartamentów z metrażami, pojemnościami, cenami i opisami
   przepisanymi z tatrapart.pl
+- ceny (`priceFrom` w `site-config.js`) podawane są **za osobę za dobę**
+  przy pełnym obłożeniu, a nie za cały apartament
 
 Facebook nie został podany, więc odnośnik do niego **automatycznie się nie
 wyświetla**. Po dodaniu adresu w `social.facebook` pojawi się sam.

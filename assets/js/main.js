@@ -881,7 +881,7 @@
     return '<p class="price-tag">' +
              '<span data-i18n="common.from"></span> ' +
              '<b>' + esc(apt.priceFrom) + ' ' + esc(CFG.currency || 'zł') + '</b> ' +
-             '<span data-i18n="common.perNight"></span>' +
+             '<span data-i18n="common.perPersonNight"></span>' +
            '</p>';
   }
 
@@ -1165,6 +1165,7 @@
       var key = n.getAttribute('data-cfg');
       var map = {
         'phone':        c.phone,
+        'phone2':       c.phone2,
         'email':        c.email,
         'reservations': c.reservationsEmail,
         'street':       c.street,
@@ -1184,6 +1185,7 @@
       var key = n.getAttribute('data-cfg-href');
       var map = {
         'phone':        c.phoneHref ? 'tel:' + c.phoneHref : '',
+        'phone2':       c.phone2Href ? 'tel:' + c.phone2Href : '',
         'email':        c.email ? 'mailto:' + c.email : '',
         'reservations': c.reservationsEmail ? 'mailto:' + c.reservationsEmail : '',
         'maps':         c.mapsUrl || '',

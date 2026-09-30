@@ -58,6 +58,9 @@ window.TATRAPART_CONFIG = {
     nip: '5262638491',
     phone: '+48 510 005 004',
     phoneHref: '+48510005004',
+    // Drugi numer kontaktowy: odbieramy po polsku i po angielsku.
+    phone2: '+48 503 803 800',
+    phone2Href: '+48503803800',
     email: 'contact@tatrapart.pl',
     reservationsEmail: 'contact@tatrapart.pl',
     // Wspolrzedne budynku przy ul. Topory 1B odczytane z bazy OpenStreetMap
@@ -128,6 +131,11 @@ window.TATRAPART_CONFIG = {
      osobno dla strony glownej (home) i dla zakladki Apartamenty (apartments).
      Sciezki sa liczone od assets/images/. Bez wpisu kafelek bierze zdjecie
      tytulowe wyliczone z photos.cover, tak jak dotychczas.
+
+     priceFrom to najnizsza stawka ZA OSOBE ZA DOBE przy pelnym oblozeniu,
+     a nie cena calego apartamentu — tak czytelniej widac, ile kosztuje
+     pobyt, gdy przyjezdza komplet Gosci. Napis obok liczby bierze sie
+     z klucza common.perPersonNight w i18n.js.
      -------------------------------------------------------------------- */
   apartments: [
     {
@@ -137,7 +145,7 @@ window.TATRAPART_CONFIG = {
       // Pliki: assets/images/apartamenty/<id>-<wariant>-01.jpg ... -NN.jpg
       // Zdjecia tytulowe dobrane tak, zeby od razu bylo widac kominek.
       photos: { path: 'apartamenty/', brown: 14, white: 17, cover: { brown: 10, white: 17 } },
-      priceFrom: 445,
+      priceFrom: 120,
       guests: 6,
       bedrooms: 2,
       bathrooms: 1,
@@ -157,7 +165,7 @@ window.TATRAPART_CONFIG = {
       // wpisany tylko wariant Brown, dopoki nie powstanie i nie bedzie zdjec.
       // Zdjecie tytulowe z widocznym kominkiem.
       photos: { path: 'apartamenty/', brown: 18, cover: { brown: 13 } },
-      priceFrom: 495,
+      priceFrom: 110,
       guests: 8,
       bedrooms: 3,
       bathrooms: 2,
@@ -182,7 +190,7 @@ window.TATRAPART_CONFIG = {
           apartments: 'apartamenty/suite-poddasze-brown-cover-apartments.jpg'
         }
       },
-      priceFrom: 297,
+      priceFrom: 95,
       guests: 6,
       bedrooms: 3,
       bathrooms: 1,
