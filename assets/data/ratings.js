@@ -11,14 +11,14 @@
    url    — dokad prowadzi klikniecie w kafelek
    ========================================================================= */
 window.TATRAPART_RATINGS = {
-  updated: '2026-09-28',
+  updated: '2026-10-05',
   items: [
     {
       id: 'booking',
       label: 'Booking.com',
       score: 9.6,
       max: 10,
-      count: 132,
+      count: 133,
       url: 'https://www.booking.com/hotel/pl/gawra-tatrzanska.pl.html'
     },
     {
@@ -32,9 +32,9 @@ window.TATRAPART_RATINGS = {
     {
       id: 'google',
       label: 'Google',
-      score: 4.8,
+      score: 4.9,
       max: 5,
-      count: 52,
+      count: 47,
       url: 'https://www.google.com/maps/search/?api=1&query=TatrApart+Topory+1B+Zakopane'
     }
   ]
