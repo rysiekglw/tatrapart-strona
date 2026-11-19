@@ -2,6 +2,48 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/regulamin",
+      "destination": "/regulamin.html",
+      "permanent": true
+    },
+    {
+      "source": "/oferty",
+      "destination": "/oferty.html",
+      "permanent": true
+    },
+    {
+      "source": "/apartamenty",
+      "destination": "/apartamenty.html",
+      "permanent": true
+    },
+    {
+      "source": "/galeria",
+      "destination": "/galeria.html",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/rezerwacja",
+      "destination": "/kontakt.html#rezerwacja",
+      "permanent": true
+    },
+    {
+      "source": "/vouchery",
+      "destination": "/oferty.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/regulamin.html",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/images/(.*)",
@@ -24,9 +66,18 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
       ]
     }
   ]
