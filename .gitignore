@@ -27,3 +27,6 @@ assets/images/bugs/
 
 # Notatki techniczne (stare wpisy DNS itp.) — nie naleza do strony.
 Stare wartosci DNS strony TATRAPART.txt
+
+# Lokalny podglad strony (nie nalezy do witryny)
+.claude/

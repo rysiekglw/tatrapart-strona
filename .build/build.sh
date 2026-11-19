@@ -58,10 +58,59 @@ TAIL
   echo "  zbudowano: ${file}"
 }
 
+# Strona bledu 404. Vercel pokazuje ja pod KAZDYM nieistniejacym adresem,
+# takze zagniezdzonym (np. /stare/cos), dlatego wszystkie sciezki musza byc
+# bezwzgledne (od korzenia). Naglowek i stopka sa te same co na reszcie
+# strony - ponizszy sed zamienia w nich sciezki wzgledne na bezwzgledne.
+make_404 () {
+  local file="404.html"
+
+  {
+    cat <<'HEAD'
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nie znaleziono strony — TatrApart Zakopane</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FBF8F3">
+
+<link rel="icon" href="/assets/images/ikony/logo-tatrapart.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body data-page="notfound" data-title-key="meta.title.notfound">
+
+<a class="skip-link" href="#main">TatrApart</a>
+
+HEAD
+
+    sed -e 's#"assets/#"/assets/#g' -e 's#"index.html#"/index.html#g' -e 's#"apartamenty.html#"/apartamenty.html#g' -e 's#"oferty.html#"/oferty.html#g' -e 's#"galeria.html#"/galeria.html#g' -e 's#"kontakt.html#"/kontakt.html#g' -e 's#"regulamin.html#"/regulamin.html#g' .build/header.html
+    echo
+    cat .build/main-404.html
+    echo
+    sed -e 's#"assets/#"/assets/#g' -e 's#"index.html#"/index.html#g' -e 's#"apartamenty.html#"/apartamenty.html#g' -e 's#"oferty.html#"/oferty.html#g' -e 's#"galeria.html#"/galeria.html#g' -e 's#"kontakt.html#"/kontakt.html#g' -e 's#"regulamin.html#"/regulamin.html#g' .build/footer.html
+
+    cat <<'TAIL'
+</body>
+</html>
+TAIL
+  } > "${file}"
+
+  echo "  zbudowano: ${file}"
+}
+
 echo "Skladanie podstron Tatrapart..."
 make_page "apartamenty.html" "apartments" "meta.title.apartments" "Apartamenty — TatrApart Zakopane" "gallery-04.jpg" ".build/main-apartamenty.html"
 make_page "galeria.html"     "gallery"    "meta.title.gallery"    "Galeria — TatrApart Zakopane"     "gallery-06.jpg" ".build/main-galeria.html"
 make_page "oferty.html"      "offers"     "meta.title.offers"     "Oferty — TatrApart Zakopane"      "gallery-10.jpg" ".build/main-oferty.html"
 make_page "kontakt.html"     "contact"    "meta.title.contact"    "Kontakt — TatrApart Zakopane"      "gallery-11.jpg" ".build/main-kontakt.html"
 make_page "regulamin.html"   "terms"      "meta.title.terms"      "Regulamin — TatrApart Zakopane"    "gallery-04.jpg" ".build/main-regulamin.html"
+make_404
 echo "Gotowe."
